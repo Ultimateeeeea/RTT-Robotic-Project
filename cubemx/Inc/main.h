@@ -65,6 +65,14 @@ void Error_Handler(void);
 #define Motor_BackLeft_GPIO_Port GPIOC
 #define Motor_BackRight_Pin GPIO_PIN_9
 #define Motor_BackRight_GPIO_Port GPIOC
+#define RTT_TX_Pin GPIO_PIN_9
+#define RTT_TX_GPIO_Port GPIOA
+#define RTT_RX_Pin GPIO_PIN_10
+#define RTT_RX_GPIO_Port GPIOA
+#define StepMotor_TX_Pin GPIO_PIN_12
+#define StepMotor_TX_GPIO_Port GPIOC
+#define StepMotor_RX_Pin GPIO_PIN_2
+#define StepMotor_RX_GPIO_Port GPIOD
 
 /* USER CODE BEGIN Private defines */
 

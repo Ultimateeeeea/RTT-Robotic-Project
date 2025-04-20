@@ -65,6 +65,7 @@ uwTick              0x4               ./libraries/STM32F1xx_HAL_Driver/Src/stm32
 pFlash              0x20              ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
 htim5               0x40              ./cubemx/Src/tim.o
 htim3               0x40              ./cubemx/Src/tim.o
+huart5              0x40              ./cubemx/Src/usart.o
 rt_thread_priority_table
                     0x100             ./rt-thread/src/scheduler.o
 rt_object_put_hook  0x4               ./rt-thread/src/object.o
@@ -373,8 +374,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x70 ./rt-thread/src/mempool.o
  .debug_ranges  0x00000000       0x60 ./rt-thread/src/mempool.o
- .debug_line    0x00000000      0x494 ./rt-thread/src/mempool.o
- .debug_str     0x00000000      0x62f ./rt-thread/src/mempool.o
+ .debug_line    0x00000000      0x497 ./rt-thread/src/mempool.o
+ .debug_str     0x00000000      0x632 ./rt-thread/src/mempool.o
  .comment       0x00000000       0x6f ./rt-thread/src/mempool.o
  .debug_frame   0x00000000      0x1b0 ./rt-thread/src/mempool.o
  .ARM.attributes
@@ -462,8 +463,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x20 ./rt-thread/libcpu/arm/common/backtrace.o
  .debug_ranges  0x00000000       0x10 ./rt-thread/libcpu/arm/common/backtrace.o
- .debug_line    0x00000000      0x1ed ./rt-thread/libcpu/arm/common/backtrace.o
- .debug_str     0x00000000      0x1d9 ./rt-thread/libcpu/arm/common/backtrace.o
+ .debug_line    0x00000000      0x1f0 ./rt-thread/libcpu/arm/common/backtrace.o
+ .debug_str     0x00000000      0x1dc ./rt-thread/libcpu/arm/common/backtrace.o
  .comment       0x00000000       0x6f ./rt-thread/libcpu/arm/common/backtrace.o
  .debug_frame   0x00000000       0x34 ./rt-thread/libcpu/arm/common/backtrace.o
  .ARM.attributes
@@ -479,7 +480,7 @@ Discarded input sections
                 0x00000000       0x20 ./rt-thread/libcpu/arm/common/div0.o
  .debug_ranges  0x00000000       0x10 ./rt-thread/libcpu/arm/common/div0.o
  .debug_line    0x00000000       0x5a ./rt-thread/libcpu/arm/common/div0.o
- .debug_str     0x00000000       0xf5 ./rt-thread/libcpu/arm/common/div0.o
+ .debug_str     0x00000000       0xf8 ./rt-thread/libcpu/arm/common/div0.o
  .comment       0x00000000       0x6f ./rt-thread/libcpu/arm/common/div0.o
  .debug_frame   0x00000000       0x28 ./rt-thread/libcpu/arm/common/div0.o
  .ARM.attributes
@@ -498,8 +499,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x20 ./rt-thread/libcpu/arm/common/showmem.o
  .debug_ranges  0x00000000       0x10 ./rt-thread/libcpu/arm/common/showmem.o
- .debug_line    0x00000000      0x1f6 ./rt-thread/libcpu/arm/common/showmem.o
- .debug_str     0x00000000      0x1d8 ./rt-thread/libcpu/arm/common/showmem.o
+ .debug_line    0x00000000      0x1f9 ./rt-thread/libcpu/arm/common/showmem.o
+ .debug_str     0x00000000      0x1db ./rt-thread/libcpu/arm/common/showmem.o
  .comment       0x00000000       0x6f ./rt-thread/libcpu/arm/common/showmem.o
  .debug_frame   0x00000000       0x34 ./rt-thread/libcpu/arm/common/showmem.o
  .ARM.attributes
@@ -578,7 +579,7 @@ Discarded input sections
                 0x00000000       0x28 ./rt-thread/components/libc/compilers/common/cctype.o
  .debug_ranges  0x00000000       0x18 ./rt-thread/components/libc/compilers/common/cctype.o
  .debug_line    0x00000000       0x8e ./rt-thread/components/libc/compilers/common/cctype.o
- .debug_str     0x00000000      0x19f ./rt-thread/components/libc/compilers/common/cctype.o
+ .debug_str     0x00000000      0x1a2 ./rt-thread/components/libc/compilers/common/cctype.o
  .comment       0x00000000       0x6f ./rt-thread/components/libc/compilers/common/cctype.o
  .debug_frame   0x00000000       0x60 ./rt-thread/components/libc/compilers/common/cctype.o
  .ARM.attributes
@@ -591,7 +592,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./rt-thread/components/libc/compilers/common/cstdio.o
  .debug_line    0x00000000       0x1d ./rt-thread/components/libc/compilers/common/cstdio.o
- .debug_str     0x00000000      0x19d ./rt-thread/components/libc/compilers/common/cstdio.o
+ .debug_str     0x00000000      0x1a0 ./rt-thread/components/libc/compilers/common/cstdio.o
  .comment       0x00000000       0x6f ./rt-thread/components/libc/compilers/common/cstdio.o
  .ARM.attributes
                 0x00000000       0x33 ./rt-thread/components/libc/compilers/common/cstdio.o
@@ -612,8 +613,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x48 ./rt-thread/components/libc/compilers/common/cstdlib.o
  .debug_ranges  0x00000000       0x38 ./rt-thread/components/libc/compilers/common/cstdlib.o
- .debug_line    0x00000000      0x33e ./rt-thread/components/libc/compilers/common/cstdlib.o
- .debug_str     0x00000000      0x39a ./rt-thread/components/libc/compilers/common/cstdlib.o
+ .debug_line    0x00000000      0x341 ./rt-thread/components/libc/compilers/common/cstdlib.o
+ .debug_str     0x00000000      0x39d ./rt-thread/components/libc/compilers/common/cstdlib.o
  .comment       0x00000000       0x6f ./rt-thread/components/libc/compilers/common/cstdlib.o
  .debug_frame   0x00000000       0xf0 ./rt-thread/components/libc/compilers/common/cstdlib.o
  .ARM.attributes
@@ -650,7 +651,7 @@ Discarded input sections
                 0x00000000       0xa0 ./rt-thread/components/libc/compilers/common/cstring.o
  .debug_ranges  0x00000000       0x90 ./rt-thread/components/libc/compilers/common/cstring.o
  .debug_line    0x00000000      0x3be ./rt-thread/components/libc/compilers/common/cstring.o
- .debug_str     0x00000000      0x263 ./rt-thread/components/libc/compilers/common/cstring.o
+ .debug_str     0x00000000      0x266 ./rt-thread/components/libc/compilers/common/cstring.o
  .comment       0x00000000       0x6f ./rt-thread/components/libc/compilers/common/cstring.o
  .debug_frame   0x00000000      0x298 ./rt-thread/components/libc/compilers/common/cstring.o
  .ARM.attributes
@@ -707,8 +708,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xd0 ./rt-thread/components/libc/compilers/common/ctime.o
  .debug_ranges  0x00000000       0xd8 ./rt-thread/components/libc/compilers/common/ctime.o
- .debug_line    0x00000000      0x56f ./rt-thread/components/libc/compilers/common/ctime.o
- .debug_str     0x00000000      0x3ac ./rt-thread/components/libc/compilers/common/ctime.o
+ .debug_line    0x00000000      0x575 ./rt-thread/components/libc/compilers/common/ctime.o
+ .debug_str     0x00000000      0x3af ./rt-thread/components/libc/compilers/common/ctime.o
  .comment       0x00000000       0x6f ./rt-thread/components/libc/compilers/common/ctime.o
  .debug_frame   0x00000000      0x358 ./rt-thread/components/libc/compilers/common/ctime.o
  .ARM.attributes
@@ -730,7 +731,7 @@ Discarded input sections
                 0x00000000       0x30 ./rt-thread/components/libc/compilers/common/cwchar.o
  .debug_ranges  0x00000000       0x20 ./rt-thread/components/libc/compilers/common/cwchar.o
  .debug_line    0x00000000      0x1ad ./rt-thread/components/libc/compilers/common/cwchar.o
- .debug_str     0x00000000      0x1f5 ./rt-thread/components/libc/compilers/common/cwchar.o
+ .debug_str     0x00000000      0x1f8 ./rt-thread/components/libc/compilers/common/cwchar.o
  .comment       0x00000000       0x6f ./rt-thread/components/libc/compilers/common/cwchar.o
  .debug_frame   0x00000000       0x80 ./rt-thread/components/libc/compilers/common/cwchar.o
  .ARM.attributes
@@ -834,8 +835,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x68 ./rt-thread/components/drivers/ipc/dataqueue.o
  .debug_ranges  0x00000000       0x58 ./rt-thread/components/drivers/ipc/dataqueue.o
- .debug_line    0x00000000      0x4f9 ./rt-thread/components/drivers/ipc/dataqueue.o
- .debug_str     0x00000000      0x50b ./rt-thread/components/drivers/ipc/dataqueue.o
+ .debug_line    0x00000000      0x4ff ./rt-thread/components/drivers/ipc/dataqueue.o
+ .debug_str     0x00000000      0x50e ./rt-thread/components/drivers/ipc/dataqueue.o
  .comment       0x00000000       0x6f ./rt-thread/components/drivers/ipc/dataqueue.o
  .debug_frame   0x00000000      0x18c ./rt-thread/components/drivers/ipc/dataqueue.o
  .ARM.attributes
@@ -872,8 +873,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x60 ./rt-thread/components/drivers/ipc/pipe.o
  .debug_ranges  0x00000000       0x80 ./rt-thread/components/drivers/ipc/pipe.o
- .debug_line    0x00000000      0x406 ./rt-thread/components/drivers/ipc/pipe.o
- .debug_str     0x00000000      0x8a2 ./rt-thread/components/drivers/ipc/pipe.o
+ .debug_line    0x00000000      0x40c ./rt-thread/components/drivers/ipc/pipe.o
+ .debug_str     0x00000000      0x8a5 ./rt-thread/components/drivers/ipc/pipe.o
  .comment       0x00000000       0x6f ./rt-thread/components/drivers/ipc/pipe.o
  .debug_frame   0x00000000      0x15c ./rt-thread/components/drivers/ipc/pipe.o
  .ARM.attributes
@@ -966,8 +967,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xd8 ./rt-thread/components/drivers/ipc/ringblk_buf.o
  .debug_ranges  0x00000000       0xc8 ./rt-thread/components/drivers/ipc/ringblk_buf.o
- .debug_line    0x00000000      0x694 ./rt-thread/components/drivers/ipc/ringblk_buf.o
- .debug_str     0x00000000      0x51c ./rt-thread/components/drivers/ipc/ringblk_buf.o
+ .debug_line    0x00000000      0x69a ./rt-thread/components/drivers/ipc/ringblk_buf.o
+ .debug_str     0x00000000      0x51f ./rt-thread/components/drivers/ipc/ringblk_buf.o
  .comment       0x00000000       0x6f ./rt-thread/components/drivers/ipc/ringblk_buf.o
  .debug_frame   0x00000000      0x390 ./rt-thread/components/drivers/ipc/ringblk_buf.o
  .ARM.attributes
@@ -1030,8 +1031,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x80 ./rt-thread/components/drivers/ipc/ringbuffer.o
  .debug_ranges  0x00000000       0x70 ./rt-thread/components/drivers/ipc/ringbuffer.o
- .debug_line    0x00000000      0x485 ./rt-thread/components/drivers/ipc/ringbuffer.o
- .debug_str     0x00000000      0x3f8 ./rt-thread/components/drivers/ipc/ringbuffer.o
+ .debug_line    0x00000000      0x48b ./rt-thread/components/drivers/ipc/ringbuffer.o
+ .debug_str     0x00000000      0x3fb ./rt-thread/components/drivers/ipc/ringbuffer.o
  .comment       0x00000000       0x6f ./rt-thread/components/drivers/ipc/ringbuffer.o
  .debug_frame   0x00000000      0x1f8 ./rt-thread/components/drivers/ipc/ringbuffer.o
  .ARM.attributes
@@ -1066,8 +1067,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x60 ./rt-thread/components/drivers/ipc/waitqueue.o
  .debug_ranges  0x00000000       0x50 ./rt-thread/components/drivers/ipc/waitqueue.o
- .debug_line    0x00000000      0x343 ./rt-thread/components/drivers/ipc/waitqueue.o
- .debug_str     0x00000000      0x481 ./rt-thread/components/drivers/ipc/waitqueue.o
+ .debug_line    0x00000000      0x349 ./rt-thread/components/drivers/ipc/waitqueue.o
+ .debug_str     0x00000000      0x484 ./rt-thread/components/drivers/ipc/waitqueue.o
  .comment       0x00000000       0x6f ./rt-thread/components/drivers/ipc/waitqueue.o
  .debug_frame   0x00000000      0x168 ./rt-thread/components/drivers/ipc/waitqueue.o
  .ARM.attributes
@@ -1138,8 +1139,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xa8 ./rt-thread/components/drivers/ipc/workqueue.o
  .debug_ranges  0x00000000       0x98 ./rt-thread/components/drivers/ipc/workqueue.o
- .debug_line    0x00000000      0x4c2 ./rt-thread/components/drivers/ipc/workqueue.o
- .debug_str     0x00000000      0x5d6 ./rt-thread/components/drivers/ipc/workqueue.o
+ .debug_line    0x00000000      0x4c8 ./rt-thread/components/drivers/ipc/workqueue.o
+ .debug_str     0x00000000      0x5d9 ./rt-thread/components/drivers/ipc/workqueue.o
  .comment       0x00000000       0x6f ./rt-thread/components/drivers/ipc/workqueue.o
  .debug_frame   0x00000000      0x2ac ./rt-thread/components/drivers/ipc/workqueue.o
  .ARM.attributes
@@ -1151,8 +1152,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o
- .debug_str     0x00000000      0x1c1 ./libraries/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o
+ .debug_str     0x00000000      0x1c4 ./libraries/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o
@@ -1212,8 +1213,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
@@ -1224,8 +1225,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
- .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
+ .debug_str     0x00000000      0x1c0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
@@ -1236,8 +1237,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
@@ -1248,8 +1249,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o
@@ -1295,8 +1296,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o
@@ -1307,8 +1308,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o
@@ -1319,8 +1320,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o
- .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o
+ .debug_str     0x00000000      0x1c0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o
@@ -1356,8 +1357,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o
@@ -1388,8 +1389,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x60 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o
  .debug_ranges  0x00000000       0x50 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o
- .debug_line    0x00000000      0x3a3 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o
- .debug_str     0x00000000      0x3ed ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o
+ .debug_line    0x00000000      0x3ac ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o
+ .debug_str     0x00000000      0x3f0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o
  .debug_frame   0x00000000      0x174 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o
  .ARM.attributes
@@ -1431,8 +1432,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x88 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
  .debug_ranges  0x00000000       0x78 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
- .debug_line    0x00000000      0x4ac ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
- .debug_str     0x00000000      0x515 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+ .debug_line    0x00000000      0x4b5 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+ .debug_str     0x00000000      0x518 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
  .debug_frame   0x00000000      0x214 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
  .ARM.attributes
@@ -1479,8 +1480,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x98 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
  .debug_ranges  0x00000000       0x88 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
- .debug_line    0x00000000      0x50a ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
- .debug_str     0x00000000      0x641 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
+ .debug_line    0x00000000      0x513 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
+ .debug_str     0x00000000      0x644 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
  .debug_frame   0x00000000      0x258 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
  .ARM.attributes
@@ -1509,8 +1510,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x30 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o
  .debug_ranges  0x00000000       0x20 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o
- .debug_line    0x00000000      0x268 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o
- .debug_str     0x00000000      0x26e ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o
+ .debug_line    0x00000000      0x26e ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o
+ .debug_str     0x00000000      0x271 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o
  .debug_frame   0x00000000       0x78 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o
  .ARM.attributes
@@ -1522,8 +1523,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o
@@ -1534,8 +1535,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
@@ -1546,8 +1547,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o
@@ -1558,8 +1559,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o
- .debug_str     0x00000000      0x1bb ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o
+ .debug_str     0x00000000      0x1be ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o
@@ -1570,8 +1571,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o
- .debug_str     0x00000000      0x1bb ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o
+ .debug_str     0x00000000      0x1be ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o
@@ -1582,8 +1583,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o
@@ -1594,8 +1595,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o
- .debug_str     0x00000000      0x1bb ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o
+ .debug_str     0x00000000      0x1be ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o
@@ -1606,8 +1607,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o
@@ -1618,8 +1619,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o
- .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o
+ .debug_str     0x00000000      0x1c0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o
@@ -1630,8 +1631,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o
@@ -1642,8 +1643,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o
- .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o
+ .debug_str     0x00000000      0x1c0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o
@@ -1692,8 +1693,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xa8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o
  .debug_ranges  0x00000000       0x98 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o
- .debug_line    0x00000000      0x42a ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o
- .debug_str     0x00000000      0x4b2 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o
+ .debug_line    0x00000000      0x433 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o
+ .debug_str     0x00000000      0x4b5 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o
  .debug_frame   0x00000000      0x270 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o
  .ARM.attributes
@@ -1733,8 +1734,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x30 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
  .debug_ranges  0x00000000       0x20 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_line    0x00000000      0x375 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
- .debug_str     0x00000000      0x3ef ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_line    0x00000000      0x37e ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
+ .debug_str     0x00000000      0x3f2 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
  .debug_frame   0x00000000       0x84 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o
  .ARM.attributes
@@ -1746,8 +1747,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o
@@ -1758,8 +1759,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o
- .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o
+ .debug_str     0x00000000      0x1c0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o
@@ -1770,8 +1771,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o
- .debug_str     0x00000000      0x1b9 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o
+ .debug_str     0x00000000      0x1bc ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o
@@ -1782,8 +1783,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o
- .debug_str     0x00000000      0x1c0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o
+ .debug_str     0x00000000      0x1c3 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o
@@ -1794,8 +1795,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
- .debug_str     0x00000000      0x1ba ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+ .debug_str     0x00000000      0x1bd ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
@@ -1806,8 +1807,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o
- .debug_str     0x00000000      0x1bb ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o
+ .debug_str     0x00000000      0x1be ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o
@@ -1906,8 +1907,6 @@ Discarded input sections
                 0x00000000       0x88 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .text.HAL_TIM_OnePulse_Stop_IT
                 0x00000000       0xd8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .text.HAL_TIM_Encoder_Init
-                0x00000000      0x11c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .text.HAL_TIM_Encoder_DeInit
                 0x00000000       0x60 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .text.HAL_TIM_Encoder_MspInit
@@ -2199,8 +2198,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o
- .debug_str     0x00000000      0x1bc ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o
+ .debug_str     0x00000000      0x1bf ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o
@@ -2211,8 +2210,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o
- .debug_str     0x00000000      0x1bb ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o
+ .debug_str     0x00000000      0x1be ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o
@@ -2223,8 +2222,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o
  .debug_aranges
                 0x00000000       0x18 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o
- .debug_line    0x00000000      0x193 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o
- .debug_str     0x00000000      0x1b9 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o
+ .debug_line    0x00000000      0x196 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o
+ .debug_str     0x00000000      0x1bc ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o
  .comment       0x00000000       0x6f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o
  .ARM.attributes
                 0x00000000       0x33 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o
@@ -2246,8 +2245,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_adc.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_adc.o
- .debug_line    0x00000000      0x193 ./drivers/drv_adc.o
- .debug_str     0x00000000      0x19a ./drivers/drv_adc.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_adc.o
+ .debug_str     0x00000000      0x19d ./drivers/drv_adc.o
  .comment       0x00000000       0x6f ./drivers/drv_adc.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_adc.o
@@ -2278,8 +2277,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_eth.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_eth.o
- .debug_line    0x00000000      0x193 ./drivers/drv_eth.o
- .debug_str     0x00000000      0x19a ./drivers/drv_eth.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_eth.o
+ .debug_str     0x00000000      0x19d ./drivers/drv_eth.o
  .comment       0x00000000       0x6f ./drivers/drv_eth.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_eth.o
@@ -2290,8 +2289,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_flash_f1.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_flash_f1.o
- .debug_line    0x00000000      0x193 ./drivers/drv_flash_f1.o
- .debug_str     0x00000000      0x19f ./drivers/drv_flash_f1.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_flash_f1.o
+ .debug_str     0x00000000      0x1a2 ./drivers/drv_flash_f1.o
  .comment       0x00000000       0x6f ./drivers/drv_flash_f1.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_flash_f1.o
@@ -2305,8 +2304,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_hwtimer.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_hwtimer.o
- .debug_line    0x00000000      0x193 ./drivers/drv_hwtimer.o
- .debug_str     0x00000000      0x19e ./drivers/drv_hwtimer.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_hwtimer.o
+ .debug_str     0x00000000      0x1a1 ./drivers/drv_hwtimer.o
  .comment       0x00000000       0x6f ./drivers/drv_hwtimer.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_hwtimer.o
@@ -2317,8 +2316,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_pwm.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_pwm.o
- .debug_line    0x00000000      0x193 ./drivers/drv_pwm.o
- .debug_str     0x00000000      0x19a ./drivers/drv_pwm.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_pwm.o
+ .debug_str     0x00000000      0x19d ./drivers/drv_pwm.o
  .comment       0x00000000       0x6f ./drivers/drv_pwm.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_pwm.o
@@ -2329,8 +2328,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_qspi.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_qspi.o
- .debug_line    0x00000000      0x193 ./drivers/drv_qspi.o
- .debug_str     0x00000000      0x19b ./drivers/drv_qspi.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_qspi.o
+ .debug_str     0x00000000      0x19e ./drivers/drv_qspi.o
  .comment       0x00000000       0x6f ./drivers/drv_qspi.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_qspi.o
@@ -2341,8 +2340,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_rtc.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_rtc.o
- .debug_line    0x00000000      0x193 ./drivers/drv_rtc.o
- .debug_str     0x00000000      0x19a ./drivers/drv_rtc.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_rtc.o
+ .debug_str     0x00000000      0x19d ./drivers/drv_rtc.o
  .comment       0x00000000       0x6f ./drivers/drv_rtc.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_rtc.o
@@ -2353,8 +2352,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_sdio.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_sdio.o
- .debug_line    0x00000000      0x193 ./drivers/drv_sdio.o
- .debug_str     0x00000000      0x19b ./drivers/drv_sdio.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_sdio.o
+ .debug_str     0x00000000      0x19e ./drivers/drv_sdio.o
  .comment       0x00000000       0x6f ./drivers/drv_sdio.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_sdio.o
@@ -2365,8 +2364,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_soft_i2c.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_soft_i2c.o
- .debug_line    0x00000000      0x193 ./drivers/drv_soft_i2c.o
- .debug_str     0x00000000      0x19f ./drivers/drv_soft_i2c.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_soft_i2c.o
+ .debug_str     0x00000000      0x1a2 ./drivers/drv_soft_i2c.o
  .comment       0x00000000       0x6f ./drivers/drv_soft_i2c.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_soft_i2c.o
@@ -2377,8 +2376,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_spi.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_spi.o
- .debug_line    0x00000000      0x193 ./drivers/drv_spi.o
- .debug_str     0x00000000      0x19a ./drivers/drv_spi.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_spi.o
+ .debug_str     0x00000000      0x19d ./drivers/drv_spi.o
  .comment       0x00000000       0x6f ./drivers/drv_spi.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_spi.o
@@ -2392,8 +2391,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_usbd.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_usbd.o
- .debug_line    0x00000000      0x193 ./drivers/drv_usbd.o
- .debug_str     0x00000000      0x19b ./drivers/drv_usbd.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_usbd.o
+ .debug_str     0x00000000      0x19e ./drivers/drv_usbd.o
  .comment       0x00000000       0x6f ./drivers/drv_usbd.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_usbd.o
@@ -2404,8 +2403,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_usbh.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_usbh.o
- .debug_line    0x00000000      0x193 ./drivers/drv_usbh.o
- .debug_str     0x00000000      0x19b ./drivers/drv_usbh.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_usbh.o
+ .debug_str     0x00000000      0x19e ./drivers/drv_usbh.o
  .comment       0x00000000       0x6f ./drivers/drv_usbh.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_usbh.o
@@ -2416,8 +2415,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x4b ./drivers/drv_wdt.o
  .debug_aranges
                 0x00000000       0x18 ./drivers/drv_wdt.o
- .debug_line    0x00000000      0x193 ./drivers/drv_wdt.o
- .debug_str     0x00000000      0x19a ./drivers/drv_wdt.o
+ .debug_line    0x00000000      0x196 ./drivers/drv_wdt.o
+ .debug_str     0x00000000      0x19d ./drivers/drv_wdt.o
  .comment       0x00000000       0x6f ./drivers/drv_wdt.o
  .ARM.attributes
                 0x00000000       0x33 ./drivers/drv_wdt.o
@@ -2427,23 +2426,19 @@ Discarded input sections
  .text          0x00000000        0x0 ./cubemx/Src/main.o
  .data          0x00000000        0x0 ./cubemx/Src/main.o
  .bss           0x00000000        0x0 ./cubemx/Src/main.o
- .text.main     0x00000000       0x30 ./cubemx/Src/main.o
+ .text.main     0x00000000       0x34 ./cubemx/Src/main.o
  .text          0x00000000        0x0 ./cubemx/Src/stm32f1xx_hal_msp.o
  .data          0x00000000        0x0 ./cubemx/Src/stm32f1xx_hal_msp.o
  .bss           0x00000000        0x0 ./cubemx/Src/stm32f1xx_hal_msp.o
  .text          0x00000000        0x0 ./cubemx/Src/tim.o
  .data          0x00000000        0x0 ./cubemx/Src/tim.o
  .bss           0x00000000        0x0 ./cubemx/Src/tim.o
- .text.MX_TIM1_Init
-                0x00000000       0xb0 ./cubemx/Src/tim.o
  .text.MX_TIM2_Init
                 0x00000000       0xa8 ./cubemx/Src/tim.o
  .text.MX_TIM3_Init
                 0x00000000       0xa8 ./cubemx/Src/tim.o
  .text.MX_TIM4_Init
                 0x00000000       0xa8 ./cubemx/Src/tim.o
- .text.HAL_TIM_Encoder_MspInit
-                0x00000000      0x1d0 ./cubemx/Src/tim.o
  .text.HAL_TIM_Encoder_MspDeInit
                 0x00000000       0xb0 ./cubemx/Src/tim.o
  .text.HAL_TIM_PWM_MspDeInit
@@ -2451,15 +2446,17 @@ Discarded input sections
  .text          0x00000000        0x0 ./cubemx/Src/usart.o
  .data          0x00000000        0x0 ./cubemx/Src/usart.o
  .bss           0x00000000        0x0 ./cubemx/Src/usart.o
+ .text.MX_UART5_Init
+                0x00000000       0x54 ./cubemx/Src/usart.o
  .text.HAL_UART_MspDeInit
-                0x00000000       0x44 ./cubemx/Src/usart.o
+                0x00000000       0x78 ./cubemx/Src/usart.o
  .text          0x00000000        0x0 ./applications/main.o
  .data          0x00000000        0x0 ./applications/main.o
  .bss           0x00000000        0x0 ./applications/main.o
  .bss.front_left_count
                 0x00000000        0x4 ./applications/main.o
  .text.encoder_thread_entry
-                0x00000000       0x60 ./applications/main.o
+                0x00000000       0x5c ./applications/main.o
  .text          0x00000000        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
  .data          0x00000000        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
  .bss           0x00000000        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
@@ -2714,7 +2711,7 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
 LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
                 0x00000400                _system_stack_size = 0x400
 
-.text           0x08000000     0xed68
+.text           0x08000000     0xf0e4
                 0x08000000                . = ALIGN (0x4)
                 0x08000000                _stext = .
  *(.isr_vector)
@@ -3362,740 +3359,749 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .text.HAL_TIM_PWM_Start
                 0x08008e3c       0x7c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
                 0x08008e3c                HAL_TIM_PWM_Start
+ .text.HAL_TIM_Encoder_Init
+                0x08008eb8      0x11c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x08008eb8                HAL_TIM_Encoder_Init
  .text.HAL_TIM_PWM_ConfigChannel
-                0x08008eb8      0x18c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x08008eb8                HAL_TIM_PWM_ConfigChannel
+                0x08008fd4      0x18c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x08008fd4                HAL_TIM_PWM_ConfigChannel
  .text.TIM_Base_SetConfig
-                0x08009044       0xf4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x08009044                TIM_Base_SetConfig
+                0x08009160       0xf4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x08009160                TIM_Base_SetConfig
  .text.TIM_OC1_SetConfig
-                0x08009138       0xe0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x08009254       0xe0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .text.TIM_OC2_SetConfig
-                0x08009218       0xe8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x08009218                TIM_OC2_SetConfig
+                0x08009334       0xe8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x08009334                TIM_OC2_SetConfig
  .text.TIM_OC3_SetConfig
-                0x08009300       0xe8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x0800941c       0xe8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .text.TIM_OC4_SetConfig
-                0x080093e8       0xa8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x08009504       0xa8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .text.TIM_CCxChannelCmd
-                0x08009490       0x48 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                0x08009490                TIM_CCxChannelCmd
+                0x080095ac       0x48 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                0x080095ac                TIM_CCxChannelCmd
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x080094d8       0x88 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
-                0x080094d8                HAL_TIMEx_MasterConfigSynchronization
+                0x080095f4       0x88 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+                0x080095f4                HAL_TIMEx_MasterConfigSynchronization
  .text.HAL_TIMEx_ConfigBreakDeadTime
-                0x08009560       0xa4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
-                0x08009560                HAL_TIMEx_ConfigBreakDeadTime
+                0x0800967c       0xa4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+                0x0800967c                HAL_TIMEx_ConfigBreakDeadTime
  .text.HAL_UART_Init
-                0x08009604       0x9c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
-                0x08009604                HAL_UART_Init
+                0x08009720       0x9c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x08009720                HAL_UART_Init
  .text.HAL_UART_Transmit_DMA
-                0x080096a0       0xd8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
-                0x080096a0                HAL_UART_Transmit_DMA
+                0x080097bc       0xd8 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x080097bc                HAL_UART_Transmit_DMA
  .text.HAL_UART_TxCpltCallback
-                0x08009778       0x14 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
-                0x08009778                HAL_UART_TxCpltCallback
+                0x08009894       0x14 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x08009894                HAL_UART_TxCpltCallback
  .text.HAL_UART_TxHalfCpltCallback
-                0x0800978c       0x14 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
-                0x0800978c                HAL_UART_TxHalfCpltCallback
+                0x080098a8       0x14 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x080098a8                HAL_UART_TxHalfCpltCallback
  .text.HAL_UART_ErrorCallback
-                0x080097a0       0x14 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
-                0x080097a0                HAL_UART_ErrorCallback
+                0x080098bc       0x14 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x080098bc                HAL_UART_ErrorCallback
  .text.UART_DMATransmitCplt
-                0x080097b4       0x54 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x080098d0       0x54 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .text.UART_DMATxHalfCplt
-                0x08009808       0x1c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x08009924       0x1c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .text.UART_DMAError
-                0x08009824       0x94 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x08009940       0x94 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .text.UART_EndTxTransfer
-                0x080098b8       0x2c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x080099d4       0x2c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .text.UART_EndRxTransfer
-                0x080098e4       0x3c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x08009a00       0x3c ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .text.UART_SetConfig
-                0x08009920      0x1b4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x08009a3c      0x1b4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .text.Reset_Handler
-                0x08009ad4       0x44 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
-                0x08009ad4                Reset_Handler
+                0x08009bf0       0x44 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
+                0x08009bf0                Reset_Handler
  .text.Default_Handler
-                0x08009b18        0x2 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
-                0x08009b18                RTC_Alarm_IRQHandler
-                0x08009b18                TIM8_TRG_COM_IRQHandler
-                0x08009b18                TIM8_CC_IRQHandler
-                0x08009b18                DebugMon_Handler
-                0x08009b18                TIM1_CC_IRQHandler
-                0x08009b18                TIM6_IRQHandler
-                0x08009b18                PVD_IRQHandler
-                0x08009b18                SDIO_IRQHandler
-                0x08009b18                NMI_Handler
-                0x08009b18                I2C2_EV_IRQHandler
-                0x08009b18                UsageFault_Handler
-                0x08009b18                ADC1_2_IRQHandler
-                0x08009b18                SPI1_IRQHandler
-                0x08009b18                TAMPER_IRQHandler
-                0x08009b18                TIM8_UP_IRQHandler
-                0x08009b18                DMA2_Channel2_IRQHandler
-                0x08009b18                DMA1_Channel4_IRQHandler
-                0x08009b18                USART3_IRQHandler
-                0x08009b18                RTC_IRQHandler
-                0x08009b18                DMA1_Channel7_IRQHandler
-                0x08009b18                CAN1_RX1_IRQHandler
-                0x08009b18                UART5_IRQHandler
-                0x08009b18                ADC3_IRQHandler
-                0x08009b18                TIM4_IRQHandler
-                0x08009b18                DMA2_Channel1_IRQHandler
-                0x08009b18                I2C1_EV_IRQHandler
-                0x08009b18                DMA1_Channel6_IRQHandler
-                0x08009b18                UART4_IRQHandler
-                0x08009b18                TIM3_IRQHandler
-                0x08009b18                RCC_IRQHandler
-                0x08009b18                TIM1_TRG_COM_IRQHandler
-                0x08009b18                DMA1_Channel1_IRQHandler
-                0x08009b18                Default_Handler
-                0x08009b18                TIM7_IRQHandler
-                0x08009b18                TIM5_IRQHandler
-                0x08009b18                SPI2_IRQHandler
-                0x08009b18                MemManage_Handler
-                0x08009b18                SVC_Handler
-                0x08009b18                DMA1_Channel5_IRQHandler
-                0x08009b18                USB_LP_CAN1_RX0_IRQHandler
-                0x08009b18                USB_HP_CAN1_TX_IRQHandler
-                0x08009b18                DMA1_Channel3_IRQHandler
-                0x08009b18                FSMC_IRQHandler
-                0x08009b18                TIM1_UP_IRQHandler
-                0x08009b18                WWDG_IRQHandler
-                0x08009b18                TIM2_IRQHandler
-                0x08009b18                TIM1_BRK_IRQHandler
-                0x08009b18                DMA2_Channel4_5_IRQHandler
-                0x08009b18                USART2_IRQHandler
-                0x08009b18                I2C2_ER_IRQHandler
-                0x08009b18                DMA1_Channel2_IRQHandler
-                0x08009b18                TIM8_BRK_IRQHandler
-                0x08009b18                CAN1_SCE_IRQHandler
-                0x08009b18                FLASH_IRQHandler
-                0x08009b18                BusFault_Handler
-                0x08009b18                SPI3_IRQHandler
-                0x08009b18                I2C1_ER_IRQHandler
-                0x08009b18                USBWakeUp_IRQHandler
-                0x08009b18                DMA2_Channel3_IRQHandler
- *fill*         0x08009b1a        0x2 00000000
+                0x08009c34        0x2 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
+                0x08009c34                RTC_Alarm_IRQHandler
+                0x08009c34                TIM8_TRG_COM_IRQHandler
+                0x08009c34                TIM8_CC_IRQHandler
+                0x08009c34                DebugMon_Handler
+                0x08009c34                TIM1_CC_IRQHandler
+                0x08009c34                TIM6_IRQHandler
+                0x08009c34                PVD_IRQHandler
+                0x08009c34                SDIO_IRQHandler
+                0x08009c34                NMI_Handler
+                0x08009c34                I2C2_EV_IRQHandler
+                0x08009c34                UsageFault_Handler
+                0x08009c34                ADC1_2_IRQHandler
+                0x08009c34                SPI1_IRQHandler
+                0x08009c34                TAMPER_IRQHandler
+                0x08009c34                TIM8_UP_IRQHandler
+                0x08009c34                DMA2_Channel2_IRQHandler
+                0x08009c34                DMA1_Channel4_IRQHandler
+                0x08009c34                USART3_IRQHandler
+                0x08009c34                RTC_IRQHandler
+                0x08009c34                DMA1_Channel7_IRQHandler
+                0x08009c34                CAN1_RX1_IRQHandler
+                0x08009c34                UART5_IRQHandler
+                0x08009c34                ADC3_IRQHandler
+                0x08009c34                TIM4_IRQHandler
+                0x08009c34                DMA2_Channel1_IRQHandler
+                0x08009c34                I2C1_EV_IRQHandler
+                0x08009c34                DMA1_Channel6_IRQHandler
+                0x08009c34                UART4_IRQHandler
+                0x08009c34                TIM3_IRQHandler
+                0x08009c34                RCC_IRQHandler
+                0x08009c34                TIM1_TRG_COM_IRQHandler
+                0x08009c34                DMA1_Channel1_IRQHandler
+                0x08009c34                Default_Handler
+                0x08009c34                TIM7_IRQHandler
+                0x08009c34                TIM5_IRQHandler
+                0x08009c34                SPI2_IRQHandler
+                0x08009c34                MemManage_Handler
+                0x08009c34                SVC_Handler
+                0x08009c34                DMA1_Channel5_IRQHandler
+                0x08009c34                USB_LP_CAN1_RX0_IRQHandler
+                0x08009c34                USB_HP_CAN1_TX_IRQHandler
+                0x08009c34                DMA1_Channel3_IRQHandler
+                0x08009c34                FSMC_IRQHandler
+                0x08009c34                TIM1_UP_IRQHandler
+                0x08009c34                WWDG_IRQHandler
+                0x08009c34                TIM2_IRQHandler
+                0x08009c34                TIM1_BRK_IRQHandler
+                0x08009c34                DMA2_Channel4_5_IRQHandler
+                0x08009c34                USART2_IRQHandler
+                0x08009c34                I2C2_ER_IRQHandler
+                0x08009c34                DMA1_Channel2_IRQHandler
+                0x08009c34                TIM8_BRK_IRQHandler
+                0x08009c34                CAN1_SCE_IRQHandler
+                0x08009c34                FLASH_IRQHandler
+                0x08009c34                BusFault_Handler
+                0x08009c34                SPI3_IRQHandler
+                0x08009c34                I2C1_ER_IRQHandler
+                0x08009c34                USBWakeUp_IRQHandler
+                0x08009c34                DMA2_Channel3_IRQHandler
+ *fill*         0x08009c36        0x2 00000000
  .text.SystemInit
-                0x08009b1c       0x68 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
-                0x08009b1c                SystemInit
+                0x08009c38       0x68 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
+                0x08009c38                SystemInit
  .text.rt_hw_board_init
-                0x08009b84       0x34 ./drivers/board.o
-                0x08009b84                rt_hw_board_init
+                0x08009ca0       0x74 ./drivers/board.o
+                0x08009ca0                rt_hw_board_init
  .text.clock_information
-                0x08009bb8       0x10 ./drivers/drv_clk.o
-                0x08009bb8                clock_information
+                0x08009d14       0x10 ./drivers/drv_clk.o
+                0x08009d14                clock_information
  .text.clk_init
-                0x08009bc8       0x18 ./drivers/drv_clk.o
-                0x08009bc8                clk_init
+                0x08009d24       0x18 ./drivers/drv_clk.o
+                0x08009d24                clk_init
  .text.rt_hw_systick_init
-                0x08009be0       0x34 ./drivers/drv_common.o
-                0x08009be0                rt_hw_systick_init
+                0x08009d3c       0x34 ./drivers/drv_common.o
+                0x08009d3c                rt_hw_systick_init
  .text.SysTick_Handler
-                0x08009c14       0x18 ./drivers/drv_common.o
-                0x08009c14                SysTick_Handler
+                0x08009d70       0x18 ./drivers/drv_common.o
+                0x08009d70                SysTick_Handler
  .text.HAL_GetTick
-                0x08009c2c       0x24 ./drivers/drv_common.o
-                0x08009c2c                HAL_GetTick
+                0x08009d88       0x24 ./drivers/drv_common.o
+                0x08009d88                HAL_GetTick
  .text.HAL_InitTick
-                0x08009c50       0x14 ./drivers/drv_common.o
-                0x08009c50                HAL_InitTick
+                0x08009dac       0x14 ./drivers/drv_common.o
+                0x08009dac                HAL_InitTick
  .text.hw_board_init
-                0x08009c64       0x44 ./drivers/drv_common.o
-                0x08009c64                hw_board_init
- .text.get_pin  0x08009ca8       0x44 ./drivers/drv_gpio.o
+                0x08009dc0       0x44 ./drivers/drv_common.o
+                0x08009dc0                hw_board_init
+ .text.get_pin  0x08009e04       0x44 ./drivers/drv_gpio.o
  .text.stm32_pin_write
-                0x08009cec       0x3c ./drivers/drv_gpio.o
+                0x08009e48       0x3c ./drivers/drv_gpio.o
  .text.stm32_pin_read
-                0x08009d28       0x44 ./drivers/drv_gpio.o
+                0x08009e84       0x44 ./drivers/drv_gpio.o
  .text.stm32_pin_mode
-                0x08009d6c       0x98 ./drivers/drv_gpio.o
+                0x08009ec8       0x98 ./drivers/drv_gpio.o
  .text.bit2bitno
-                0x08009e04       0x3c ./drivers/drv_gpio.o
+                0x08009f60       0x3c ./drivers/drv_gpio.o
  .text.get_pin_irq_map
-                0x08009e40       0x34 ./drivers/drv_gpio.o
+                0x08009f9c       0x34 ./drivers/drv_gpio.o
  .text.stm32_pin_attach_irq
-                0x08009e74      0x148 ./drivers/drv_gpio.o
+                0x08009fd0      0x148 ./drivers/drv_gpio.o
  .text.stm32_pin_dettach_irq
-                0x08009fbc       0xd0 ./drivers/drv_gpio.o
+                0x0800a118       0xd0 ./drivers/drv_gpio.o
  .text.stm32_pin_irq_enable
-                0x0800a08c      0x1e0 ./drivers/drv_gpio.o
+                0x0800a1e8      0x1e0 ./drivers/drv_gpio.o
  .text.pin_irq_hdr
-                0x0800a26c       0x54 ./drivers/drv_gpio.o
+                0x0800a3c8       0x54 ./drivers/drv_gpio.o
  .text.HAL_GPIO_EXTI_Callback
-                0x0800a2c0       0x24 ./drivers/drv_gpio.o
-                0x0800a2c0                HAL_GPIO_EXTI_Callback
+                0x0800a41c       0x24 ./drivers/drv_gpio.o
+                0x0800a41c                HAL_GPIO_EXTI_Callback
  .text.EXTI0_IRQHandler
-                0x0800a2e4       0x18 ./drivers/drv_gpio.o
-                0x0800a2e4                EXTI0_IRQHandler
+                0x0800a440       0x18 ./drivers/drv_gpio.o
+                0x0800a440                EXTI0_IRQHandler
  .text.EXTI1_IRQHandler
-                0x0800a2fc       0x18 ./drivers/drv_gpio.o
-                0x0800a2fc                EXTI1_IRQHandler
+                0x0800a458       0x18 ./drivers/drv_gpio.o
+                0x0800a458                EXTI1_IRQHandler
  .text.EXTI2_IRQHandler
-                0x0800a314       0x18 ./drivers/drv_gpio.o
-                0x0800a314                EXTI2_IRQHandler
+                0x0800a470       0x18 ./drivers/drv_gpio.o
+                0x0800a470                EXTI2_IRQHandler
  .text.EXTI3_IRQHandler
-                0x0800a32c       0x18 ./drivers/drv_gpio.o
-                0x0800a32c                EXTI3_IRQHandler
+                0x0800a488       0x18 ./drivers/drv_gpio.o
+                0x0800a488                EXTI3_IRQHandler
  .text.EXTI4_IRQHandler
-                0x0800a344       0x18 ./drivers/drv_gpio.o
-                0x0800a344                EXTI4_IRQHandler
+                0x0800a4a0       0x18 ./drivers/drv_gpio.o
+                0x0800a4a0                EXTI4_IRQHandler
  .text.EXTI9_5_IRQHandler
-                0x0800a35c       0x34 ./drivers/drv_gpio.o
-                0x0800a35c                EXTI9_5_IRQHandler
+                0x0800a4b8       0x34 ./drivers/drv_gpio.o
+                0x0800a4b8                EXTI9_5_IRQHandler
  .text.EXTI15_10_IRQHandler
-                0x0800a390       0x40 ./drivers/drv_gpio.o
-                0x0800a390                EXTI15_10_IRQHandler
+                0x0800a4ec       0x40 ./drivers/drv_gpio.o
+                0x0800a4ec                EXTI15_10_IRQHandler
  .text.rt_hw_pin_init
-                0x0800a3d0       0xd0 ./drivers/drv_gpio.o
-                0x0800a3d0                rt_hw_pin_init
+                0x0800a52c       0xd0 ./drivers/drv_gpio.o
+                0x0800a52c                rt_hw_pin_init
  .text.__NVIC_EnableIRQ
-                0x0800a4a0       0x38 ./drivers/drv_usart.o
+                0x0800a5fc       0x38 ./drivers/drv_usart.o
  .text.__NVIC_DisableIRQ
-                0x0800a4d8       0x44 ./drivers/drv_usart.o
+                0x0800a634       0x44 ./drivers/drv_usart.o
  .text.stm32_uart_clk_enable
-                0x0800a51c       0x48 ./drivers/drv_usart.o
+                0x0800a678       0x48 ./drivers/drv_usart.o
  .text.stm32_gpio_clk_enable
-                0x0800a564      0x170 ./drivers/drv_usart.o
- .text.up_char  0x0800a6d4       0x30 ./drivers/drv_usart.o
+                0x0800a6c0      0x170 ./drivers/drv_usart.o
+ .text.up_char  0x0800a830       0x30 ./drivers/drv_usart.o
  .text.get_pin_by_name
-                0x0800a704       0x58 ./drivers/drv_usart.o
+                0x0800a860       0x58 ./drivers/drv_usart.o
  .text.stm32_get_pin
-                0x0800a75c       0x38 ./drivers/drv_usart.o
+                0x0800a8b8       0x38 ./drivers/drv_usart.o
  .text.stm32_gpio_configure
-                0x0800a794      0x274 ./drivers/drv_usart.o
+                0x0800a8f0      0x274 ./drivers/drv_usart.o
  .text.stm32_configure
-                0x0800aa08      0x12c ./drivers/drv_usart.o
+                0x0800ab64      0x12c ./drivers/drv_usart.o
  .text.stm32_control
-                0x0800ab34       0x80 ./drivers/drv_usart.o
+                0x0800ac90       0x80 ./drivers/drv_usart.o
  .text.stm32_putc
-                0x0800abb4       0x58 ./drivers/drv_usart.o
+                0x0800ad10       0x58 ./drivers/drv_usart.o
  .text.stm32_getc
-                0x0800ac0c       0x50 ./drivers/drv_usart.o
+                0x0800ad68       0x50 ./drivers/drv_usart.o
  .text.stm32_dma_transmit
-                0x0800ac5c       0x64 ./drivers/drv_usart.o
+                0x0800adb8       0x64 ./drivers/drv_usart.o
  .text.uart_isr
-                0x0800acc0      0x160 ./drivers/drv_usart.o
+                0x0800ae1c      0x160 ./drivers/drv_usart.o
  .text.USART1_IRQHandler
-                0x0800ae20       0x1c ./drivers/drv_usart.o
-                0x0800ae20                USART1_IRQHandler
+                0x0800af7c       0x1c ./drivers/drv_usart.o
+                0x0800af7c                USART1_IRQHandler
  .text.stm32_uart_get_dma_config
-                0x0800ae3c       0x18 ./drivers/drv_usart.o
+                0x0800af98       0x18 ./drivers/drv_usart.o
  .text.rt_hw_usart_init
-                0x0800ae54       0xf8 ./drivers/drv_usart.o
-                0x0800ae54                rt_hw_usart_init
+                0x0800afb0       0xf8 ./drivers/drv_usart.o
+                0x0800afb0                rt_hw_usart_init
  .text.MX_GPIO_Init
-                0x0800af4c       0x8c ./cubemx/Src/gpio.o
-                0x0800af4c                MX_GPIO_Init
+                0x0800b0a8       0x8c ./cubemx/Src/gpio.o
+                0x0800b0a8                MX_GPIO_Init
  .text.SystemClock_Config
-                0x0800afd8       0x8c ./cubemx/Src/main.o
-                0x0800afd8                SystemClock_Config
+                0x0800b134       0x8c ./cubemx/Src/main.o
+                0x0800b134                SystemClock_Config
  .text.Error_Handler
-                0x0800b064        0x8 ./cubemx/Src/main.o
-                0x0800b064                Error_Handler
+                0x0800b1c0        0x8 ./cubemx/Src/main.o
+                0x0800b1c0                Error_Handler
  .text.HAL_MspInit
-                0x0800b06c       0x5c ./cubemx/Src/stm32f1xx_hal_msp.o
-                0x0800b06c                HAL_MspInit
+                0x0800b1c8       0x5c ./cubemx/Src/stm32f1xx_hal_msp.o
+                0x0800b1c8                HAL_MspInit
+ .text.MX_TIM1_Init
+                0x0800b224       0xb0 ./cubemx/Src/tim.o
+                0x0800b224                MX_TIM1_Init
  .text.MX_TIM5_Init
-                0x0800b0c8       0xc8 ./cubemx/Src/tim.o
-                0x0800b0c8                MX_TIM5_Init
+                0x0800b2d4       0xc8 ./cubemx/Src/tim.o
+                0x0800b2d4                MX_TIM5_Init
  .text.MX_TIM8_Init
-                0x0800b190      0x120 ./cubemx/Src/tim.o
-                0x0800b190                MX_TIM8_Init
+                0x0800b39c      0x120 ./cubemx/Src/tim.o
+                0x0800b39c                MX_TIM8_Init
+ .text.HAL_TIM_Encoder_MspInit
+                0x0800b4bc      0x1d0 ./cubemx/Src/tim.o
+                0x0800b4bc                HAL_TIM_Encoder_MspInit
  .text.HAL_TIM_PWM_MspInit
-                0x0800b2b0       0x64 ./cubemx/Src/tim.o
-                0x0800b2b0                HAL_TIM_PWM_MspInit
+                0x0800b68c       0x64 ./cubemx/Src/tim.o
+                0x0800b68c                HAL_TIM_PWM_MspInit
  .text.HAL_TIM_MspPostInit
-                0x0800b314       0xac ./cubemx/Src/tim.o
-                0x0800b314                HAL_TIM_MspPostInit
+                0x0800b6f0       0xac ./cubemx/Src/tim.o
+                0x0800b6f0                HAL_TIM_MspPostInit
  .text.MX_USART1_UART_Init
-                0x0800b3c0       0x54 ./cubemx/Src/usart.o
-                0x0800b3c0                MX_USART1_UART_Init
+                0x0800b79c       0x54 ./cubemx/Src/usart.o
+                0x0800b79c                MX_USART1_UART_Init
  .text.HAL_UART_MspInit
-                0x0800b414       0xa8 ./cubemx/Src/usart.o
-                0x0800b414                HAL_UART_MspInit
+                0x0800b7f0      0x13c ./cubemx/Src/usart.o
+                0x0800b7f0                HAL_UART_MspInit
  .text.pwm_entry
-                0x0800b4bc       0xb4 ./applications/main.o
-                0x0800b4bc                pwm_entry
- .text.main     0x0800b570       0x68 ./applications/main.o
-                0x0800b570                main
- .text.atoi     0x0800b5d8        0x8 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
-                0x0800b5d8                atoi
+                0x0800b92c       0x40 ./applications/main.o
+                0x0800b92c                pwm_entry
+ .text.main     0x0800b96c       0x48 ./applications/main.o
+                0x0800b96c                main
+ .text.atoi     0x0800b9b4        0x8 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
+                0x0800b9b4                atoi
  .text.__get_current_locale
-                0x0800b5e0       0x18 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+                0x0800b9bc       0x18 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
  .text.__locale_ctype_ptr_l
-                0x0800b5f8        0x8 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
-                0x0800b5f8                __locale_ctype_ptr_l
+                0x0800b9d4        0x8 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+                0x0800b9d4                __locale_ctype_ptr_l
  .text.__locale_ctype_ptr
-                0x0800b600       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
-                0x0800b600                __locale_ctype_ptr
- .text.malloc   0x0800b614       0x10 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
-                0x0800b614                malloc
+                0x0800b9dc       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+                0x0800b9dc                __locale_ctype_ptr
+ .text.malloc   0x0800b9f0       0x10 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
+                0x0800b9f0                malloc
  .text.__ascii_mbtowc
-                0x0800b624       0x2c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
-                0x0800b624                __ascii_mbtowc
- .text.memcmp   0x0800b650       0x64 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
-                0x0800b650                memcmp
- .text.memset   0x0800b6b4       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
-                0x0800b6b4                memset
- .text.strlen   0x0800b750       0x5c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
-                0x0800b750                strlen
- .text.strncat  0x0800b7ac       0x5c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
-                0x0800b7ac                strncat
- .text.strncmp  0x0800b808       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
-                0x0800b808                strncmp
- .text.strncpy  0x0800b8a4       0x68 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
-                0x0800b8a4                strncpy
+                0x0800ba00       0x2c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
+                0x0800ba00                __ascii_mbtowc
+ .text.memcmp   0x0800ba2c       0x64 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
+                0x0800ba2c                memcmp
+ .text.memset   0x0800ba90       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                0x0800ba90                memset
+ .text.strlen   0x0800bb2c       0x5c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
+                0x0800bb2c                strlen
+ .text.strncat  0x0800bb88       0x5c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
+                0x0800bb88                strncat
+ .text.strncmp  0x0800bbe4       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
+                0x0800bbe4                strncmp
+ .text.strncpy  0x0800bc80       0x68 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
+                0x0800bc80                strncpy
  .text._strtol_l.isra.0
-                0x0800b90c      0x138 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
- .text.strtol   0x0800ba44       0x2c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
-                0x0800ba44                strtol
+                0x0800bce8      0x138 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
+ .text.strtol   0x0800be20       0x2c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
+                0x0800be20                strtol
  .text.__ascii_wctomb
-                0x0800ba70       0x1c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
-                0x0800ba70                __ascii_wctomb
+                0x0800be4c       0x1c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
+                0x0800be4c                __ascii_wctomb
  .text.startup.register_fini
-                0x0800ba8c       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x0800baa0        0xc e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
-                0x0800baa0                atexit
+                0x0800be68       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0800be7c        0xc e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
+                0x0800be7c                atexit
  .text.__libc_fini_array
-                0x0800baac       0x28 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
-                0x0800baac                __libc_fini_array
+                0x0800be88       0x28 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
+                0x0800be88                __libc_fini_array
  .text.__register_exitproc
-                0x0800bad4       0xa4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
-                0x0800bad4                __register_exitproc
+                0x0800beb0       0xa4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
+                0x0800beb0                __register_exitproc
  *(.rodata)
- .rodata        0x0800bb78       0x17 ./rt-thread/src/components.o
- *fill*         0x0800bb8f        0x1 00000000
- .rodata        0x0800bb90       0xf4 ./rt-thread/src/device.o
- .rodata        0x0800bc84        0x8 ./rt-thread/src/idle.o
- .rodata        0x0800bc8c      0x4de ./rt-thread/src/ipc.o
- *fill*         0x0800c16a        0x2 00000000
- .rodata        0x0800c16c      0x1cf ./rt-thread/src/kservice.o
- *fill*         0x0800c33b        0x1 00000000
- .rodata        0x0800c33c      0x41b ./rt-thread/src/mem.o
- *fill*         0x0800c757        0x1 00000000
- .rodata        0x0800c758       0x91 ./rt-thread/src/object.o
- *fill*         0x0800c7e9        0x3 00000000
- .rodata        0x0800c7ec       0x65 ./rt-thread/src/scheduler.o
- *fill*         0x0800c851        0x3 00000000
- .rodata        0x0800c854      0x19f ./rt-thread/src/thread.o
- *fill*         0x0800c9f3        0x1 00000000
- .rodata        0x0800c9f4      0x10e ./rt-thread/src/timer.o
- *fill*         0x0800cb02        0x2 00000000
- .rodata        0x0800cb04      0x2be ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
- *fill*         0x0800cdc2        0x2 00000000
- .rodata        0x0800cdc4      0x7df ./rt-thread/components/finsh/cmd.o
- *fill*         0x0800d5a3        0x1 00000000
- .rodata        0x0800d5a4       0xb8 ./rt-thread/components/finsh/msh.o
- .rodata        0x0800d65c       0x91 ./rt-thread/components/finsh/shell.o
- *fill*         0x0800d6ed        0x3 00000000
- .rodata        0x0800d6f0       0xd7 ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0800d7c7        0x1 00000000
- .rodata        0x0800d7c8      0x2aa ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x0800da72        0x2 00000000
- .rodata        0x0800da74       0xd7 ./rt-thread/components/drivers/ipc/completion.o
- *fill*         0x0800db4b        0x1 00000000
- .rodata        0x0800db4c       0x12 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- *fill*         0x0800db5e        0x2 00000000
- .rodata        0x0800db60        0xa ./drivers/board.o
- *fill*         0x0800db6a        0x2 00000000
- .rodata        0x0800db6c        0x4 ./drivers/drv_gpio.o
- .rodata        0x0800db70      0x104 ./drivers/drv_usart.o
- .rodata        0x0800dc74       0x9e ./applications/main.o
- *(.rodata*)
- *fill*         0x0800dd12        0x2 00000000
- .rodata.__FUNCTION__.5504
-                0x0800dd14       0x14 ./rt-thread/src/components.o
- .rodata.__FUNCTION__.5413
-                0x0800dd28        0xf ./rt-thread/src/device.o
- *fill*         0x0800dd37        0x1 00000000
- .rodata.__FUNCTION__.5418
-                0x0800dd38       0x10 ./rt-thread/src/device.o
- .rodata.__FUNCTION__.5425
-                0x0800dd48        0xf ./rt-thread/src/device.o
- *fill*         0x0800dd57        0x1 00000000
- .rodata.__FUNCTION__.5432
-                0x0800dd58       0x10 ./rt-thread/src/device.o
- .rodata.__FUNCTION__.5445
-                0x0800dd68       0x1a ./rt-thread/src/device.o
- *fill*         0x0800dd82        0x2 00000000
- .rodata.__FUNCTION__.5497
-                0x0800dd84        0xc ./rt-thread/src/ipc.o
- .rodata.__FUNCTION__.5521
-                0x0800dd90        0xc ./rt-thread/src/ipc.o
- .rodata.__FUNCTION__.5478
-                0x0800dd9c       0x12 ./rt-thread/src/ipc.o
- *fill*         0x0800ddae        0x2 00000000
- .rodata.__FUNCTION__.5533
-                0x0800ddb0        0xf ./rt-thread/src/ipc.o
- *fill*         0x0800ddbf        0x1 00000000
- .rodata.__FUNCTION__.5547
-                0x0800ddc0        0xe ./rt-thread/src/ipc.o
- *fill*         0x0800ddce        0x2 00000000
- .rodata.__FUNCTION__.5571
-                0x0800ddd0        0xe ./rt-thread/src/ipc.o
- *fill*         0x0800ddde        0x2 00000000
- .rodata.__FUNCTION__.5583
-                0x0800dde0       0x11 ./rt-thread/src/ipc.o
- *fill*         0x0800ddf1        0x3 00000000
- .rodata.large_digits.5584
-                0x0800ddf4       0x11 ./rt-thread/src/kservice.o
- *fill*         0x0800de05        0x3 00000000
- .rodata.small_digits.5583
-                0x0800de08       0x11 ./rt-thread/src/kservice.o
- *fill*         0x0800de19        0x3 00000000
- .rodata.__FUNCTION__.5734
-                0x0800de1c       0x14 ./rt-thread/src/kservice.o
- .rodata.__FUNCTION__.5721
-                0x0800de30        0xd ./rt-thread/src/kservice.o
- *fill*         0x0800de3d        0x3 00000000
- .rodata.__FUNCTION__.5471
-                0x0800de40        0xb ./rt-thread/src/mem.o
- *fill*         0x0800de4b        0x1 00000000
- .rodata.__FUNCTION__.5496
-                0x0800de4c        0xe ./rt-thread/src/mem.o
- *fill*         0x0800de5a        0x2 00000000
- .rodata.__FUNCTION__.5521
-                0x0800de5c        0xd ./rt-thread/src/mem.o
- *fill*         0x0800de69        0x3 00000000
- .rodata.__FUNCTION__.5536
-                0x0800de6c        0xf ./rt-thread/src/object.o
- *fill*         0x0800de7b        0x1 00000000
- .rodata.__FUNCTION__.5545
-                0x0800de7c       0x11 ./rt-thread/src/object.o
- *fill*         0x0800de8d        0x3 00000000
- .rodata.__FUNCTION__.5554
-                0x0800de90       0x13 ./rt-thread/src/object.o
- *fill*         0x0800dea3        0x1 00000000
- .rodata.__FUNCTION__.5559
-                0x0800dea4       0x11 ./rt-thread/src/object.o
- *fill*         0x0800deb5        0x3 00000000
- .rodata.__FUNCTION__.5563
-                0x0800deb8       0x1a ./rt-thread/src/object.o
- *fill*         0x0800ded2        0x2 00000000
- .rodata.__FUNCTION__.5567
-                0x0800ded4       0x13 ./rt-thread/src/object.o
- *fill*         0x0800dee7        0x1 00000000
- .rodata.__FUNCTION__.5576
-                0x0800dee8        0xf ./rt-thread/src/object.o
- *fill*         0x0800def7        0x1 00000000
- .rodata.__FUNCTION__.5478
-                0x0800def8       0x17 ./rt-thread/src/scheduler.o
- *fill*         0x0800df0f        0x1 00000000
- .rodata.__FUNCTION__.5516
-                0x0800df10       0x1a ./rt-thread/src/scheduler.o
- *fill*         0x0800df2a        0x2 00000000
- .rodata.__FUNCTION__.5522
-                0x0800df2c       0x1a ./rt-thread/src/scheduler.o
+ .rodata        0x0800bf54       0x17 ./rt-thread/src/components.o
+ *fill*         0x0800bf6b        0x1 00000000
+ .rodata        0x0800bf6c       0xf4 ./rt-thread/src/device.o
+ .rodata        0x0800c060        0x8 ./rt-thread/src/idle.o
+ .rodata        0x0800c068      0x4de ./rt-thread/src/ipc.o
+ *fill*         0x0800c546        0x2 00000000
+ .rodata        0x0800c548      0x1cf ./rt-thread/src/kservice.o
+ *fill*         0x0800c717        0x1 00000000
+ .rodata        0x0800c718      0x41b ./rt-thread/src/mem.o
+ *fill*         0x0800cb33        0x1 00000000
+ .rodata        0x0800cb34       0x91 ./rt-thread/src/object.o
+ *fill*         0x0800cbc5        0x3 00000000
+ .rodata        0x0800cbc8       0x65 ./rt-thread/src/scheduler.o
+ *fill*         0x0800cc2d        0x3 00000000
+ .rodata        0x0800cc30      0x19f ./rt-thread/src/thread.o
+ *fill*         0x0800cdcf        0x1 00000000
+ .rodata        0x0800cdd0      0x10e ./rt-thread/src/timer.o
+ *fill*         0x0800cede        0x2 00000000
+ .rodata        0x0800cee0      0x2be ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
+ *fill*         0x0800d19e        0x2 00000000
+ .rodata        0x0800d1a0      0x7df ./rt-thread/components/finsh/cmd.o
+ *fill*         0x0800d97f        0x1 00000000
+ .rodata        0x0800d980       0xb8 ./rt-thread/components/finsh/msh.o
+ .rodata        0x0800da38       0x91 ./rt-thread/components/finsh/shell.o
+ *fill*         0x0800dac9        0x3 00000000
+ .rodata        0x0800dacc       0xd7 ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0800dba3        0x1 00000000
+ .rodata        0x0800dba4      0x2aa ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x0800de4e        0x2 00000000
+ .rodata        0x0800de50       0xd7 ./rt-thread/components/drivers/ipc/completion.o
+ *fill*         0x0800df27        0x1 00000000
+ .rodata        0x0800df28       0x12 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ *fill*         0x0800df3a        0x2 00000000
+ .rodata        0x0800df3c        0xa ./drivers/board.o
  *fill*         0x0800df46        0x2 00000000
- .rodata.__FUNCTION__.5483
-                0x0800df48       0x10 ./rt-thread/src/thread.o
- .rodata.__FUNCTION__.5495
-                0x0800df58        0xd ./rt-thread/src/thread.o
- *fill*         0x0800df65        0x3 00000000
- .rodata.__FUNCTION__.5507
-                0x0800df68        0xf ./rt-thread/src/thread.o
- *fill*         0x0800df77        0x1 00000000
- .rodata.__FUNCTION__.5516
-                0x0800df78       0x12 ./rt-thread/src/thread.o
- *fill*         0x0800df8a        0x2 00000000
+ .rodata        0x0800df48        0x4 ./drivers/drv_gpio.o
+ .rodata        0x0800df4c      0x104 ./drivers/drv_usart.o
+ .rodata        0x0800e050       0x3e ./applications/main.o
+ *(.rodata*)
+ *fill*         0x0800e08e        0x2 00000000
+ .rodata.__FUNCTION__.5504
+                0x0800e090       0x14 ./rt-thread/src/components.o
+ .rodata.__FUNCTION__.5413
+                0x0800e0a4        0xf ./rt-thread/src/device.o
+ *fill*         0x0800e0b3        0x1 00000000
+ .rodata.__FUNCTION__.5418
+                0x0800e0b4       0x10 ./rt-thread/src/device.o
+ .rodata.__FUNCTION__.5425
+                0x0800e0c4        0xf ./rt-thread/src/device.o
+ *fill*         0x0800e0d3        0x1 00000000
+ .rodata.__FUNCTION__.5432
+                0x0800e0d4       0x10 ./rt-thread/src/device.o
+ .rodata.__FUNCTION__.5445
+                0x0800e0e4       0x1a ./rt-thread/src/device.o
+ *fill*         0x0800e0fe        0x2 00000000
+ .rodata.__FUNCTION__.5497
+                0x0800e100        0xc ./rt-thread/src/ipc.o
  .rodata.__FUNCTION__.5521
-                0x0800df8c       0x11 ./rt-thread/src/thread.o
- *fill*         0x0800df9d        0x3 00000000
- .rodata.__FUNCTION__.5537
-                0x0800dfa0       0x11 ./rt-thread/src/thread.o
- *fill*         0x0800dfb1        0x3 00000000
- .rodata.__FUNCTION__.5548
-                0x0800dfb4       0x10 ./rt-thread/src/thread.o
+                0x0800e10c        0xc ./rt-thread/src/ipc.o
+ .rodata.__FUNCTION__.5478
+                0x0800e118       0x12 ./rt-thread/src/ipc.o
+ *fill*         0x0800e12a        0x2 00000000
+ .rodata.__FUNCTION__.5533
+                0x0800e12c        0xf ./rt-thread/src/ipc.o
+ *fill*         0x0800e13b        0x1 00000000
+ .rodata.__FUNCTION__.5547
+                0x0800e13c        0xe ./rt-thread/src/ipc.o
+ *fill*         0x0800e14a        0x2 00000000
  .rodata.__FUNCTION__.5571
-                0x0800dfc4       0x12 ./rt-thread/src/thread.o
- *fill*         0x0800dfd6        0x2 00000000
+                0x0800e14c        0xe ./rt-thread/src/ipc.o
+ *fill*         0x0800e15a        0x2 00000000
  .rodata.__FUNCTION__.5583
-                0x0800dfd8       0x12 ./rt-thread/src/thread.o
- *fill*         0x0800dfea        0x2 00000000
- .rodata.__FUNCTION__.5588
-                0x0800dfec       0x11 ./rt-thread/src/thread.o
- *fill*         0x0800dffd        0x3 00000000
- .rodata.__FUNCTION__.5510
-                0x0800e000        0xe ./rt-thread/src/timer.o
- *fill*         0x0800e00e        0x2 00000000
- .rodata.__FUNCTION__.5515
-                0x0800e010       0x10 ./rt-thread/src/timer.o
- .rodata.__FUNCTION__.5541
-                0x0800e020        0xf ./rt-thread/src/timer.o
- *fill*         0x0800e02f        0x1 00000000
- .rodata.__FUNCTION__.5558
-                0x0800e030        0xe ./rt-thread/src/timer.o
- *fill*         0x0800e03e        0x2 00000000
- .rodata.__FUNCTION__.5565
-                0x0800e040       0x11 ./rt-thread/src/timer.o
- *fill*         0x0800e051        0x3 00000000
- .rodata.name   0x0800e054      0x1b9 ./rt-thread/components/finsh/cmd.o
-                0x0800e054                __fsym_clear_name
-                0x0800e05c                __fsym_clear_desc
-                0x0800e078                __fsym_version_name
-                0x0800e080                __fsym_version_desc
-                0x0800e0a4                __fsym_list_thread_name
-                0x0800e0b0                __fsym_list_thread_desc
-                0x0800e0bc                __fsym_list_sem_name
-                0x0800e0c8                __fsym_list_sem_desc
-                0x0800e0e4                __fsym_list_event_name
-                0x0800e0f0                __fsym_list_event_desc
-                0x0800e108                __fsym_list_mutex_name
-                0x0800e114                __fsym_list_mutex_desc
-                0x0800e12c                __fsym_list_mailbox_name
-                0x0800e13c                __fsym_list_mailbox_desc
-                0x0800e154                __fsym_list_msgqueue_name
-                0x0800e164                __fsym_list_msgqueue_desc
-                0x0800e184                __fsym_list_mempool_name
-                0x0800e194                __fsym_list_mempool_desc
-                0x0800e1b0                __fsym_list_timer_name
-                0x0800e1bc                __fsym_list_timer_desc
-                0x0800e1d4                __fsym_list_device_name
-                0x0800e1e0                __fsym_list_device_desc
-                0x0800e1f8                __fsym_list_name
-                0x0800e200                __fsym_list_desc
- *fill*         0x0800e20d        0x3 00000000
- .rodata.device_type_str
-                0x0800e210       0x78 ./rt-thread/components/finsh/cmd.o
- .rodata.name   0x0800e288       0x6d ./rt-thread/components/finsh/msh.o
-                0x0800e288                __fsym_help_name
-                0x0800e290                __fsym_help_desc
-                0x0800e2a8                __fsym_ps_name
-                0x0800e2ac                __fsym_ps_desc
-                0x0800e2c8                __fsym_free_name
-                0x0800e2d0                __fsym_free_desc
- *fill*         0x0800e2f5        0x3 00000000
- .rodata.__FUNCTION__.5506
-                0x0800e2f8        0xe ./rt-thread/components/finsh/msh.o
- *fill*         0x0800e306        0x2 00000000
- .rodata.__FUNCTION__.6079
-                0x0800e308       0x16 ./rt-thread/components/finsh/shell.o
- *fill*         0x0800e31e        0x2 00000000
- .rodata.__FUNCTION__.6085
-                0x0800e320        0xe ./rt-thread/components/finsh/shell.o
- *fill*         0x0800e32e        0x2 00000000
- .rodata.__FUNCTION__.6093
-                0x0800e330        0xd ./rt-thread/components/finsh/shell.o
- *fill*         0x0800e33d        0x3 00000000
- .rodata.__FUNCTION__.6098
-                0x0800e340       0x11 ./rt-thread/components/finsh/shell.o
- *fill*         0x0800e351        0x3 00000000
- .rodata.__FUNCTION__.5910
-                0x0800e354        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0800e363        0x1 00000000
- .rodata.__FUNCTION__.5917
-                0x0800e364        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0800e373        0x1 00000000
- .rodata.__FUNCTION__.5924
-                0x0800e374       0x10 ./rt-thread/components/drivers/serial/serial.o
- .rodata.__FUNCTION__.5934
-                0x0800e384        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0800e393        0x1 00000000
- .rodata.__FUNCTION__.5884
-                0x0800e394        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0800e3a3        0x1 00000000
- .rodata.__FUNCTION__.5863
-                0x0800e3a4       0x10 ./rt-thread/components/drivers/serial/serial.o
- .rodata.__FUNCTION__.5942
-                0x0800e3b4       0x10 ./rt-thread/components/drivers/serial/serial.o
- .rodata.__FUNCTION__.5897
-                0x0800e3c4        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0800e3d3        0x1 00000000
- .rodata.__FUNCTION__.5873
-                0x0800e3d4       0x10 ./rt-thread/components/drivers/serial/serial.o
- .rodata.__FUNCTION__.5950
-                0x0800e3e4       0x12 ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0800e3f6        0x2 00000000
- .rodata.__FUNCTION__.5965
-                0x0800e3f8       0x16 ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0800e40e        0x2 00000000
- .rodata.__FUNCTION__.5974
-                0x0800e410       0x11 ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0800e421        0x3 00000000
- .rodata.name   0x0800e424       0x11 ./rt-thread/components/drivers/misc/pin.o
-                0x0800e424                __fsym_pin_name
-                0x0800e428                __fsym_pin_desc
- *fill*         0x0800e435        0x3 00000000
- .rodata.__FUNCTION__.5458
-                0x0800e438        0xa ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x0800e442        0x2 00000000
- .rodata.__FUNCTION__.5467
-                0x0800e444        0xb ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x0800e44f        0x1 00000000
- .rodata.__FUNCTION__.5475
-                0x0800e450        0xd ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x0800e45d        0x3 00000000
- .rodata.__FUNCTION__.5502
-                0x0800e460        0xc ./rt-thread/components/drivers/misc/pin.o
+                0x0800e15c       0x11 ./rt-thread/src/ipc.o
+ *fill*         0x0800e16d        0x3 00000000
+ .rodata.large_digits.5584
+                0x0800e170       0x11 ./rt-thread/src/kservice.o
+ *fill*         0x0800e181        0x3 00000000
+ .rodata.small_digits.5583
+                0x0800e184       0x11 ./rt-thread/src/kservice.o
+ *fill*         0x0800e195        0x3 00000000
+ .rodata.__FUNCTION__.5734
+                0x0800e198       0x14 ./rt-thread/src/kservice.o
+ .rodata.__FUNCTION__.5721
+                0x0800e1ac        0xd ./rt-thread/src/kservice.o
+ *fill*         0x0800e1b9        0x3 00000000
+ .rodata.__FUNCTION__.5471
+                0x0800e1bc        0xb ./rt-thread/src/mem.o
+ *fill*         0x0800e1c7        0x1 00000000
+ .rodata.__FUNCTION__.5496
+                0x0800e1c8        0xe ./rt-thread/src/mem.o
+ *fill*         0x0800e1d6        0x2 00000000
+ .rodata.__FUNCTION__.5521
+                0x0800e1d8        0xd ./rt-thread/src/mem.o
+ *fill*         0x0800e1e5        0x3 00000000
+ .rodata.__FUNCTION__.5536
+                0x0800e1e8        0xf ./rt-thread/src/object.o
+ *fill*         0x0800e1f7        0x1 00000000
+ .rodata.__FUNCTION__.5545
+                0x0800e1f8       0x11 ./rt-thread/src/object.o
+ *fill*         0x0800e209        0x3 00000000
+ .rodata.__FUNCTION__.5554
+                0x0800e20c       0x13 ./rt-thread/src/object.o
+ *fill*         0x0800e21f        0x1 00000000
+ .rodata.__FUNCTION__.5559
+                0x0800e220       0x11 ./rt-thread/src/object.o
+ *fill*         0x0800e231        0x3 00000000
+ .rodata.__FUNCTION__.5563
+                0x0800e234       0x1a ./rt-thread/src/object.o
+ *fill*         0x0800e24e        0x2 00000000
+ .rodata.__FUNCTION__.5567
+                0x0800e250       0x13 ./rt-thread/src/object.o
+ *fill*         0x0800e263        0x1 00000000
+ .rodata.__FUNCTION__.5576
+                0x0800e264        0xf ./rt-thread/src/object.o
+ *fill*         0x0800e273        0x1 00000000
+ .rodata.__FUNCTION__.5478
+                0x0800e274       0x17 ./rt-thread/src/scheduler.o
+ *fill*         0x0800e28b        0x1 00000000
+ .rodata.__FUNCTION__.5516
+                0x0800e28c       0x1a ./rt-thread/src/scheduler.o
+ *fill*         0x0800e2a6        0x2 00000000
+ .rodata.__FUNCTION__.5522
+                0x0800e2a8       0x1a ./rt-thread/src/scheduler.o
+ *fill*         0x0800e2c2        0x2 00000000
+ .rodata.__FUNCTION__.5483
+                0x0800e2c4       0x10 ./rt-thread/src/thread.o
+ .rodata.__FUNCTION__.5495
+                0x0800e2d4        0xd ./rt-thread/src/thread.o
+ *fill*         0x0800e2e1        0x3 00000000
  .rodata.__FUNCTION__.5507
-                0x0800e46c        0xd ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x0800e479        0x3 00000000
- .rodata.__FUNCTION__.5511
-                0x0800e47c        0xc ./rt-thread/components/drivers/misc/pin.o
+                0x0800e2e4        0xf ./rt-thread/src/thread.o
+ *fill*         0x0800e2f3        0x1 00000000
+ .rodata.__FUNCTION__.5516
+                0x0800e2f4       0x12 ./rt-thread/src/thread.o
+ *fill*         0x0800e306        0x2 00000000
+ .rodata.__FUNCTION__.5521
+                0x0800e308       0x11 ./rt-thread/src/thread.o
+ *fill*         0x0800e319        0x3 00000000
+ .rodata.__FUNCTION__.5537
+                0x0800e31c       0x11 ./rt-thread/src/thread.o
+ *fill*         0x0800e32d        0x3 00000000
+ .rodata.__FUNCTION__.5548
+                0x0800e330       0x10 ./rt-thread/src/thread.o
+ .rodata.__FUNCTION__.5571
+                0x0800e340       0x12 ./rt-thread/src/thread.o
+ *fill*         0x0800e352        0x2 00000000
+ .rodata.__FUNCTION__.5583
+                0x0800e354       0x12 ./rt-thread/src/thread.o
+ *fill*         0x0800e366        0x2 00000000
+ .rodata.__FUNCTION__.5588
+                0x0800e368       0x11 ./rt-thread/src/thread.o
+ *fill*         0x0800e379        0x3 00000000
+ .rodata.__FUNCTION__.5510
+                0x0800e37c        0xe ./rt-thread/src/timer.o
+ *fill*         0x0800e38a        0x2 00000000
  .rodata.__FUNCTION__.5515
-                0x0800e488        0xb ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x0800e493        0x1 00000000
+                0x0800e38c       0x10 ./rt-thread/src/timer.o
+ .rodata.__FUNCTION__.5541
+                0x0800e39c        0xf ./rt-thread/src/timer.o
+ *fill*         0x0800e3ab        0x1 00000000
+ .rodata.__FUNCTION__.5558
+                0x0800e3ac        0xe ./rt-thread/src/timer.o
+ *fill*         0x0800e3ba        0x2 00000000
+ .rodata.__FUNCTION__.5565
+                0x0800e3bc       0x11 ./rt-thread/src/timer.o
+ *fill*         0x0800e3cd        0x3 00000000
+ .rodata.name   0x0800e3d0      0x1b9 ./rt-thread/components/finsh/cmd.o
+                0x0800e3d0                __fsym_clear_name
+                0x0800e3d8                __fsym_clear_desc
+                0x0800e3f4                __fsym_version_name
+                0x0800e3fc                __fsym_version_desc
+                0x0800e420                __fsym_list_thread_name
+                0x0800e42c                __fsym_list_thread_desc
+                0x0800e438                __fsym_list_sem_name
+                0x0800e444                __fsym_list_sem_desc
+                0x0800e460                __fsym_list_event_name
+                0x0800e46c                __fsym_list_event_desc
+                0x0800e484                __fsym_list_mutex_name
+                0x0800e490                __fsym_list_mutex_desc
+                0x0800e4a8                __fsym_list_mailbox_name
+                0x0800e4b8                __fsym_list_mailbox_desc
+                0x0800e4d0                __fsym_list_msgqueue_name
+                0x0800e4e0                __fsym_list_msgqueue_desc
+                0x0800e500                __fsym_list_mempool_name
+                0x0800e510                __fsym_list_mempool_desc
+                0x0800e52c                __fsym_list_timer_name
+                0x0800e538                __fsym_list_timer_desc
+                0x0800e550                __fsym_list_device_name
+                0x0800e55c                __fsym_list_device_desc
+                0x0800e574                __fsym_list_name
+                0x0800e57c                __fsym_list_desc
+ *fill*         0x0800e589        0x3 00000000
+ .rodata.device_type_str
+                0x0800e58c       0x78 ./rt-thread/components/finsh/cmd.o
+ .rodata.name   0x0800e604       0x6d ./rt-thread/components/finsh/msh.o
+                0x0800e604                __fsym_help_name
+                0x0800e60c                __fsym_help_desc
+                0x0800e624                __fsym_ps_name
+                0x0800e628                __fsym_ps_desc
+                0x0800e644                __fsym_free_name
+                0x0800e64c                __fsym_free_desc
+ *fill*         0x0800e671        0x3 00000000
+ .rodata.__FUNCTION__.5506
+                0x0800e674        0xe ./rt-thread/components/finsh/msh.o
+ *fill*         0x0800e682        0x2 00000000
+ .rodata.__FUNCTION__.6079
+                0x0800e684       0x16 ./rt-thread/components/finsh/shell.o
+ *fill*         0x0800e69a        0x2 00000000
+ .rodata.__FUNCTION__.6085
+                0x0800e69c        0xe ./rt-thread/components/finsh/shell.o
+ *fill*         0x0800e6aa        0x2 00000000
+ .rodata.__FUNCTION__.6093
+                0x0800e6ac        0xd ./rt-thread/components/finsh/shell.o
+ *fill*         0x0800e6b9        0x3 00000000
+ .rodata.__FUNCTION__.6098
+                0x0800e6bc       0x11 ./rt-thread/components/finsh/shell.o
+ *fill*         0x0800e6cd        0x3 00000000
+ .rodata.__FUNCTION__.5910
+                0x0800e6d0        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0800e6df        0x1 00000000
+ .rodata.__FUNCTION__.5917
+                0x0800e6e0        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0800e6ef        0x1 00000000
+ .rodata.__FUNCTION__.5924
+                0x0800e6f0       0x10 ./rt-thread/components/drivers/serial/serial.o
+ .rodata.__FUNCTION__.5934
+                0x0800e700        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0800e70f        0x1 00000000
+ .rodata.__FUNCTION__.5884
+                0x0800e710        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0800e71f        0x1 00000000
+ .rodata.__FUNCTION__.5863
+                0x0800e720       0x10 ./rt-thread/components/drivers/serial/serial.o
+ .rodata.__FUNCTION__.5942
+                0x0800e730       0x10 ./rt-thread/components/drivers/serial/serial.o
+ .rodata.__FUNCTION__.5897
+                0x0800e740        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0800e74f        0x1 00000000
+ .rodata.__FUNCTION__.5873
+                0x0800e750       0x10 ./rt-thread/components/drivers/serial/serial.o
+ .rodata.__FUNCTION__.5950
+                0x0800e760       0x12 ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0800e772        0x2 00000000
+ .rodata.__FUNCTION__.5965
+                0x0800e774       0x16 ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0800e78a        0x2 00000000
+ .rodata.__FUNCTION__.5974
+                0x0800e78c       0x11 ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0800e79d        0x3 00000000
+ .rodata.name   0x0800e7a0       0x11 ./rt-thread/components/drivers/misc/pin.o
+                0x0800e7a0                __fsym_pin_name
+                0x0800e7a4                __fsym_pin_desc
+ *fill*         0x0800e7b1        0x3 00000000
+ .rodata.__FUNCTION__.5458
+                0x0800e7b4        0xa ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x0800e7be        0x2 00000000
+ .rodata.__FUNCTION__.5467
+                0x0800e7c0        0xb ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x0800e7cb        0x1 00000000
+ .rodata.__FUNCTION__.5475
+                0x0800e7cc        0xd ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x0800e7d9        0x3 00000000
+ .rodata.__FUNCTION__.5502
+                0x0800e7dc        0xc ./rt-thread/components/drivers/misc/pin.o
+ .rodata.__FUNCTION__.5507
+                0x0800e7e8        0xd ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x0800e7f5        0x3 00000000
+ .rodata.__FUNCTION__.5511
+                0x0800e7f8        0xc ./rt-thread/components/drivers/misc/pin.o
+ .rodata.__FUNCTION__.5515
+                0x0800e804        0xb ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x0800e80f        0x1 00000000
  .rodata.__FUNCTION__.5860
-                0x0800e494       0x13 ./rt-thread/components/drivers/ipc/completion.o
- *fill*         0x0800e4a7        0x1 00000000
+                0x0800e810       0x13 ./rt-thread/components/drivers/ipc/completion.o
+ *fill*         0x0800e823        0x1 00000000
  .rodata.__FUNCTION__.5868
-                0x0800e4a8       0x13 ./rt-thread/components/drivers/ipc/completion.o
- *fill*         0x0800e4bb        0x1 00000000
+                0x0800e824       0x13 ./rt-thread/components/drivers/ipc/completion.o
+ *fill*         0x0800e837        0x1 00000000
  .rodata.__FUNCTION__.5877
-                0x0800e4bc       0x13 ./rt-thread/components/drivers/ipc/completion.o
- *fill*         0x0800e4cf        0x1 00000000
+                0x0800e838       0x13 ./rt-thread/components/drivers/ipc/completion.o
+ *fill*         0x0800e84b        0x1 00000000
  .rodata.AHBPrescTable
-                0x0800e4d0       0x10 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
-                0x0800e4d0                AHBPrescTable
+                0x0800e84c       0x10 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
+                0x0800e84c                AHBPrescTable
  .rodata.APBPrescTable
-                0x0800e4e0        0x8 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
-                0x0800e4e0                APBPrescTable
- .rodata.pins   0x0800e4e8      0x540 ./drivers/drv_gpio.o
+                0x0800e85c        0x8 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
+                0x0800e85c                APBPrescTable
+ .rodata.pins   0x0800e864      0x540 ./drivers/drv_gpio.o
  .rodata.pin_irq_map
-                0x0800ea28       0x40 ./drivers/drv_gpio.o
+                0x0800eda4       0x40 ./drivers/drv_gpio.o
  .rodata._stm32_pin_ops
-                0x0800ea68       0x1c ./drivers/drv_gpio.o
+                0x0800ede4       0x1c ./drivers/drv_gpio.o
  .rodata.stm32_uart_ops
-                0x0800ea84       0x14 ./drivers/drv_usart.o
+                0x0800ee00       0x14 ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8136
-                0x0800ea98       0x16 ./drivers/drv_usart.o
- *fill*         0x0800eaae        0x2 00000000
+                0x0800ee14       0x16 ./drivers/drv_usart.o
+ *fill*         0x0800ee2a        0x2 00000000
  .rodata.uart_remaps.8185
-                0x0800eab0       0x38 ./drivers/drv_usart.o
+                0x0800ee2c       0x38 ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8189
-                0x0800eae8       0x15 ./drivers/drv_usart.o
- *fill*         0x0800eafd        0x3 00000000
+                0x0800ee64       0x15 ./drivers/drv_usart.o
+ *fill*         0x0800ee79        0x3 00000000
  .rodata.__FUNCTION__.8207
-                0x0800eb00       0x10 ./drivers/drv_usart.o
+                0x0800ee7c       0x10 ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8227
-                0x0800eb10        0xe ./drivers/drv_usart.o
- *fill*         0x0800eb1e        0x2 00000000
+                0x0800ee8c        0xe ./drivers/drv_usart.o
+ *fill*         0x0800ee9a        0x2 00000000
  .rodata.__FUNCTION__.8236
-                0x0800eb20        0xb ./drivers/drv_usart.o
- *fill*         0x0800eb2b        0x1 00000000
+                0x0800ee9c        0xb ./drivers/drv_usart.o
+ *fill*         0x0800eea7        0x1 00000000
  .rodata.__FUNCTION__.8245
-                0x0800eb2c        0xb ./drivers/drv_usart.o
- *fill*         0x0800eb37        0x1 00000000
+                0x0800eea8        0xb ./drivers/drv_usart.o
+ *fill*         0x0800eeb3        0x1 00000000
  .rodata.__FUNCTION__.8253
-                0x0800eb38       0x13 ./drivers/drv_usart.o
- *fill*         0x0800eb4b        0x1 00000000
+                0x0800eeb4       0x13 ./drivers/drv_usart.o
+ *fill*         0x0800eec7        0x1 00000000
  .rodata.__FUNCTION__.8259
-                0x0800eb4c        0x9 ./drivers/drv_usart.o
- *fill*         0x0800eb55        0x3 00000000
+                0x0800eec8        0x9 ./drivers/drv_usart.o
+ *fill*         0x0800eed1        0x3 00000000
  .rodata.__FUNCTION__.8277
-                0x0800eb58       0x11 ./drivers/drv_usart.o
- *fill*         0x0800eb69        0x3 00000000
+                0x0800eed4       0x11 ./drivers/drv_usart.o
+ *fill*         0x0800eee5        0x3 00000000
  .rodata._global_impure_ptr
-                0x0800eb6c        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
-                0x0800eb6c                _global_impure_ptr
+                0x0800eee8        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
+                0x0800eee8                _global_impure_ptr
  .rodata.str1.4
-                0x0800eb70       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+                0x0800eeec       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
                                  0x12 (size before relaxing)
  .rodata._ctype_
-                0x0800eb84      0x101 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-ctype_.o)
-                0x0800eb84                _ctype_
+                0x0800ef00      0x101 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-ctype_.o)
+                0x0800ef00                _ctype_
  *(.glue_7)
- .glue_7        0x0800ec85        0x0 linker stubs
+ .glue_7        0x0800f001        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800ec85        0x0 linker stubs
+ .glue_7t       0x0800f001        0x0 linker stubs
  *(.gnu.linkonce.t*)
-                0x0800ec88                . = ALIGN (0x4)
- *fill*         0x0800ec85        0x3 00000000
-                0x0800ec88                __fsymtab_start = .
+                0x0800f004                . = ALIGN (0x4)
+ *fill*         0x0800f001        0x3 00000000
+                0x0800f004                __fsymtab_start = .
  *(FSymTab)
- FSymTab        0x0800ec88       0x90 ./rt-thread/components/finsh/cmd.o
-                0x0800ec88                __fsym_clear
-                0x0800ec94                __fsym_version
-                0x0800eca0                __fsym_list_thread
-                0x0800ecac                __fsym_list_sem
-                0x0800ecb8                __fsym_list_event
-                0x0800ecc4                __fsym_list_mutex
-                0x0800ecd0                __fsym_list_mailbox
-                0x0800ecdc                __fsym_list_msgqueue
-                0x0800ece8                __fsym_list_mempool
-                0x0800ecf4                __fsym_list_timer
-                0x0800ed00                __fsym_list_device
-                0x0800ed0c                __fsym_list
- FSymTab        0x0800ed18       0x24 ./rt-thread/components/finsh/msh.o
-                0x0800ed18                __fsym_help
-                0x0800ed24                __fsym_ps
-                0x0800ed30                __fsym_free
- FSymTab        0x0800ed3c        0xc ./rt-thread/components/drivers/misc/pin.o
-                0x0800ed3c                __fsym_pin
-                0x0800ed48                __fsymtab_end = .
-                0x0800ed48                . = ALIGN (0x4)
-                0x0800ed48                __vsymtab_start = .
+ FSymTab        0x0800f004       0x90 ./rt-thread/components/finsh/cmd.o
+                0x0800f004                __fsym_clear
+                0x0800f010                __fsym_version
+                0x0800f01c                __fsym_list_thread
+                0x0800f028                __fsym_list_sem
+                0x0800f034                __fsym_list_event
+                0x0800f040                __fsym_list_mutex
+                0x0800f04c                __fsym_list_mailbox
+                0x0800f058                __fsym_list_msgqueue
+                0x0800f064                __fsym_list_mempool
+                0x0800f070                __fsym_list_timer
+                0x0800f07c                __fsym_list_device
+                0x0800f088                __fsym_list
+ FSymTab        0x0800f094       0x24 ./rt-thread/components/finsh/msh.o
+                0x0800f094                __fsym_help
+                0x0800f0a0                __fsym_ps
+                0x0800f0ac                __fsym_free
+ FSymTab        0x0800f0b8        0xc ./rt-thread/components/drivers/misc/pin.o
+                0x0800f0b8                __fsym_pin
+                0x0800f0c4                __fsymtab_end = .
+                0x0800f0c4                . = ALIGN (0x4)
+                0x0800f0c4                __vsymtab_start = .
  *(VSymTab)
-                0x0800ed48                __vsymtab_end = .
-                0x0800ed48                . = ALIGN (0x4)
-                0x0800ed48                __rt_utest_tc_tab_start = .
+                0x0800f0c4                __vsymtab_end = .
+                0x0800f0c4                . = ALIGN (0x4)
+                0x0800f0c4                __rt_utest_tc_tab_start = .
  *(UtestTcTab)
-                0x0800ed48                __rt_utest_tc_tab_end = .
-                0x0800ed48                . = ALIGN (0x4)
-                0x0800ed48                __rtatcmdtab_start = .
+                0x0800f0c4                __rt_utest_tc_tab_end = .
+                0x0800f0c4                . = ALIGN (0x4)
+                0x0800f0c4                __rtatcmdtab_start = .
  *(RtAtCmdTab)
-                0x0800ed48                __rtatcmdtab_end = .
-                0x0800ed48                . = ALIGN (0x4)
-                0x0800ed48                . = ALIGN (0x4)
-                0x0800ed48                __rt_init_start = .
+                0x0800f0c4                __rtatcmdtab_end = .
+                0x0800f0c4                . = ALIGN (0x4)
+                0x0800f0c4                . = ALIGN (0x4)
+                0x0800f0c4                __rt_init_start = .
  *(SORT(.rti_fn*))
- .rti_fn.0      0x0800ed48        0x4 ./rt-thread/src/components.o
-                0x0800ed48                __rt_init_rti_start
- .rti_fn.0.end  0x0800ed4c        0x4 ./rt-thread/src/components.o
-                0x0800ed4c                __rt_init_rti_board_start
- .rti_fn.1      0x0800ed50        0x4 ./drivers/drv_clk.o
-                0x0800ed50                __rt_init_clock_information
- .rti_fn.1.end  0x0800ed54        0x4 ./rt-thread/src/components.o
-                0x0800ed54                __rt_init_rti_board_end
- .rti_fn.6      0x0800ed58        0x4 ./rt-thread/components/finsh/shell.o
-                0x0800ed58                __rt_init_finsh_system_init
- .rti_fn.6.end  0x0800ed5c        0x4 ./rt-thread/src/components.o
-                0x0800ed5c                __rt_init_rti_end
-                0x0800ed60                __rt_init_end = .
-                0x0800ed60                . = ALIGN (0x4)
+ .rti_fn.0      0x0800f0c4        0x4 ./rt-thread/src/components.o
+                0x0800f0c4                __rt_init_rti_start
+ .rti_fn.0.end  0x0800f0c8        0x4 ./rt-thread/src/components.o
+                0x0800f0c8                __rt_init_rti_board_start
+ .rti_fn.1      0x0800f0cc        0x4 ./drivers/drv_clk.o
+                0x0800f0cc                __rt_init_clock_information
+ .rti_fn.1.end  0x0800f0d0        0x4 ./rt-thread/src/components.o
+                0x0800f0d0                __rt_init_rti_board_end
+ .rti_fn.6      0x0800f0d4        0x4 ./rt-thread/components/finsh/shell.o
+                0x0800f0d4                __rt_init_finsh_system_init
+ .rti_fn.6.end  0x0800f0d8        0x4 ./rt-thread/src/components.o
+                0x0800f0d8                __rt_init_rti_end
+                0x0800f0dc                __rt_init_end = .
+                0x0800f0dc                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__ctors_start__, .)
  *(SORT(.init_array.*))
  .init_array.00000
-                0x0800ed60        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+                0x0800f0dc        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
  *(.init_array)
- .init_array    0x0800ed64        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .init_array    0x0800f0e0        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
                 [!provide]                PROVIDE (__ctors_end__, .)
-                0x0800ed68                . = ALIGN (0x4)
-                0x0800ed68                _etext = .
-                0x0800ed68                __exidx_start = .
+                0x0800f0e4                . = ALIGN (0x4)
+                0x0800f0e4                _etext = .
+                0x0800f0e4                __exidx_start = .
 
-.vfp11_veneer   0x0800ed68        0x0
- .vfp11_veneer  0x0800ed68        0x0 linker stubs
+.vfp11_veneer   0x0800f0e4        0x0
+ .vfp11_veneer  0x0800f0e4        0x0 linker stubs
 
-.v4_bx          0x0800ed68        0x0
- .v4_bx         0x0800ed68        0x0 linker stubs
+.v4_bx          0x0800f0e4        0x0
+ .v4_bx         0x0800f0e4        0x0 linker stubs
 
-.init           0x0800ed68        0x4
- .init          0x0800ed68        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x0800ed68                _init
+.init           0x0800f0e4        0x4
+ .init          0x0800f0e4        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x0800f0e4                _init
 
-.fini           0x0800ed6c        0x4
- .fini          0x0800ed6c        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x0800ed6c                _fini
+.fini           0x0800f0e8        0x4
+ .fini          0x0800f0e8        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x0800f0e8                _fini
 
-.iplt           0x0800ed70        0x0
- .iplt          0x0800ed70        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.iplt           0x0800f0ec        0x0
+ .iplt          0x0800f0ec        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.eh_frame       0x0800ed70        0x0
- .eh_frame      0x0800ed70        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.eh_frame       0x0800f0ec        0x0
+ .eh_frame      0x0800f0ec        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.rel.dyn        0x0800ed70        0x0
- .rel.iplt      0x0800ed70        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.rel.dyn        0x0800f0ec        0x0
+ .rel.iplt      0x0800f0ec        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.ARM.exidx      0x0800ed70        0x0
+.ARM.exidx      0x0800f0ec        0x0
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0800ed70                _sidata = .
-                0x0800ed70                __exidx_end = .
+                0x0800f0ec                _sidata = .
+                0x0800f0ec                __exidx_end = .
 
-.data           0x20000000      0x758 load address 0x0800ed70
+.data           0x20000000      0x758 load address 0x0800f0ec
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -4140,13 +4146,13 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
                 0x20000758                . = ALIGN (0x4)
                 0x20000758                _edata = .
 
-.jcr            0x20000758        0x0 load address 0x0800f4c8
+.jcr            0x20000758        0x0 load address 0x0800f844
  .jcr           0x20000758        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.igot.plt       0x20000758        0x0 load address 0x0800f4c8
+.igot.plt       0x20000758        0x0 load address 0x0800f844
  .igot.plt      0x20000758        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.stack          0x20000758      0x400 load address 0x0800f4c8
+.stack          0x20000758      0x400 load address 0x0800f844
                 0x20000758                . = ALIGN (0x4)
                 0x20000758                _sstack = .
                 0x20000b58                . = (. + _system_stack_size)
@@ -4155,7 +4161,7 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
                 0x20000b58                _estack = .
                 0x20000b58                __bss_start = .
 
-.bss            0x20000b58      0xaa8 load address 0x0800f8c8
+.bss            0x20000b58      0xae4 load address 0x0800fc44
                 0x20000b58                . = ALIGN (0x4)
                 0x20000b58                _sbss = .
  *(.bss)
@@ -4243,42 +4249,41 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .bss.pin_irq_enable_mask
                 0x2000126c        0x4 ./drivers/drv_gpio.o
  .bss.uart_obj  0x20001270       0x9c ./drivers/drv_usart.o
- .bss.Init_Flag.7389
-                0x2000130c        0x4 ./applications/main.o
- .bss.tid.7388  0x20001310        0x4 ./applications/main.o
+ .bss.tid.7391  0x2000130c        0x4 ./applications/main.o
  *(COMMON)
- COMMON         0x20001314        0x4 ./rt-thread/src/kservice.o
-                0x20001314                rt_assert_hook
- COMMON         0x20001318        0xc ./rt-thread/src/object.o
-                0x20001318                rt_object_put_hook
-                0x2000131c                rt_object_take_hook
-                0x20001320                rt_object_trytake_hook
- COMMON         0x20001324      0x108 ./rt-thread/src/scheduler.o
-                0x20001324                rt_thread_priority_table
-                0x20001424                rt_current_priority
-                0x20001428                rt_thread_ready_priority_group
- COMMON         0x2000142c        0xc ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
-                0x2000142c                rt_interrupt_to_thread
-                0x20001430                rt_interrupt_from_thread
-                0x20001434                rt_thread_switch_interrupt_flag
- COMMON         0x20001438        0x4 ./rt-thread/components/finsh/shell.o
-                0x20001438                shell
- COMMON         0x2000143c        0x4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x2000143c                uwTick
- COMMON         0x20001440      0x180 ./cubemx/Src/tim.o
-                0x20001440                htim8
-                0x20001480                htim4
-                0x200014c0                htim5
-                0x20001500                htim3
-                0x20001540                htim1
-                0x20001580                htim2
- COMMON         0x200015c0       0x40 ./cubemx/Src/usart.o
-                0x200015c0                huart1
-                0x20001600                . = ALIGN (0x4)
-                0x20001600                _ebss = .
+ COMMON         0x20001310        0x4 ./rt-thread/src/kservice.o
+                0x20001310                rt_assert_hook
+ COMMON         0x20001314        0xc ./rt-thread/src/object.o
+                0x20001314                rt_object_put_hook
+                0x20001318                rt_object_take_hook
+                0x2000131c                rt_object_trytake_hook
+ COMMON         0x20001320      0x108 ./rt-thread/src/scheduler.o
+                0x20001320                rt_thread_priority_table
+                0x20001420                rt_current_priority
+                0x20001424                rt_thread_ready_priority_group
+ COMMON         0x20001428        0xc ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
+                0x20001428                rt_interrupt_to_thread
+                0x2000142c                rt_interrupt_from_thread
+                0x20001430                rt_thread_switch_interrupt_flag
+ COMMON         0x20001434        0x4 ./rt-thread/components/finsh/shell.o
+                0x20001434                shell
+ COMMON         0x20001438        0x4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x20001438                uwTick
+ COMMON         0x2000143c      0x180 ./cubemx/Src/tim.o
+                0x2000143c                htim8
+                0x2000147c                htim4
+                0x200014bc                htim5
+                0x200014fc                htim3
+                0x2000153c                htim1
+                0x2000157c                htim2
+ COMMON         0x200015bc       0x80 ./cubemx/Src/usart.o
+                0x200015bc                huart5
+                0x200015fc                huart1
+                0x2000163c                . = ALIGN (0x4)
+                0x2000163c                _ebss = .
  *(.bss.init)
-                0x20001600                __bss_end = .
-                0x20001600                _end = .
+                0x2000163c                __bss_end = .
+                0x2000163c                _end = .
 
 .stab
  *(.stab)
@@ -4486,7 +4491,7 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000     0x1a50
+.debug_aranges  0x00000000     0x1a58
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x48 ./rt-thread/src/clock.o
@@ -4571,14 +4576,14 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_aranges
                 0x00001980       0x70 ./cubemx/Src/tim.o
  .debug_aranges
-                0x000019f0       0x30 ./cubemx/Src/usart.o
+                0x000019f0       0x38 ./cubemx/Src/usart.o
  .debug_aranges
-                0x00001a20       0x30 ./applications/main.o
+                0x00001a28       0x30 ./applications/main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x1bf37
+.debug_info     0x00000000    0x1c4c0
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4cc ./rt-thread/src/clock.o
  .debug_info    0x000004cc      0x566 ./rt-thread/src/components.o
@@ -4592,39 +4597,39 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_info    0x00005e77      0x892 ./rt-thread/src/scheduler.o
  .debug_info    0x00006709      0xc5b ./rt-thread/src/thread.o
  .debug_info    0x00007364      0xc17 ./rt-thread/src/timer.o
- .debug_info    0x00007f7b       0x7f ./rt-thread/libcpu/arm/cortex-m3/context_gcc.o
- .debug_info    0x00007ffa      0x45c ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
- .debug_info    0x00008456     0x170f ./rt-thread/components/libc/compilers/newlib/syscalls.o
- .debug_info    0x00009b65     0x1840 ./rt-thread/components/finsh/cmd.o
- .debug_info    0x0000b3a5      0x62c ./rt-thread/components/finsh/msh.o
- .debug_info    0x0000b9d1      0x16f ./rt-thread/components/finsh/msh_parse.o
- .debug_info    0x0000bb40      0xd6e ./rt-thread/components/finsh/shell.o
- .debug_info    0x0000c8ae      0xdfa ./rt-thread/components/drivers/serial/serial.o
- .debug_info    0x0000d6a8      0xd70 ./rt-thread/components/drivers/misc/pin.o
- .debug_info    0x0000e418      0x5f8 ./rt-thread/components/drivers/ipc/completion.o
- .debug_info    0x0000ea10      0x7b5 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_info    0x0000f1c5      0xc06 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_info    0x0000fdcb      0x774 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_info    0x0001053f      0x643 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_info    0x00010b82      0x889 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_info    0x0001140b     0x26a6 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_info    0x00013ab1     0x11bb ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_info    0x00014c6c     0x12c1 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_info    0x00015f2d       0x9d ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
- .debug_info    0x00015fca      0x42b ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
- .debug_info    0x000163f5       0xf5 ./drivers/board.o
- .debug_info    0x000164ea      0x2eb ./drivers/drv_clk.o
- .debug_info    0x000167d5      0x5ae ./drivers/drv_common.o
- .debug_info    0x00016d83      0xfe0 ./drivers/drv_gpio.o
- .debug_info    0x00017d63     0x1a0d ./drivers/drv_usart.o
- .debug_info    0x00019770      0x210 ./cubemx/Src/gpio.o
- .debug_info    0x00019980      0x285 ./cubemx/Src/main.o
- .debug_info    0x00019c05      0x24e ./cubemx/Src/stm32f1xx_hal_msp.o
- .debug_info    0x00019e53      0xdec ./cubemx/Src/tim.o
- .debug_info    0x0001ac3f      0x95f ./cubemx/Src/usart.o
- .debug_info    0x0001b59e      0x999 ./applications/main.o
+ .debug_info    0x00007f7b       0x82 ./rt-thread/libcpu/arm/cortex-m3/context_gcc.o
+ .debug_info    0x00007ffd      0x45c ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
+ .debug_info    0x00008459     0x170f ./rt-thread/components/libc/compilers/newlib/syscalls.o
+ .debug_info    0x00009b68     0x1840 ./rt-thread/components/finsh/cmd.o
+ .debug_info    0x0000b3a8      0x62c ./rt-thread/components/finsh/msh.o
+ .debug_info    0x0000b9d4      0x16f ./rt-thread/components/finsh/msh_parse.o
+ .debug_info    0x0000bb43      0xd6e ./rt-thread/components/finsh/shell.o
+ .debug_info    0x0000c8b1      0xdfa ./rt-thread/components/drivers/serial/serial.o
+ .debug_info    0x0000d6ab      0xd70 ./rt-thread/components/drivers/misc/pin.o
+ .debug_info    0x0000e41b      0x5f8 ./rt-thread/components/drivers/ipc/completion.o
+ .debug_info    0x0000ea13      0x7b5 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_info    0x0000f1c8      0xc06 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_info    0x0000fdce      0x774 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_info    0x00010542      0x643 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_info    0x00010b85      0x889 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_info    0x0001140e     0x26a6 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_info    0x00013ab4     0x11bb ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_info    0x00014c6f     0x12c1 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_info    0x00015f30       0xa0 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
+ .debug_info    0x00015fd0      0x42b ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
+ .debug_info    0x000163fb      0x618 ./drivers/board.o
+ .debug_info    0x00016a13      0x2eb ./drivers/drv_clk.o
+ .debug_info    0x00016cfe      0x5ae ./drivers/drv_common.o
+ .debug_info    0x000172ac      0xfe0 ./drivers/drv_gpio.o
+ .debug_info    0x0001828c     0x1a0d ./drivers/drv_usart.o
+ .debug_info    0x00019c99      0x210 ./cubemx/Src/gpio.o
+ .debug_info    0x00019ea9      0x285 ./cubemx/Src/main.o
+ .debug_info    0x0001a12e      0x24e ./cubemx/Src/stm32f1xx_hal_msp.o
+ .debug_info    0x0001a37c      0xdec ./cubemx/Src/tim.o
+ .debug_info    0x0001b168      0x9db ./cubemx/Src/usart.o
+ .debug_info    0x0001bb43      0x97d ./applications/main.o
 
-.debug_abbrev   0x00000000     0x49e6
+.debug_abbrev   0x00000000     0x4a83
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x164 ./rt-thread/src/clock.o
  .debug_abbrev  0x00000164      0x166 ./rt-thread/src/components.o
@@ -4658,65 +4663,65 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_abbrev  0x000035f6      0x1fb ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .debug_abbrev  0x000037f1       0x12 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
  .debug_abbrev  0x00003803      0x124 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
- .debug_abbrev  0x00003927       0x9b ./drivers/board.o
- .debug_abbrev  0x000039c2      0x12e ./drivers/drv_clk.o
- .debug_abbrev  0x00003af0      0x23e ./drivers/drv_common.o
- .debug_abbrev  0x00003d2e      0x246 ./drivers/drv_gpio.o
- .debug_abbrev  0x00003f74      0x2e2 ./drivers/drv_usart.o
- .debug_abbrev  0x00004256       0xc6 ./cubemx/Src/gpio.o
- .debug_abbrev  0x0000431c      0x11c ./cubemx/Src/main.o
- .debug_abbrev  0x00004438       0xd8 ./cubemx/Src/stm32f1xx_hal_msp.o
- .debug_abbrev  0x00004510      0x1bc ./cubemx/Src/tim.o
- .debug_abbrev  0x000046cc      0x179 ./cubemx/Src/usart.o
- .debug_abbrev  0x00004845      0x1a1 ./applications/main.o
+ .debug_abbrev  0x00003927      0x147 ./drivers/board.o
+ .debug_abbrev  0x00003a6e      0x12e ./drivers/drv_clk.o
+ .debug_abbrev  0x00003b9c      0x23e ./drivers/drv_common.o
+ .debug_abbrev  0x00003dda      0x246 ./drivers/drv_gpio.o
+ .debug_abbrev  0x00004020      0x2e2 ./drivers/drv_usart.o
+ .debug_abbrev  0x00004302       0xc6 ./cubemx/Src/gpio.o
+ .debug_abbrev  0x000043c8      0x11c ./cubemx/Src/main.o
+ .debug_abbrev  0x000044e4       0xd8 ./cubemx/Src/stm32f1xx_hal_msp.o
+ .debug_abbrev  0x000045bc      0x1bc ./cubemx/Src/tim.o
+ .debug_abbrev  0x00004778      0x179 ./cubemx/Src/usart.o
+ .debug_abbrev  0x000048f1      0x192 ./applications/main.o
 
-.debug_line     0x00000000     0xd7d8
+.debug_line     0x00000000     0xda3a
  *(.debug_line)
- .debug_line    0x00000000      0x22a ./rt-thread/src/clock.o
- .debug_line    0x0000022a      0x29b ./rt-thread/src/components.o
- .debug_line    0x000004c5      0x441 ./rt-thread/src/device.o
- .debug_line    0x00000906      0x3a4 ./rt-thread/src/idle.o
- .debug_line    0x00000caa      0xe93 ./rt-thread/src/ipc.o
- .debug_line    0x00001b3d      0x213 ./rt-thread/src/irq.o
- .debug_line    0x00001d50      0x828 ./rt-thread/src/kservice.o
- .debug_line    0x00002578      0x440 ./rt-thread/src/mem.o
- .debug_line    0x000029b8      0x4e8 ./rt-thread/src/object.o
- .debug_line    0x00002ea0      0x3b6 ./rt-thread/src/scheduler.o
- .debug_line    0x00003256      0x50c ./rt-thread/src/thread.o
- .debug_line    0x00003762      0x5d8 ./rt-thread/src/timer.o
- .debug_line    0x00003d3a       0xcb ./rt-thread/libcpu/arm/cortex-m3/context_gcc.o
- .debug_line    0x00003e05      0x2e2 ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
- .debug_line    0x000040e7      0x55f ./rt-thread/components/libc/compilers/newlib/syscalls.o
- .debug_line    0x00004646      0x64e ./rt-thread/components/finsh/cmd.o
- .debug_line    0x00004c94      0x32f ./rt-thread/components/finsh/msh.o
- .debug_line    0x00004fc3      0x13f ./rt-thread/components/finsh/msh_parse.o
- .debug_line    0x00005102      0x551 ./rt-thread/components/finsh/shell.o
- .debug_line    0x00005653      0x5f2 ./rt-thread/components/drivers/serial/serial.o
- .debug_line    0x00005c45      0x558 ./rt-thread/components/drivers/misc/pin.o
- .debug_line    0x0000619d      0x302 ./rt-thread/components/drivers/ipc/completion.o
- .debug_line    0x0000649f      0x490 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_line    0x0000692f      0x4fa ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_line    0x00006e29      0xb76 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_line    0x0000799f      0x4a7 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_line    0x00007e46      0x5aa ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_line    0x000083f0     0x1520 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_line    0x00009910      0x8d1 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_line    0x0000a1e1      0xbb0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_line    0x0000ad91       0xad ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
- .debug_line    0x0000ae3e      0x29d ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
- .debug_line    0x0000b0db      0x1fe ./drivers/board.o
- .debug_line    0x0000b2d9      0x2be ./drivers/drv_clk.o
- .debug_line    0x0000b597      0x3c5 ./drivers/drv_common.o
- .debug_line    0x0000b95c      0x5d8 ./drivers/drv_gpio.o
- .debug_line    0x0000bf34      0x6c6 ./drivers/drv_usart.o
- .debug_line    0x0000c5fa      0x21e ./cubemx/Src/gpio.o
- .debug_line    0x0000c818      0x2aa ./cubemx/Src/main.o
- .debug_line    0x0000cac2      0x229 ./cubemx/Src/stm32f1xx_hal_msp.o
- .debug_line    0x0000cceb      0x46c ./cubemx/Src/tim.o
- .debug_line    0x0000d157      0x2fb ./cubemx/Src/usart.o
- .debug_line    0x0000d452      0x386 ./applications/main.o
+ .debug_line    0x00000000      0x22d ./rt-thread/src/clock.o
+ .debug_line    0x0000022d      0x29e ./rt-thread/src/components.o
+ .debug_line    0x000004cb      0x444 ./rt-thread/src/device.o
+ .debug_line    0x0000090f      0x3a7 ./rt-thread/src/idle.o
+ .debug_line    0x00000cb6      0xe96 ./rt-thread/src/ipc.o
+ .debug_line    0x00001b4c      0x216 ./rt-thread/src/irq.o
+ .debug_line    0x00001d62      0x82b ./rt-thread/src/kservice.o
+ .debug_line    0x0000258d      0x443 ./rt-thread/src/mem.o
+ .debug_line    0x000029d0      0x4eb ./rt-thread/src/object.o
+ .debug_line    0x00002ebb      0x3b9 ./rt-thread/src/scheduler.o
+ .debug_line    0x00003274      0x50f ./rt-thread/src/thread.o
+ .debug_line    0x00003783      0x5db ./rt-thread/src/timer.o
+ .debug_line    0x00003d5e       0xcb ./rt-thread/libcpu/arm/cortex-m3/context_gcc.o
+ .debug_line    0x00003e29      0x2e5 ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
+ .debug_line    0x0000410e      0x562 ./rt-thread/components/libc/compilers/newlib/syscalls.o
+ .debug_line    0x00004670      0x654 ./rt-thread/components/finsh/cmd.o
+ .debug_line    0x00004cc4      0x335 ./rt-thread/components/finsh/msh.o
+ .debug_line    0x00004ff9      0x142 ./rt-thread/components/finsh/msh_parse.o
+ .debug_line    0x0000513b      0x557 ./rt-thread/components/finsh/shell.o
+ .debug_line    0x00005692      0x5fb ./rt-thread/components/drivers/serial/serial.o
+ .debug_line    0x00005c8d      0x561 ./rt-thread/components/drivers/misc/pin.o
+ .debug_line    0x000061ee      0x308 ./rt-thread/components/drivers/ipc/completion.o
+ .debug_line    0x000064f6      0x499 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_line    0x0000698f      0x500 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_line    0x00006e8f      0xb7f ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_line    0x00007a0e      0x4b0 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_line    0x00007ebe      0x5b3 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_line    0x00008471     0x1529 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_line    0x0000999a      0x8da ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_line    0x0000a274      0xbb9 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_line    0x0000ae2d       0xad ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
+ .debug_line    0x0000aeda      0x2a3 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
+ .debug_line    0x0000b17d      0x333 ./drivers/board.o
+ .debug_line    0x0000b4b0      0x2c7 ./drivers/drv_clk.o
+ .debug_line    0x0000b777      0x3d1 ./drivers/drv_common.o
+ .debug_line    0x0000bb48      0x5e7 ./drivers/drv_gpio.o
+ .debug_line    0x0000c12f      0x6d5 ./drivers/drv_usart.o
+ .debug_line    0x0000c804      0x224 ./cubemx/Src/gpio.o
+ .debug_line    0x0000ca28      0x2b1 ./cubemx/Src/main.o
+ .debug_line    0x0000ccd9      0x22f ./cubemx/Src/stm32f1xx_hal_msp.o
+ .debug_line    0x0000cf08      0x475 ./cubemx/Src/tim.o
+ .debug_line    0x0000d37d      0x33a ./cubemx/Src/usart.o
+ .debug_line    0x0000d6b7      0x383 ./applications/main.o
 
-.debug_frame    0x00000000     0x6cb4
+.debug_frame    0x00000000     0x6cd0
  *(.debug_frame)
  .debug_frame   0x00000000       0xe4 ./rt-thread/src/clock.o
  .debug_frame   0x000000e4      0x158 ./rt-thread/src/components.o
@@ -4757,112 +4762,112 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_frame   0x0000652c       0x68 ./cubemx/Src/main.o
  .debug_frame   0x00006594       0x38 ./cubemx/Src/stm32f1xx_hal_msp.o
  .debug_frame   0x000065cc      0x1a4 ./cubemx/Src/tim.o
- .debug_frame   0x00006770       0x74 ./cubemx/Src/usart.o
- .debug_frame   0x000067e4       0x78 ./applications/main.o
- .debug_frame   0x0000685c       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
- .debug_frame   0x0000688c       0x84 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
- .debug_frame   0x00006910       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
- .debug_frame   0x00006940       0x4c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
- .debug_frame   0x0000698c       0x38 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
- .debug_frame   0x000069c4       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
- .debug_frame   0x000069f8       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strcmp.o)
- .debug_frame   0x00006a2c       0x20 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
- .debug_frame   0x00006a4c       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
- .debug_frame   0x00006a7c       0x54 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
- .debug_frame   0x00006ad0       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
- .debug_frame   0x00006b04       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
- .debug_frame   0x00006ba0       0x3c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
- .debug_frame   0x00006bdc       0x50 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x00006c2c       0x20 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
- .debug_frame   0x00006c4c       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
- .debug_frame   0x00006c80       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x00006770       0x90 ./cubemx/Src/usart.o
+ .debug_frame   0x00006800       0x78 ./applications/main.o
+ .debug_frame   0x00006878       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
+ .debug_frame   0x000068a8       0x84 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+ .debug_frame   0x0000692c       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
+ .debug_frame   0x0000695c       0x4c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x000069a8       0x38 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
+ .debug_frame   0x000069e0       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .debug_frame   0x00006a14       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strcmp.o)
+ .debug_frame   0x00006a48       0x20 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
+ .debug_frame   0x00006a68       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
+ .debug_frame   0x00006a98       0x54 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
+ .debug_frame   0x00006aec       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
+ .debug_frame   0x00006b20       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
+ .debug_frame   0x00006bbc       0x3c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
+ .debug_frame   0x00006bf8       0x50 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00006c48       0x20 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00006c68       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
+ .debug_frame   0x00006c9c       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
 
-.debug_str      0x00000000     0x6a21
+.debug_str      0x00000000     0x6a34
  *(.debug_str)
- .debug_str     0x00000000      0x2e8 ./rt-thread/src/clock.o
-                                0x3b1 (size before relaxing)
- .debug_str     0x000002e8      0x108 ./rt-thread/src/components.o
-                                0x41d (size before relaxing)
- .debug_str     0x000003f0      0x5c0 ./rt-thread/src/device.o
-                                0x81e (size before relaxing)
- .debug_str     0x000009b0      0x156 ./rt-thread/src/idle.o
-                                0x481 (size before relaxing)
- .debug_str     0x00000b06      0x488 ./rt-thread/src/ipc.o
-                                0x987 (size before relaxing)
- .debug_str     0x00000f8e       0xcb ./rt-thread/src/irq.o
-                                0x280 (size before relaxing)
- .debug_str     0x00001059      0x422 ./rt-thread/src/kservice.o
-                                0xb65 (size before relaxing)
- .debug_str     0x0000147b       0xe2 ./rt-thread/src/mem.o
-                                0x4d4 (size before relaxing)
- .debug_str     0x0000155d      0x2d4 ./rt-thread/src/object.o
-                                0x6eb (size before relaxing)
- .debug_str     0x00001831      0x22c ./rt-thread/src/scheduler.o
-                                0x615 (size before relaxing)
- .debug_str     0x00001a5d      0x1f3 ./rt-thread/src/thread.o
-                                0x6eb (size before relaxing)
- .debug_str     0x00001c50      0x203 ./rt-thread/src/timer.o
-                                0x74a (size before relaxing)
- .debug_str     0x00001e53      0x198 ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
-                                0x39b (size before relaxing)
- .debug_str     0x00001feb      0x5d7 ./rt-thread/components/libc/compilers/newlib/syscalls.o
-                                0xbfd (size before relaxing)
- .debug_str     0x000025c2      0x44c ./rt-thread/components/finsh/cmd.o
-                                0xe14 (size before relaxing)
- .debug_str     0x00002a0e      0x1a1 ./rt-thread/components/finsh/msh.o
-                                0x394 (size before relaxing)
- .debug_str     0x00002baf       0x54 ./rt-thread/components/finsh/msh_parse.o
-                                0x1ca (size before relaxing)
- .debug_str     0x00002c03      0x228 ./rt-thread/components/finsh/shell.o
-                                0x99c (size before relaxing)
- .debug_str     0x00002e2b      0x229 ./rt-thread/components/drivers/serial/serial.o
-                                0x83c (size before relaxing)
- .debug_str     0x00003054      0x1a1 ./rt-thread/components/drivers/misc/pin.o
-                                0x7f6 (size before relaxing)
- .debug_str     0x000031f5       0x6a ./rt-thread/components/drivers/ipc/completion.o
-                                0x403 (size before relaxing)
- .debug_str     0x0000325f      0x72a ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                                0x8cd (size before relaxing)
- .debug_str     0x00003989      0x403 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                                0x9bc (size before relaxing)
- .debug_str     0x00003d8c      0x3ed ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
-                                0x608 (size before relaxing)
- .debug_str     0x00004179      0x1c1 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                                0x417 (size before relaxing)
- .debug_str     0x0000433a      0x341 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
-                                0x61b (size before relaxing)
- .debug_str     0x0000467b      0xfc7 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                               0x13f5 (size before relaxing)
- .debug_str     0x00005642      0x57b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
-                                0xbf5 (size before relaxing)
- .debug_str     0x00005bbd      0x6da ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
-                                0xb2b (size before relaxing)
- .debug_str     0x00006297       0x7e ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
-                                0x2f3 (size before relaxing)
- .debug_str     0x00006315       0x2e ./drivers/board.o
-                                0x1c1 (size before relaxing)
- .debug_str     0x00006343       0x88 ./drivers/drv_clk.o
-                                0x37f (size before relaxing)
- .debug_str     0x000063cb       0xba ./drivers/drv_common.o
-                                0x727 (size before relaxing)
- .debug_str     0x00006485      0x1a2 ./drivers/drv_gpio.o
-                                0xca2 (size before relaxing)
- .debug_str     0x00006627      0x238 ./drivers/drv_usart.o
-                               0x11bf (size before relaxing)
- .debug_str     0x0000685f       0x22 ./cubemx/Src/gpio.o
-                                0x1fc (size before relaxing)
- .debug_str     0x00006881       0x23 ./cubemx/Src/main.o
-                                0x313 (size before relaxing)
- .debug_str     0x000068a4       0x22 ./cubemx/Src/stm32f1xx_hal_msp.o
-                                0x236 (size before relaxing)
- .debug_str     0x000068c6       0xce ./cubemx/Src/tim.o
-                                0x92f (size before relaxing)
- .debug_str     0x00006994       0x3c ./cubemx/Src/usart.o
-                                0xa09 (size before relaxing)
- .debug_str     0x000069d0       0x51 ./applications/main.o
-                                0x75a (size before relaxing)
+ .debug_str     0x00000000      0x2eb ./rt-thread/src/clock.o
+                                0x3b4 (size before relaxing)
+ .debug_str     0x000002eb      0x108 ./rt-thread/src/components.o
+                                0x420 (size before relaxing)
+ .debug_str     0x000003f3      0x5c0 ./rt-thread/src/device.o
+                                0x821 (size before relaxing)
+ .debug_str     0x000009b3      0x156 ./rt-thread/src/idle.o
+                                0x484 (size before relaxing)
+ .debug_str     0x00000b09      0x488 ./rt-thread/src/ipc.o
+                                0x98a (size before relaxing)
+ .debug_str     0x00000f91       0xcb ./rt-thread/src/irq.o
+                                0x283 (size before relaxing)
+ .debug_str     0x0000105c      0x422 ./rt-thread/src/kservice.o
+                                0xb68 (size before relaxing)
+ .debug_str     0x0000147e       0xe2 ./rt-thread/src/mem.o
+                                0x4d7 (size before relaxing)
+ .debug_str     0x00001560      0x2d4 ./rt-thread/src/object.o
+                                0x6ee (size before relaxing)
+ .debug_str     0x00001834      0x22c ./rt-thread/src/scheduler.o
+                                0x618 (size before relaxing)
+ .debug_str     0x00001a60      0x1f3 ./rt-thread/src/thread.o
+                                0x6ee (size before relaxing)
+ .debug_str     0x00001c53      0x203 ./rt-thread/src/timer.o
+                                0x74d (size before relaxing)
+ .debug_str     0x00001e56      0x198 ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
+                                0x39e (size before relaxing)
+ .debug_str     0x00001fee      0x5d7 ./rt-thread/components/libc/compilers/newlib/syscalls.o
+                                0xc00 (size before relaxing)
+ .debug_str     0x000025c5      0x44c ./rt-thread/components/finsh/cmd.o
+                                0xe17 (size before relaxing)
+ .debug_str     0x00002a11      0x1a1 ./rt-thread/components/finsh/msh.o
+                                0x397 (size before relaxing)
+ .debug_str     0x00002bb2       0x54 ./rt-thread/components/finsh/msh_parse.o
+                                0x1cd (size before relaxing)
+ .debug_str     0x00002c06      0x228 ./rt-thread/components/finsh/shell.o
+                                0x99f (size before relaxing)
+ .debug_str     0x00002e2e      0x229 ./rt-thread/components/drivers/serial/serial.o
+                                0x83f (size before relaxing)
+ .debug_str     0x00003057      0x1a1 ./rt-thread/components/drivers/misc/pin.o
+                                0x7f9 (size before relaxing)
+ .debug_str     0x000031f8       0x6a ./rt-thread/components/drivers/ipc/completion.o
+                                0x406 (size before relaxing)
+ .debug_str     0x00003262      0x72a ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                                0x8d0 (size before relaxing)
+ .debug_str     0x0000398c      0x403 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                                0x9bf (size before relaxing)
+ .debug_str     0x00003d8f      0x3ed ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+                                0x60b (size before relaxing)
+ .debug_str     0x0000417c      0x1c1 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                                0x41a (size before relaxing)
+ .debug_str     0x0000433d      0x341 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                                0x61e (size before relaxing)
+ .debug_str     0x0000467e      0xfc7 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+                               0x13f8 (size before relaxing)
+ .debug_str     0x00005645      0x57b ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+                                0xbf8 (size before relaxing)
+ .debug_str     0x00005bc0      0x6df ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                                0xb2e (size before relaxing)
+ .debug_str     0x0000629f       0x7e ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
+                                0x2f6 (size before relaxing)
+ .debug_str     0x0000631d       0x3a ./drivers/board.o
+                                0x596 (size before relaxing)
+ .debug_str     0x00006357       0x88 ./drivers/drv_clk.o
+                                0x382 (size before relaxing)
+ .debug_str     0x000063df       0xba ./drivers/drv_common.o
+                                0x72a (size before relaxing)
+ .debug_str     0x00006499      0x1a2 ./drivers/drv_gpio.o
+                                0xca5 (size before relaxing)
+ .debug_str     0x0000663b      0x238 ./drivers/drv_usart.o
+                               0x11c2 (size before relaxing)
+ .debug_str     0x00006873       0x22 ./cubemx/Src/gpio.o
+                                0x1ff (size before relaxing)
+ .debug_str     0x00006895       0x23 ./cubemx/Src/main.o
+                                0x316 (size before relaxing)
+ .debug_str     0x000068b8       0x22 ./cubemx/Src/stm32f1xx_hal_msp.o
+                                0x239 (size before relaxing)
+ .debug_str     0x000068da       0xc2 ./cubemx/Src/tim.o
+                                0x932 (size before relaxing)
+ .debug_str     0x0000699c       0x51 ./cubemx/Src/usart.o
+                                0xa21 (size before relaxing)
+ .debug_str     0x000069ed       0x47 ./applications/main.o
+                                0x749 (size before relaxing)
 
-.debug_loc      0x00000000     0xdf3a
+.debug_loc      0x00000000     0xdf66
  *(.debug_loc)
  .debug_loc     0x00000000      0x1c8 ./rt-thread/src/clock.o
  .debug_loc     0x000001c8      0x2a8 ./rt-thread/src/components.o
@@ -4903,8 +4908,8 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_loc     0x0000d910       0xaa ./cubemx/Src/main.o
  .debug_loc     0x0000d9ba       0x5c ./cubemx/Src/stm32f1xx_hal_msp.o
  .debug_loc     0x0000da16      0x38c ./cubemx/Src/tim.o
- .debug_loc     0x0000dda2       0xcc ./cubemx/Src/usart.o
- .debug_loc     0x0000de6e       0xcc ./applications/main.o
+ .debug_loc     0x0000dda2       0xf8 ./cubemx/Src/usart.o
+ .debug_loc     0x0000de9a       0xcc ./applications/main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -4922,7 +4927,7 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  *(.debug_varnames)
 OUTPUT(rtthread.elf elf32-littlearm)
 
-.debug_ranges   0x00000000     0x1828
+.debug_ranges   0x00000000     0x1830
  .debug_ranges  0x00000000       0x38 ./rt-thread/src/clock.o
  .debug_ranges  0x00000038       0x58 ./rt-thread/src/components.o
  .debug_ranges  0x00000090       0x70 ./rt-thread/src/device.o
@@ -4963,8 +4968,8 @@ OUTPUT(rtthread.elf elf32-littlearm)
  .debug_ranges  0x00001758       0x20 ./cubemx/Src/main.o
  .debug_ranges  0x00001778       0x10 ./cubemx/Src/stm32f1xx_hal_msp.o
  .debug_ranges  0x00001788       0x60 ./cubemx/Src/tim.o
- .debug_ranges  0x000017e8       0x20 ./cubemx/Src/usart.o
- .debug_ranges  0x00001808       0x20 ./applications/main.o
+ .debug_ranges  0x000017e8       0x28 ./cubemx/Src/usart.o
+ .debug_ranges  0x00001810       0x20 ./applications/main.o
 
 Cross Reference Table
 
@@ -5113,9 +5118,9 @@ HAL_HalfDuplex_Init                               ./libraries/STM32F1xx_HAL_Driv
 HAL_IncTick                                       ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
                                                   ./drivers/drv_common.o
 HAL_Init                                          ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                                                  ./applications/main.o
                                                   ./cubemx/Src/main.o
                                                   ./drivers/drv_common.o
+                                                  ./drivers/board.o
 HAL_InitTick                                      ./drivers/drv_common.o
                                                   ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
                                                   ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
@@ -5330,7 +5335,7 @@ HAL_TIM_PWM_MspInit                               ./cubemx/Src/tim.o
 HAL_TIM_PWM_PulseFinishedCallback                 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
 HAL_TIM_PWM_PulseFinishedHalfCpltCallback         ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
 HAL_TIM_PWM_Start                                 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
-                                                  ./applications/main.o
+                                                  ./drivers/board.o
 HAL_TIM_PWM_Start_DMA                             ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
 HAL_TIM_PWM_Start_IT                              ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
 HAL_TIM_PWM_Stop                                  ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
@@ -5384,11 +5389,11 @@ I2C1_EV_IRQHandler                                ./libraries/CMSIS/Device/ST/ST
 I2C2_ER_IRQHandler                                ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
 I2C2_EV_IRQHandler                                ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
 MX_GPIO_Init                                      ./cubemx/Src/gpio.o
-                                                  ./applications/main.o
                                                   ./cubemx/Src/main.o
+                                                  ./drivers/board.o
 MX_TIM1_Init                                      ./cubemx/Src/tim.o
-                                                  ./applications/main.o
                                                   ./cubemx/Src/main.o
+                                                  ./drivers/board.o
 MX_TIM2_Init                                      ./cubemx/Src/tim.o
                                                   ./cubemx/Src/main.o
 MX_TIM3_Init                                      ./cubemx/Src/tim.o
@@ -5396,14 +5401,16 @@ MX_TIM3_Init                                      ./cubemx/Src/tim.o
 MX_TIM4_Init                                      ./cubemx/Src/tim.o
                                                   ./cubemx/Src/main.o
 MX_TIM5_Init                                      ./cubemx/Src/tim.o
-                                                  ./applications/main.o
                                                   ./cubemx/Src/main.o
+                                                  ./drivers/board.o
 MX_TIM8_Init                                      ./cubemx/Src/tim.o
-                                                  ./applications/main.o
+                                                  ./cubemx/Src/main.o
+                                                  ./drivers/board.o
+MX_UART5_Init                                     ./cubemx/Src/usart.o
                                                   ./cubemx/Src/main.o
 MX_USART1_UART_Init                               ./cubemx/Src/usart.o
-                                                  ./applications/main.o
                                                   ./cubemx/Src/main.o
+                                                  ./drivers/board.o
 MemManage_Handler                                 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
 NMI_Handler                                       ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
 PVD_IRQHandler                                    ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
@@ -5714,9 +5721,12 @@ htim3                                             ./cubemx/Src/tim.o
 htim4                                             ./cubemx/Src/tim.o
 htim5                                             ./cubemx/Src/tim.o
                                                   ./applications/main.o
+                                                  ./drivers/board.o
 htim8                                             ./cubemx/Src/tim.o
                                                   ./applications/main.o
+                                                  ./drivers/board.o
 huart1                                            ./cubemx/Src/usart.o
+huart5                                            ./cubemx/Src/usart.o
 hw_board_init                                     ./drivers/drv_common.o
                                                   ./drivers/board.o
 index                                             ./rt-thread/components/libc/compilers/common/cstring.o

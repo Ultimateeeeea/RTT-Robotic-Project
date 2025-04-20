@@ -15,16 +15,14 @@
 #include <rtdbg.h>
 
 #include "main.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "tim.h"
-
 int front_left_count = 0;
+
 
 void encoder_thread_entry(void *parameter)
 {
-        MX_TIM1_Init();
-
     // 启动编码器模式
        if (HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL) != HAL_OK)
        {
@@ -49,38 +47,6 @@ void encoder_thread_entry(void *parameter)
 
 void pwm_entry(void *parameter)
 {
-    MX_TIM5_Init();
-    MX_TIM8_Init();
-
-    // 启动 左前轮 输出
-    if (HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_3) != HAL_OK)
-    {
-        rt_kprintf("L_F Start Failed\n");
-    }
-
-    else
-    {
-        rt_kprintf("Wrong number!\n");
-    }
-
-    // 启动 右前轮 输出
-    if (HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_4) != HAL_OK)
-     {
-         rt_kprintf("R_F Start Failed\n");
-     }
-
-    // 启动 左后轮 输出
-    if (HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3) != HAL_OK)
-     {
-         rt_kprintf("L_B Start Failed\n");
-     }
-
-    // 启动 右后轮 输出
-    if (HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4) != HAL_OK)
-     {
-         rt_kprintf("R_B Start Failed\n");
-     }
-
     // 可以在这里添加代码来修改占空比或做其他操作
     while (1)
     {
@@ -96,19 +62,7 @@ void pwm_entry(void *parameter)
 int main(void)
 {
     static rt_thread_t tid;
-    static rt_bool_t Init_Flag;
-
-    /*初始化函数*/
-    if(Init_Flag != RT_EOK)
-    {
-        HAL_Init();
-        MX_GPIO_Init();
-        MX_USART1_UART_Init();
-
-        Init_Flag = RT_EOK;
-    }
-
-    /*线程调度*/
+    /* 线程调度 */
 //       tid = rt_thread_create("encoder_thread_entry", encoder_thread_entry, RT_NULL, 512, 10, 10);
 //           if (tid != RT_NULL)
 //               rt_thread_startup(tid);
