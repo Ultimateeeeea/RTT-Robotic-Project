@@ -63,14 +63,14 @@ int front_left_count = 0;
 //    }
 //}
 
-void Test_1_entry(void *p)
-{
-    while(1)
-    {
-        rt_kprintf("I'm One!\n");
-        rt_thread_mdelay(1000);
-    }
-}
+//void Test_1_entry(void *p)
+//{
+//    while(1)
+//    {
+//        rt_kprintf("I'm One!\n");
+//        rt_thread_mdelay(1000);
+//    }
+//}
 
 void Test_2_entry(void *p)
 {
