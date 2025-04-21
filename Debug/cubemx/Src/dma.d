@@ -1,5 +1,6 @@
-cubemx/Src/main.o: ../cubemx/Src/main.c \
+cubemx/Src/dma.o: ../cubemx/Src/dma.c \
  E:\RT-ThreadStudio\workspace\Robtic\rtconfig_preinc.h \
+ E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/dma.h \
  E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/main.h \
  E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal.h \
  E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/stm32f1xx_hal_conf.h \
@@ -24,14 +25,11 @@ cubemx/Src/main.o: ../cubemx/Src/main.c \
  E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_pwr.h \
  E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_tim.h \
  E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_tim_ex.h \
- E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_uart.h \
- E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/dma.h \
- E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/main.h \
- E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/tim.h \
- E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/usart.h \
- E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/gpio.h
+ E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_uart.h
 
 E:\RT-ThreadStudio\workspace\Robtic\rtconfig_preinc.h:
+
+E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/dma.h:
 
 E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/main.h:
 
@@ -82,13 +80,3 @@ E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx
 E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_tim_ex.h:
 
 E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_uart.h:
-
-E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/dma.h:
-
-E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/main.h:
-
-E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/tim.h:
-
-E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/usart.h:
-
-E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/gpio.h:

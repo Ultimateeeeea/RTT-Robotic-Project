@@ -36,7 +36,9 @@ applications/main.o: ../applications/main.c \
  E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/tim.h \
  E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/main.h \
  E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/usart.h \
- E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/gpio.h
+ E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/gpio.h \
+ E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/dma.h \
+ ../applications/motor/motor_control.h
 
 E:\RT-ThreadStudio\workspace\Robtic\rtconfig_preinc.h:
 
@@ -113,3 +115,7 @@ E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/main.h:
 E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/usart.h:
 
 E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/gpio.h:
+
+E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/dma.h:
+
+../applications/motor/motor_control.h:

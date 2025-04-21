@@ -11,6 +11,7 @@ Src/main.c
 Src/gpio.c
 Src/usart.c
 Src/tim.c
+Src/dma.c
 ''')
 
 path = [cwd]

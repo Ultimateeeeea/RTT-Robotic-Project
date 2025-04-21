@@ -28,6 +28,7 @@ drivers/board.o: ../drivers/board.c \
  E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_uart.h \
  E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/usart.h \
  E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/gpio.h \
+ E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/dma.h \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rtthread.h \
  E:\RT-ThreadStudio\workspace\Robtic/rtconfig.h \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rtdebug.h \
@@ -96,6 +97,8 @@ E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx
 E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/usart.h:
 
 E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/gpio.h:
+
+E:\RT-ThreadStudio\workspace\Robtic\cubemx\Inc/dma.h:
 
 E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rtthread.h:
 

@@ -47,6 +47,7 @@ drivers/drv_usart.o: ../drivers/drv_usart.c \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/ipc/ringblk_buf.h \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/drivers/serial.h \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/drivers/pin.h \
+ E:\RT-ThreadStudio\workspace\Robtic\drivers\include\config/dma_config.h \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rtdbg.h
 
 E:\RT-ThreadStudio\workspace\Robtic\rtconfig_preinc.h:
@@ -144,5 +145,7 @@ E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/ipc/rin
 E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/drivers/serial.h:
 
 E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/drivers/pin.h:
+
+E:\RT-ThreadStudio\workspace\Robtic\drivers\include\config/dma_config.h:
 
 E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rtdbg.h:

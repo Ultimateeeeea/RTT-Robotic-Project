@@ -14,6 +14,7 @@
 #include "tim.h"      // CubeMX 生成的，定义了 htim5, htim8, MX_TIM5_Init() 等
 #include "usart.h"
 #include "gpio.h"
+#include "dma.h"
 
 #include <rtthread.h>
 #include <board.h>
@@ -40,21 +41,24 @@ RT_WEAK void rt_hw_board_init()
 #ifdef RT_USING_COMPONENTS_INIT
     rt_components_board_init();
 #endif
+
     /* 基本初始化 */
         HAL_Init();
         MX_GPIO_Init();
         MX_USART1_UART_Init();
+        MX_DMA_Init();
+        MX_UART4_Init();
 
     /* TIM5/TIM8 PWM 初始化 */
-       MX_TIM5_Init();
-       HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_3);
-       HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_4);
+        MX_TIM5_Init();
+        HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_3);
+        HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_4);
 
-       MX_TIM8_Init();
-       HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3);
-       HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
+        MX_TIM8_Init();
+        HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3);
+        HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
 
      /* TIM1 编码器初始化*/
-       MX_TIM1_Init();
+        MX_TIM1_Init();
 
 }
