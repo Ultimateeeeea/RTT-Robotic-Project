@@ -40,7 +40,7 @@ int motor_thread_init(void)
     if (tid) rt_thread_startup(tid);
     return 0;
 }
-/*****************************************************/
+/******************************************************/
 /* 作为测试用 */
 static void test_event_thread(void *p)
 {
