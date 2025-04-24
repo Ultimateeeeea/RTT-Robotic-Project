@@ -19,7 +19,7 @@
 #include "usart.h"
 #include "gpio.h"
 #include "dma.h"
-#include "motor/motor_control.h"    //StepMotor
+
 
 int front_left_count = 0;
 
@@ -63,27 +63,28 @@ int front_left_count = 0;
 //    }
 //}
 
-void Test_1_entry(void *p)
-{
-    while(1)
-    {
-        rt_kprintf("I'm One!\n");
-        rt_thread_mdelay(1000);
-    }
-}
+//void Test_1_entry(void *p)
+//{
+//    while(1)
+//    {
+//        rt_kprintf("I'm One!\n");
+//        rt_thread_mdelay(1000);
+//    }
+//}
+//
+//void Test_2_entry(void *p)
+//{
+//    while(1)
+//    {
+//        rt_kprintf("I'm Two!\n");
+//        rt_thread_mdelay(500);
+//    }
+//}
 
-void Test_2_entry(void *p)
-{
-    while(1)
-    {
-        rt_kprintf("I'm Two!\n");
-        rt_thread_mdelay(500);
-    }
-}
 
 int main(void)
 {
-    static rt_thread_t tid;
+//    static rt_thread_t tid;
 
     /* 线程调度 */
 //       tid = rt_thread_create("encoder_thread_entry", encoder_thread_entry, RT_NULL, 512, 10, 10);
@@ -93,14 +94,14 @@ int main(void)
 //        tid = rt_thread_create("pwm_entry", pwm_entry, RT_NULL, 512, 15, 10);
 //            if (tid != RT_NULL)
 //                rt_thread_startup(tid);
-
-        tid = rt_thread_create("Test_1_entry", Test_1_entry, RT_NULL, 512, 15, 10);
-                  if (tid != RT_NULL)
-                      rt_thread_startup(tid);
-
-        tid = rt_thread_create("Test_2_entry", Test_2_entry, RT_NULL, 512, 15, 10);
-                if (tid != RT_NULL)
-                    rt_thread_startup(tid);
+//
+//        tid = rt_thread_create("Test_1_entry", Test_1_entry, RT_NULL, 512, 15, 10);
+//                  if (tid != RT_NULL)
+//                      rt_thread_startup(tid);
+//
+//        tid = rt_thread_create("Test_2_entry", Test_2_entry, RT_NULL, 512, 15, 10);
+//                if (tid != RT_NULL)
+//                    rt_thread_startup(tid);
 
     return RT_EOK;
 }

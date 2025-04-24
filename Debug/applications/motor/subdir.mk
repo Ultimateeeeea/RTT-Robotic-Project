@@ -4,16 +4,22 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../applications/motor/event_motor.c \
-../applications/motor/motor_control_thread.c 
+../applications/motor/motor_cmd.c \
+../applications/motor/motor_motion.c \
+../applications/motor/motor_state.c \
+../applications/motor/motor_thread.c 
 
 OBJS += \
-./applications/motor/event_motor.o \
-./applications/motor/motor_control_thread.o 
+./applications/motor/motor_cmd.o \
+./applications/motor/motor_motion.o \
+./applications/motor/motor_state.o \
+./applications/motor/motor_thread.o 
 
 C_DEPS += \
-./applications/motor/event_motor.d \
-./applications/motor/motor_control_thread.d 
+./applications/motor/motor_cmd.d \
+./applications/motor/motor_motion.d \
+./applications/motor/motor_state.d \
+./applications/motor/motor_thread.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

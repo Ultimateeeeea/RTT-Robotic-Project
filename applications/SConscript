@@ -1,0 +1,11 @@
+Import('SRC')
+
+
+SRC += [
+	'main.c',
+	# 底层驱动模块
+    'motor/motor_cmd.c',
+    'motor/motor_motion.c',
+    'motor_state.c',
+    'motor_thread.c',
+]
