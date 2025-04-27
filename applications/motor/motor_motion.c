@@ -14,8 +14,8 @@
 //前进指令
 rt_err_t motion_forward(uint16_t rpm)
 {
-    motor_cmd_speed(LF, CW, rpm, 0, RT_FALSE);
-    motor_cmd_speed(RF, CW, rpm, 0, RT_FALSE);
+    motor_cmd_speed(LF, CW, rpm, 0, RT_TRUE);
+    motor_cmd_speed(RF, CW, rpm, 0, RT_TRUE);
     motor_cmd_speed(LB, CW, rpm, 0, RT_TRUE);
     motor_cmd_speed(RB, CW, rpm, 0, RT_TRUE);
     motor_cmd_sync(0x00);  // 广播 使得电机同步运转

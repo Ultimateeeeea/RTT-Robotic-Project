@@ -49,16 +49,9 @@ RT_WEAK void rt_hw_board_init()
         MX_DMA_Init();
         MX_UART4_Init();
 
-    /* TIM5/TIM8 PWM 初始化 */
-        MX_TIM5_Init();
-        HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_3);
-        HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_4);
-
+    /* TIM8初始化，开启CH3 CH4 PWM模式*/
         MX_TIM8_Init();
         HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3);
         HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
-
-     /* TIM1 编码器初始化*/
-        MX_TIM1_Init();
 
 }

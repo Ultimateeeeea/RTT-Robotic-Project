@@ -1,6 +1,7 @@
 /* motor_state.c */
 #include "motor_state.h"
 #include "motor_motion.h"
+#include "switch/switch_evt.h"      /* g_sw_event & EVT_SW_BOTH_PRESS */
 
 static motor_state_t cur_state = ST_IDLE;
 
@@ -8,7 +9,6 @@ static motor_state_t cur_state = ST_IDLE;
 void motor_state_set(motor_state_t st)
 {
     cur_state = st;
-    rt_kprintf("[STATE] switch to %d\n",cur_state);
 }
 
 /* 当前状态对应的运动状态 */

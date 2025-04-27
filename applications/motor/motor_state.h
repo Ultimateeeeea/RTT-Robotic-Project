@@ -16,6 +16,6 @@ typedef enum
 } motor_state_t;     // 枚举体变量名称：motor_state_t
 
 void motor_state_set(motor_state_t st); /* 当前状态设置 */
-void motor_state_poll(void);  /* 当前状态对应的运动状态 */
+void motor_state_poll(void);            /* 当前状态对应的 **运动** 状态 */
 
 #endif
