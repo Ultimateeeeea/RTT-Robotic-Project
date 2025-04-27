@@ -19,7 +19,8 @@ applications/motor/motor_state.o: ../applications/motor/motor_state.c \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/ipc/ringblk_buf.h \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/drivers/serial.h \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/drivers/pin.h \
- ../applications/motor/motor_motion.h
+ ../applications/motor/motor_motion.h \
+ E:\RT-ThreadStudio\workspace\Robtic\applications/switch/switch_evt.h
 
 E:\RT-ThreadStudio\workspace\Robtic\rtconfig_preinc.h:
 
@@ -62,3 +63,5 @@ E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/drivers
 E:\RT-ThreadStudio\workspace\Robtic\rt-thread\components\drivers\include/drivers/pin.h:
 
 ../applications/motor/motor_motion.h:
+
+E:\RT-ThreadStudio\workspace\Robtic\applications/switch/switch_evt.h:

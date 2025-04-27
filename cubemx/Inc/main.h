@@ -57,10 +57,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define Moto_FrontLeft_Pin GPIO_PIN_2
-#define Moto_FrontLeft_GPIO_Port GPIOA
-#define Motor_FronRight_Pin GPIO_PIN_3
-#define Motor_FronRight_GPIO_Port GPIOA
 #define Motor_BackLeft_Pin GPIO_PIN_8
 #define Motor_BackLeft_GPIO_Port GPIOC
 #define Motor_BackRight_Pin GPIO_PIN_9
@@ -73,6 +69,10 @@ void Error_Handler(void);
 #define StepMotor_TX_GPIO_Port GPIOC
 #define StepMotor_RX_Pin GPIO_PIN_11
 #define StepMotor_RX_GPIO_Port GPIOC
+#define Front_Switch_Pin GPIO_PIN_0
+#define Front_Switch_GPIO_Port GPIOE
+#define Back_Switch_Pin GPIO_PIN_1
+#define Back_Switch_GPIO_Port GPIOE
 
 /* USER CODE BEGIN Private defines */
 
