@@ -1,11 +1,7 @@
 #include "switch_evt.h"
-#include <rtthread.h>
-#include <rtdevice.h>
-#include <board.h>
-#include "drv_common.h"
 
 /************************ 函数功能 ***********************/
-//  实现开关去抖，并统计被同时按下的次数：button_press
+//  实现开关去抖，并统计被同时按下的次数：button_press(全局变量)
 //  创建了全局事件集对象：g_sw_event
 //  全局事件：EVT_SW_BOTH_PRESS
 //  用于统计两开关被按下的**全局**标志位：both_button_press
@@ -24,7 +20,7 @@ static uint8_t sw1_stable = 0, sw2_stable = 0;  //开关稳定时的计数
 static uint8_t sw1_cnt = 0, sw2_cnt = 0;
 static rt_bool_t both_pressed_flag = RT_FALSE;  //两开关同时被按下的标志位
 static volatile rt_int32_t both_cnt = 0;        //用于统计开关被按下的原子计数(防止被中断干扰)
-volatile int32_t  both_button_press = 0;             //全局变量，记录两开关被同时按下的次数
+volatile rt_uint32_t  both_button_press = 0;             //全局变量，记录两开关被同时按下的次数
 
 /* 开关去抖，当两开关被同时按下时发送事件: EVT_SW_BOTH_PRESS*/
 static void sw_scan_entry(void *parameter)
@@ -87,12 +83,12 @@ static rt_int32_t both_counter_inc(void)
 }
 
 /* 清零计数 */
-static void both_counter_reset(void)
-{
-    rt_base_t level = rt_hw_interrupt_disable();
-    both_cnt = 0;
-    rt_hw_interrupt_enable(level);
-}
+//static void both_counter_reset(void)
+//{
+//    rt_base_t level = rt_hw_interrupt_disable();
+//    both_cnt = 0;
+//    rt_hw_interrupt_enable(level);
+//}
 
 /* -------------------------------------------------------------
  *                          逻辑线程：等待事件 → 计数
@@ -114,15 +110,17 @@ static void logic_thread_entry(void *parameter)
             both_button_press = both_counter_inc();
 
             /* 打印测试 */
-            rt_kprintf("[STATE] switch to %d\n",both_button_press);
+            rt_kprintf("[SWITCH STATE] switch to %d\n",both_button_press);
 //            /* 若计数 ≥3，循环归零 */
+
+            /* 刷新全局任务状态，供 task_execution 模块使用 */
+            task_state_update(both_button_press);
+            rt_kprintf("[CAR STATE] car state to %d\n",g_task_state);
 //            if (both_button_press >= 3)
 //                both_counter_reset();
         }
     }
 }
-
-
 
 /* 初始化函数，注册到 INIT_APP_EXPORT */
 int switch_evt_init(void)
@@ -139,8 +137,8 @@ int switch_evt_init(void)
                                        sw_scan_entry,
                                        RT_NULL,
                                        512,
-                                       10,          /* 优先级比 motor 高一点?*/
-                                       10);
+                                       10,      /* 优先级 */
+                                       10);     /* 时间片 */
     if (tid) rt_thread_startup(tid);
     return 0;
 }
@@ -151,7 +149,7 @@ static int logic_mgr_init(void)
                                        logic_thread_entry,
                                        RT_NULL,
                                        1024,
-                                       16,      /* 优先级 */
+                                       11,      /* 优先级 */
                                        10);     /* 时间片 */
     if (tid) rt_thread_startup(tid);
     return 0;

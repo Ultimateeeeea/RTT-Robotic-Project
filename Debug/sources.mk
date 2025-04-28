@@ -23,6 +23,7 @@ applications/logic \
 applications \
 applications/motor \
 applications/switch \
+applications/task \
 cubemx/Src \
 drivers \
 libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc \

@@ -1,7 +1,5 @@
 /* motor_state.c */
 #include "motor_state.h"
-#include "motor_motion.h"
-#include "switch/switch_evt.h"      /* g_sw_event & EVT_SW_BOTH_PRESS */
 
 static motor_state_t cur_state = ST_IDLE;
 

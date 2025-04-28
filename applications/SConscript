@@ -7,5 +7,6 @@ SRC += [
     'motor/motor_cmd.c',
     'motor/motor_motion.c',
     'motor/motor_state.c',
-    'switch_evt.c'
+    'swtich/switch_evt.c',
+    'task/task_state.c'
 ]

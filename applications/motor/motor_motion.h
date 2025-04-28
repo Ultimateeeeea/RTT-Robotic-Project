@@ -2,8 +2,7 @@
 #ifndef __MOTOR_MOTION_H__
 #define __MOTOR_MOTION_H__
 
-#include <rtthread.h>
-#include <rtdevice.h>
+#include "motor_cmd.h"
 
 rt_err_t motion_forward(uint16_t rpm);      /* 前进 */
 rt_err_t motion_backward(uint16_t rpm);
