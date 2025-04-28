@@ -2364,11 +2364,15 @@ Discarded input sections
  .bss           0x00000000        0x0 ./cubemx/Src/usart.o
  .text.HAL_UART_MspDeInit
                 0x00000000       0x88 ./cubemx/Src/usart.o
+ .text          0x00000000        0x0 ./applications/task/task_excution.o
+ .data          0x00000000        0x0 ./applications/task/task_excution.o
+ .bss           0x00000000        0x0 ./applications/task/task_excution.o
+ .text          0x00000000        0x0 ./applications/task/task_state.o
+ .data          0x00000000        0x0 ./applications/task/task_state.o
+ .bss           0x00000000        0x0 ./applications/task/task_state.o
  .text          0x00000000        0x0 ./applications/switch/switch_evt.o
  .data          0x00000000        0x0 ./applications/switch/switch_evt.o
  .bss           0x00000000        0x0 ./applications/switch/switch_evt.o
- .text.both_counter_reset
-                0x00000000       0x24 ./applications/switch/switch_evt.o
  .text          0x00000000        0x0 ./applications/motor/motor_cmd.o
  .data          0x00000000        0x0 ./applications/motor/motor_cmd.o
  .bss           0x00000000        0x0 ./applications/motor/motor_cmd.o
@@ -2393,7 +2397,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x48 ./applications/motor/motor_cmd.o
  .debug_ranges  0x00000000       0x38 ./applications/motor/motor_cmd.o
- .debug_line    0x00000000      0x32e ./applications/motor/motor_cmd.o
+ .debug_line    0x00000000      0x32c ./applications/motor/motor_cmd.o
  .debug_str     0x00000000      0x63f ./applications/motor/motor_cmd.o
  .comment       0x00000000       0x6f ./applications/motor/motor_cmd.o
  .debug_frame   0x00000000       0xf0 ./applications/motor/motor_cmd.o
@@ -2414,14 +2418,14 @@ Discarded input sections
                 0x00000000       0x30 ./applications/motor/motor_motion.o
  .text.motion_rotate_cw
                 0x00000000       0x5c ./applications/motor/motor_motion.o
- .debug_info    0x00000000      0x1a8 ./applications/motor/motor_motion.o
- .debug_abbrev  0x00000000       0x98 ./applications/motor/motor_motion.o
+ .debug_info    0x00000000      0x1d5 ./applications/motor/motor_motion.o
+ .debug_abbrev  0x00000000       0x96 ./applications/motor/motor_motion.o
  .debug_loc     0x00000000      0x1bc ./applications/motor/motor_motion.o
  .debug_aranges
                 0x00000000       0x48 ./applications/motor/motor_motion.o
  .debug_ranges  0x00000000       0x38 ./applications/motor/motor_motion.o
- .debug_line    0x00000000      0x23a ./applications/motor/motor_motion.o
- .debug_str     0x00000000      0x218 ./applications/motor/motor_motion.o
+ .debug_line    0x00000000      0x284 ./applications/motor/motor_motion.o
+ .debug_str     0x00000000      0x237 ./applications/motor/motor_motion.o
  .comment       0x00000000       0x6f ./applications/motor/motor_motion.o
  .debug_frame   0x00000000       0xe0 ./applications/motor/motor_motion.o
  .ARM.attributes
@@ -2435,14 +2439,14 @@ Discarded input sections
                 0x00000000       0x20 ./applications/motor/motor_state.o
  .text.motor_state_poll
                 0x00000000       0x6c ./applications/motor/motor_state.o
- .debug_info    0x00000000      0x110 ./applications/motor/motor_state.o
- .debug_abbrev  0x00000000       0xa1 ./applications/motor/motor_state.o
+ .debug_info    0x00000000      0x139 ./applications/motor/motor_state.o
+ .debug_abbrev  0x00000000       0xb9 ./applications/motor/motor_state.o
  .debug_loc     0x00000000       0x88 ./applications/motor/motor_state.o
  .debug_aranges
                 0x00000000       0x28 ./applications/motor/motor_state.o
  .debug_ranges  0x00000000       0x18 ./applications/motor/motor_state.o
- .debug_line    0x00000000       0x7f ./applications/motor/motor_state.o
- .debug_str     0x00000000      0x200 ./applications/motor/motor_state.o
+ .debug_line    0x00000000      0x1f6 ./applications/motor/motor_state.o
+ .debug_str     0x00000000      0x21f ./applications/motor/motor_state.o
  .comment       0x00000000       0x6f ./applications/motor/motor_state.o
  .debug_frame   0x00000000       0x54 ./applications/motor/motor_state.o
  .ARM.attributes
@@ -2711,6 +2715,8 @@ LOAD ./cubemx/Src/main.o
 LOAD ./cubemx/Src/stm32f1xx_hal_msp.o
 LOAD ./cubemx/Src/tim.o
 LOAD ./cubemx/Src/usart.o
+LOAD ./applications/task/task_excution.o
+LOAD ./applications/task/task_state.o
 LOAD ./applications/switch/switch_evt.o
 LOAD ./applications/motor/motor_cmd.o
 LOAD ./applications/motor/motor_motion.o
@@ -2729,7 +2735,7 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
 LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
                 0x00000400                _system_stack_size = 0x400
 
-.text           0x08000000    0x11a48
+.text           0x08000000    0x11bfc
                 0x08000000                . = ALIGN (0x4)
                 0x08000000                _stext = .
  *(.isr_vector)
@@ -3696,582 +3702,594 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
                 0x0800d738       0x4c ./cubemx/Src/dma.o
                 0x0800d738                MX_DMA_Init
  .text.MX_GPIO_Init
-                0x0800d784       0x9c ./cubemx/Src/gpio.o
+                0x0800d784       0xbc ./cubemx/Src/gpio.o
                 0x0800d784                MX_GPIO_Init
  .text.SystemClock_Config
-                0x0800d820       0x8c ./cubemx/Src/main.o
-                0x0800d820                SystemClock_Config
+                0x0800d840       0x8c ./cubemx/Src/main.o
+                0x0800d840                SystemClock_Config
  .text.Error_Handler
-                0x0800d8ac        0x8 ./cubemx/Src/main.o
-                0x0800d8ac                Error_Handler
+                0x0800d8cc        0x8 ./cubemx/Src/main.o
+                0x0800d8cc                Error_Handler
  .text.HAL_MspInit
-                0x0800d8b4       0x5c ./cubemx/Src/stm32f1xx_hal_msp.o
-                0x0800d8b4                HAL_MspInit
+                0x0800d8d4       0x5c ./cubemx/Src/stm32f1xx_hal_msp.o
+                0x0800d8d4                HAL_MspInit
  .text.MX_TIM8_Init
-                0x0800d910      0x120 ./cubemx/Src/tim.o
-                0x0800d910                MX_TIM8_Init
+                0x0800d930      0x120 ./cubemx/Src/tim.o
+                0x0800d930                MX_TIM8_Init
  .text.HAL_TIM_PWM_MspInit
-                0x0800da30       0x3c ./cubemx/Src/tim.o
-                0x0800da30                HAL_TIM_PWM_MspInit
+                0x0800da50       0x3c ./cubemx/Src/tim.o
+                0x0800da50                HAL_TIM_PWM_MspInit
  .text.HAL_TIM_MspPostInit
-                0x0800da6c       0x68 ./cubemx/Src/tim.o
-                0x0800da6c                HAL_TIM_MspPostInit
+                0x0800da8c       0x68 ./cubemx/Src/tim.o
+                0x0800da8c                HAL_TIM_MspPostInit
  .text.MX_UART4_Init
-                0x0800dad4       0x54 ./cubemx/Src/usart.o
-                0x0800dad4                MX_UART4_Init
+                0x0800daf4       0x54 ./cubemx/Src/usart.o
+                0x0800daf4                MX_UART4_Init
  .text.MX_USART1_UART_Init
-                0x0800db28       0x54 ./cubemx/Src/usart.o
-                0x0800db28                MX_USART1_UART_Init
+                0x0800db48       0x54 ./cubemx/Src/usart.o
+                0x0800db48                MX_USART1_UART_Init
  .text.HAL_UART_MspInit
-                0x0800db7c      0x1dc ./cubemx/Src/usart.o
-                0x0800db7c                HAL_UART_MspInit
+                0x0800db9c      0x1dc ./cubemx/Src/usart.o
+                0x0800db9c                HAL_UART_MspInit
+ .text.task_exec_entry
+                0x0800dd78       0x84 ./applications/task/task_excution.o
+                0x0800dd78                task_exec_entry
+ .text.task_exec_init
+                0x0800ddfc       0x3c ./applications/task/task_excution.o
+ .text.task_state_update
+                0x0800de38       0x2c ./applications/task/task_state.o
+                0x0800de38                task_state_update
  .text.sw_scan_entry
-                0x0800dd58       0xf4 ./applications/switch/switch_evt.o
+                0x0800de64       0xf4 ./applications/switch/switch_evt.o
  .text.both_counter_inc
-                0x0800de4c       0x30 ./applications/switch/switch_evt.o
+                0x0800df58       0x30 ./applications/switch/switch_evt.o
  .text.logic_thread_entry
-                0x0800de7c       0x48 ./applications/switch/switch_evt.o
+                0x0800df88       0x68 ./applications/switch/switch_evt.o
  .text.switch_evt_init
-                0x0800dec4       0x60 ./applications/switch/switch_evt.o
-                0x0800dec4                switch_evt_init
+                0x0800dff0       0x60 ./applications/switch/switch_evt.o
+                0x0800dff0                switch_evt_init
  .text.logic_mgr_init
-                0x0800df24       0x3c ./applications/switch/switch_evt.o
- .text.main     0x0800df60       0x10 ./applications/main.o
-                0x0800df60                main
- .text.atoi     0x0800df70        0x8 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
-                0x0800df70                atoi
+                0x0800e050       0x3c ./applications/switch/switch_evt.o
+ .text.main     0x0800e08c       0x10 ./applications/main.o
+                0x0800e08c                main
+ .text.atoi     0x0800e09c        0x8 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
+                0x0800e09c                atoi
  .text.__get_current_locale
-                0x0800df78       0x18 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+                0x0800e0a4       0x18 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
  .text.__locale_ctype_ptr_l
-                0x0800df90        0x8 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
-                0x0800df90                __locale_ctype_ptr_l
+                0x0800e0bc        0x8 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+                0x0800e0bc                __locale_ctype_ptr_l
  .text.__locale_ctype_ptr
-                0x0800df98       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
-                0x0800df98                __locale_ctype_ptr
- .text.malloc   0x0800dfac       0x10 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
-                0x0800dfac                malloc
+                0x0800e0c4       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+                0x0800e0c4                __locale_ctype_ptr
+ .text.malloc   0x0800e0d8       0x10 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
+                0x0800e0d8                malloc
  .text.__ascii_mbtowc
-                0x0800dfbc       0x2c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
-                0x0800dfbc                __ascii_mbtowc
- .text.memcmp   0x0800dfe8       0x64 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
-                0x0800dfe8                memcmp
- .text.memset   0x0800e04c       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
-                0x0800e04c                memset
- .text.strlen   0x0800e0e8       0x5c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
-                0x0800e0e8                strlen
- .text.strncat  0x0800e144       0x5c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
-                0x0800e144                strncat
- .text.strncmp  0x0800e1a0       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
-                0x0800e1a0                strncmp
- .text.strncpy  0x0800e23c       0x68 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
-                0x0800e23c                strncpy
+                0x0800e0e8       0x2c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
+                0x0800e0e8                __ascii_mbtowc
+ .text.memcmp   0x0800e114       0x64 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
+                0x0800e114                memcmp
+ .text.memset   0x0800e178       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                0x0800e178                memset
+ .text.strlen   0x0800e214       0x5c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
+                0x0800e214                strlen
+ .text.strncat  0x0800e270       0x5c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
+                0x0800e270                strncat
+ .text.strncmp  0x0800e2cc       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
+                0x0800e2cc                strncmp
+ .text.strncpy  0x0800e368       0x68 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
+                0x0800e368                strncpy
  .text._strtol_l.isra.0
-                0x0800e2a4      0x138 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
- .text.strtol   0x0800e3dc       0x2c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
-                0x0800e3dc                strtol
+                0x0800e3d0      0x138 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
+ .text.strtol   0x0800e508       0x2c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
+                0x0800e508                strtol
  .text.__ascii_wctomb
-                0x0800e408       0x1c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
-                0x0800e408                __ascii_wctomb
+                0x0800e534       0x1c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
+                0x0800e534                __ascii_wctomb
  .text.startup.register_fini
-                0x0800e424       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x0800e438        0xc e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
-                0x0800e438                atexit
+                0x0800e550       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0800e564        0xc e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
+                0x0800e564                atexit
  .text.__libc_fini_array
-                0x0800e444       0x28 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
-                0x0800e444                __libc_fini_array
+                0x0800e570       0x28 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
+                0x0800e570                __libc_fini_array
  .text.__register_exitproc
-                0x0800e46c       0xa4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
-                0x0800e46c                __register_exitproc
+                0x0800e598       0xa4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
+                0x0800e598                __register_exitproc
  *(.rodata)
- .rodata        0x0800e510       0x17 ./rt-thread/src/components.o
- *fill*         0x0800e527        0x1 00000000
- .rodata        0x0800e528       0xf4 ./rt-thread/src/device.o
- .rodata        0x0800e61c        0x8 ./rt-thread/src/idle.o
- .rodata        0x0800e624      0x4de ./rt-thread/src/ipc.o
- *fill*         0x0800eb02        0x2 00000000
- .rodata        0x0800eb04      0x1cf ./rt-thread/src/kservice.o
- *fill*         0x0800ecd3        0x1 00000000
- .rodata        0x0800ecd4      0x41b ./rt-thread/src/mem.o
- *fill*         0x0800f0ef        0x1 00000000
- .rodata        0x0800f0f0       0x91 ./rt-thread/src/object.o
- *fill*         0x0800f181        0x3 00000000
- .rodata        0x0800f184       0x65 ./rt-thread/src/scheduler.o
- *fill*         0x0800f1e9        0x3 00000000
- .rodata        0x0800f1ec      0x19f ./rt-thread/src/thread.o
- *fill*         0x0800f38b        0x1 00000000
- .rodata        0x0800f38c      0x10e ./rt-thread/src/timer.o
- *fill*         0x0800f49a        0x2 00000000
- .rodata        0x0800f49c      0x2be ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
- *fill*         0x0800f75a        0x2 00000000
- .rodata        0x0800f75c      0x7df ./rt-thread/components/finsh/cmd.o
- *fill*         0x0800ff3b        0x1 00000000
- .rodata        0x0800ff3c       0xb8 ./rt-thread/components/finsh/msh.o
- .rodata        0x0800fff4       0x91 ./rt-thread/components/finsh/shell.o
- *fill*         0x08010085        0x3 00000000
- .rodata        0x08010088      0x1a2 ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x0801022a        0x2 00000000
- .rodata        0x0801022c      0x2aa ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x080104d6        0x2 00000000
- .rodata        0x080104d8       0xd7 ./rt-thread/components/drivers/ipc/completion.o
- *fill*         0x080105af        0x1 00000000
- .rodata        0x080105b0       0xf4 ./rt-thread/components/drivers/ipc/dataqueue.o
- .rodata        0x080106a4       0x12 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- *fill*         0x080106b6        0x2 00000000
- .rodata        0x080106b8        0xa ./drivers/board.o
- *fill*         0x080106c2        0x2 00000000
- .rodata        0x080106c4        0x4 ./drivers/drv_gpio.o
- .rodata        0x080106c8      0x12c ./drivers/drv_usart.o
- .rodata        0x080107f4       0x46 ./applications/switch/switch_evt.o
+ .rodata        0x0800e63c       0x17 ./rt-thread/src/components.o
+ *fill*         0x0800e653        0x1 00000000
+ .rodata        0x0800e654       0xf4 ./rt-thread/src/device.o
+ .rodata        0x0800e748        0x8 ./rt-thread/src/idle.o
+ .rodata        0x0800e750      0x4de ./rt-thread/src/ipc.o
+ *fill*         0x0800ec2e        0x2 00000000
+ .rodata        0x0800ec30      0x1cf ./rt-thread/src/kservice.o
+ *fill*         0x0800edff        0x1 00000000
+ .rodata        0x0800ee00      0x41b ./rt-thread/src/mem.o
+ *fill*         0x0800f21b        0x1 00000000
+ .rodata        0x0800f21c       0x91 ./rt-thread/src/object.o
+ *fill*         0x0800f2ad        0x3 00000000
+ .rodata        0x0800f2b0       0x65 ./rt-thread/src/scheduler.o
+ *fill*         0x0800f315        0x3 00000000
+ .rodata        0x0800f318      0x19f ./rt-thread/src/thread.o
+ *fill*         0x0800f4b7        0x1 00000000
+ .rodata        0x0800f4b8      0x10e ./rt-thread/src/timer.o
+ *fill*         0x0800f5c6        0x2 00000000
+ .rodata        0x0800f5c8      0x2be ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
+ *fill*         0x0800f886        0x2 00000000
+ .rodata        0x0800f888      0x7df ./rt-thread/components/finsh/cmd.o
+ *fill*         0x08010067        0x1 00000000
+ .rodata        0x08010068       0xb8 ./rt-thread/components/finsh/msh.o
+ .rodata        0x08010120       0x91 ./rt-thread/components/finsh/shell.o
+ *fill*         0x080101b1        0x3 00000000
+ .rodata        0x080101b4      0x1a2 ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x08010356        0x2 00000000
+ .rodata        0x08010358      0x2aa ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x08010602        0x2 00000000
+ .rodata        0x08010604       0xd7 ./rt-thread/components/drivers/ipc/completion.o
+ *fill*         0x080106db        0x1 00000000
+ .rodata        0x080106dc       0xf4 ./rt-thread/components/drivers/ipc/dataqueue.o
+ .rodata        0x080107d0       0x12 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ *fill*         0x080107e2        0x2 00000000
+ .rodata        0x080107e4        0xa ./drivers/board.o
+ *fill*         0x080107ee        0x2 00000000
+ .rodata        0x080107f0        0x4 ./drivers/drv_gpio.o
+ .rodata        0x080107f4      0x12c ./drivers/drv_usart.o
+ .rodata        0x08010920       0x5b ./applications/task/task_excution.o
+ *fill*         0x0801097b        0x1 00000000
+ .rodata        0x0801097c       0x6e ./applications/switch/switch_evt.o
  *(.rodata*)
- *fill*         0x0801083a        0x2 00000000
+ *fill*         0x080109ea        0x2 00000000
  .rodata.__FUNCTION__.5504
-                0x0801083c       0x14 ./rt-thread/src/components.o
+                0x080109ec       0x14 ./rt-thread/src/components.o
  .rodata.__FUNCTION__.5413
-                0x08010850        0xf ./rt-thread/src/device.o
- *fill*         0x0801085f        0x1 00000000
+                0x08010a00        0xf ./rt-thread/src/device.o
+ *fill*         0x08010a0f        0x1 00000000
  .rodata.__FUNCTION__.5418
-                0x08010860       0x10 ./rt-thread/src/device.o
+                0x08010a10       0x10 ./rt-thread/src/device.o
  .rodata.__FUNCTION__.5425
-                0x08010870        0xf ./rt-thread/src/device.o
- *fill*         0x0801087f        0x1 00000000
+                0x08010a20        0xf ./rt-thread/src/device.o
+ *fill*         0x08010a2f        0x1 00000000
  .rodata.__FUNCTION__.5432
-                0x08010880       0x10 ./rt-thread/src/device.o
+                0x08010a30       0x10 ./rt-thread/src/device.o
  .rodata.__FUNCTION__.5445
-                0x08010890       0x1a ./rt-thread/src/device.o
- *fill*         0x080108aa        0x2 00000000
+                0x08010a40       0x1a ./rt-thread/src/device.o
+ *fill*         0x08010a5a        0x2 00000000
  .rodata.__FUNCTION__.5497
-                0x080108ac        0xc ./rt-thread/src/ipc.o
+                0x08010a5c        0xc ./rt-thread/src/ipc.o
  .rodata.__FUNCTION__.5521
-                0x080108b8        0xc ./rt-thread/src/ipc.o
+                0x08010a68        0xc ./rt-thread/src/ipc.o
  .rodata.__FUNCTION__.5478
-                0x080108c4       0x12 ./rt-thread/src/ipc.o
- *fill*         0x080108d6        0x2 00000000
+                0x08010a74       0x12 ./rt-thread/src/ipc.o
+ *fill*         0x08010a86        0x2 00000000
  .rodata.__FUNCTION__.5533
-                0x080108d8        0xf ./rt-thread/src/ipc.o
- *fill*         0x080108e7        0x1 00000000
+                0x08010a88        0xf ./rt-thread/src/ipc.o
+ *fill*         0x08010a97        0x1 00000000
  .rodata.__FUNCTION__.5547
-                0x080108e8        0xe ./rt-thread/src/ipc.o
- *fill*         0x080108f6        0x2 00000000
+                0x08010a98        0xe ./rt-thread/src/ipc.o
+ *fill*         0x08010aa6        0x2 00000000
  .rodata.__FUNCTION__.5571
-                0x080108f8        0xe ./rt-thread/src/ipc.o
- *fill*         0x08010906        0x2 00000000
+                0x08010aa8        0xe ./rt-thread/src/ipc.o
+ *fill*         0x08010ab6        0x2 00000000
  .rodata.__FUNCTION__.5583
-                0x08010908       0x11 ./rt-thread/src/ipc.o
- *fill*         0x08010919        0x3 00000000
+                0x08010ab8       0x11 ./rt-thread/src/ipc.o
+ *fill*         0x08010ac9        0x3 00000000
  .rodata.__FUNCTION__.5597
-                0x0801091c        0xe ./rt-thread/src/ipc.o
- *fill*         0x0801092a        0x2 00000000
+                0x08010acc        0xe ./rt-thread/src/ipc.o
+ *fill*         0x08010ada        0x2 00000000
  .rodata.__FUNCTION__.5623
-                0x0801092c        0xe ./rt-thread/src/ipc.o
- *fill*         0x0801093a        0x2 00000000
+                0x08010adc        0xe ./rt-thread/src/ipc.o
+ *fill*         0x08010aea        0x2 00000000
  .rodata.__FUNCTION__.5637
-                0x0801093c        0xe ./rt-thread/src/ipc.o
- *fill*         0x0801094a        0x2 00000000
+                0x08010aec        0xe ./rt-thread/src/ipc.o
+ *fill*         0x08010afa        0x2 00000000
  .rodata.large_digits.5584
-                0x0801094c       0x11 ./rt-thread/src/kservice.o
- *fill*         0x0801095d        0x3 00000000
+                0x08010afc       0x11 ./rt-thread/src/kservice.o
+ *fill*         0x08010b0d        0x3 00000000
  .rodata.small_digits.5583
-                0x08010960       0x11 ./rt-thread/src/kservice.o
- *fill*         0x08010971        0x3 00000000
+                0x08010b10       0x11 ./rt-thread/src/kservice.o
+ *fill*         0x08010b21        0x3 00000000
  .rodata.__FUNCTION__.5734
-                0x08010974       0x14 ./rt-thread/src/kservice.o
+                0x08010b24       0x14 ./rt-thread/src/kservice.o
  .rodata.__FUNCTION__.5721
-                0x08010988        0xd ./rt-thread/src/kservice.o
- *fill*         0x08010995        0x3 00000000
+                0x08010b38        0xd ./rt-thread/src/kservice.o
+ *fill*         0x08010b45        0x3 00000000
  .rodata.__FUNCTION__.5471
-                0x08010998        0xb ./rt-thread/src/mem.o
- *fill*         0x080109a3        0x1 00000000
+                0x08010b48        0xb ./rt-thread/src/mem.o
+ *fill*         0x08010b53        0x1 00000000
  .rodata.__FUNCTION__.5496
-                0x080109a4        0xe ./rt-thread/src/mem.o
- *fill*         0x080109b2        0x2 00000000
+                0x08010b54        0xe ./rt-thread/src/mem.o
+ *fill*         0x08010b62        0x2 00000000
  .rodata.__FUNCTION__.5521
-                0x080109b4        0xd ./rt-thread/src/mem.o
- *fill*         0x080109c1        0x3 00000000
+                0x08010b64        0xd ./rt-thread/src/mem.o
+ *fill*         0x08010b71        0x3 00000000
  .rodata.__FUNCTION__.5536
-                0x080109c4        0xf ./rt-thread/src/object.o
- *fill*         0x080109d3        0x1 00000000
+                0x08010b74        0xf ./rt-thread/src/object.o
+ *fill*         0x08010b83        0x1 00000000
  .rodata.__FUNCTION__.5545
-                0x080109d4       0x11 ./rt-thread/src/object.o
- *fill*         0x080109e5        0x3 00000000
+                0x08010b84       0x11 ./rt-thread/src/object.o
+ *fill*         0x08010b95        0x3 00000000
  .rodata.__FUNCTION__.5554
-                0x080109e8       0x13 ./rt-thread/src/object.o
- *fill*         0x080109fb        0x1 00000000
+                0x08010b98       0x13 ./rt-thread/src/object.o
+ *fill*         0x08010bab        0x1 00000000
  .rodata.__FUNCTION__.5559
-                0x080109fc       0x11 ./rt-thread/src/object.o
- *fill*         0x08010a0d        0x3 00000000
+                0x08010bac       0x11 ./rt-thread/src/object.o
+ *fill*         0x08010bbd        0x3 00000000
  .rodata.__FUNCTION__.5563
-                0x08010a10       0x1a ./rt-thread/src/object.o
- *fill*         0x08010a2a        0x2 00000000
+                0x08010bc0       0x1a ./rt-thread/src/object.o
+ *fill*         0x08010bda        0x2 00000000
  .rodata.__FUNCTION__.5567
-                0x08010a2c       0x13 ./rt-thread/src/object.o
- *fill*         0x08010a3f        0x1 00000000
+                0x08010bdc       0x13 ./rt-thread/src/object.o
+ *fill*         0x08010bef        0x1 00000000
  .rodata.__FUNCTION__.5576
-                0x08010a40        0xf ./rt-thread/src/object.o
- *fill*         0x08010a4f        0x1 00000000
+                0x08010bf0        0xf ./rt-thread/src/object.o
+ *fill*         0x08010bff        0x1 00000000
  .rodata.__FUNCTION__.5478
-                0x08010a50       0x17 ./rt-thread/src/scheduler.o
- *fill*         0x08010a67        0x1 00000000
+                0x08010c00       0x17 ./rt-thread/src/scheduler.o
+ *fill*         0x08010c17        0x1 00000000
  .rodata.__FUNCTION__.5516
-                0x08010a68       0x1a ./rt-thread/src/scheduler.o
- *fill*         0x08010a82        0x2 00000000
+                0x08010c18       0x1a ./rt-thread/src/scheduler.o
+ *fill*         0x08010c32        0x2 00000000
  .rodata.__FUNCTION__.5522
-                0x08010a84       0x1a ./rt-thread/src/scheduler.o
- *fill*         0x08010a9e        0x2 00000000
+                0x08010c34       0x1a ./rt-thread/src/scheduler.o
+ *fill*         0x08010c4e        0x2 00000000
  .rodata.__FUNCTION__.5483
-                0x08010aa0       0x10 ./rt-thread/src/thread.o
+                0x08010c50       0x10 ./rt-thread/src/thread.o
  .rodata.__FUNCTION__.5495
-                0x08010ab0        0xd ./rt-thread/src/thread.o
- *fill*         0x08010abd        0x3 00000000
+                0x08010c60        0xd ./rt-thread/src/thread.o
+ *fill*         0x08010c6d        0x3 00000000
  .rodata.__FUNCTION__.5507
-                0x08010ac0        0xf ./rt-thread/src/thread.o
- *fill*         0x08010acf        0x1 00000000
+                0x08010c70        0xf ./rt-thread/src/thread.o
+ *fill*         0x08010c7f        0x1 00000000
  .rodata.__FUNCTION__.5516
-                0x08010ad0       0x12 ./rt-thread/src/thread.o
- *fill*         0x08010ae2        0x2 00000000
+                0x08010c80       0x12 ./rt-thread/src/thread.o
+ *fill*         0x08010c92        0x2 00000000
  .rodata.__FUNCTION__.5521
-                0x08010ae4       0x11 ./rt-thread/src/thread.o
- *fill*         0x08010af5        0x3 00000000
+                0x08010c94       0x11 ./rt-thread/src/thread.o
+ *fill*         0x08010ca5        0x3 00000000
  .rodata.__FUNCTION__.5537
-                0x08010af8       0x11 ./rt-thread/src/thread.o
- *fill*         0x08010b09        0x3 00000000
+                0x08010ca8       0x11 ./rt-thread/src/thread.o
+ *fill*         0x08010cb9        0x3 00000000
  .rodata.__FUNCTION__.5548
-                0x08010b0c       0x10 ./rt-thread/src/thread.o
+                0x08010cbc       0x10 ./rt-thread/src/thread.o
  .rodata.__FUNCTION__.5571
-                0x08010b1c       0x12 ./rt-thread/src/thread.o
- *fill*         0x08010b2e        0x2 00000000
+                0x08010ccc       0x12 ./rt-thread/src/thread.o
+ *fill*         0x08010cde        0x2 00000000
  .rodata.__FUNCTION__.5583
-                0x08010b30       0x12 ./rt-thread/src/thread.o
- *fill*         0x08010b42        0x2 00000000
+                0x08010ce0       0x12 ./rt-thread/src/thread.o
+ *fill*         0x08010cf2        0x2 00000000
  .rodata.__FUNCTION__.5588
-                0x08010b44       0x11 ./rt-thread/src/thread.o
- *fill*         0x08010b55        0x3 00000000
+                0x08010cf4       0x11 ./rt-thread/src/thread.o
+ *fill*         0x08010d05        0x3 00000000
  .rodata.__FUNCTION__.5510
-                0x08010b58        0xe ./rt-thread/src/timer.o
- *fill*         0x08010b66        0x2 00000000
+                0x08010d08        0xe ./rt-thread/src/timer.o
+ *fill*         0x08010d16        0x2 00000000
  .rodata.__FUNCTION__.5515
-                0x08010b68       0x10 ./rt-thread/src/timer.o
+                0x08010d18       0x10 ./rt-thread/src/timer.o
  .rodata.__FUNCTION__.5541
-                0x08010b78        0xf ./rt-thread/src/timer.o
- *fill*         0x08010b87        0x1 00000000
+                0x08010d28        0xf ./rt-thread/src/timer.o
+ *fill*         0x08010d37        0x1 00000000
  .rodata.__FUNCTION__.5558
-                0x08010b88        0xe ./rt-thread/src/timer.o
- *fill*         0x08010b96        0x2 00000000
+                0x08010d38        0xe ./rt-thread/src/timer.o
+ *fill*         0x08010d46        0x2 00000000
  .rodata.__FUNCTION__.5565
-                0x08010b98       0x11 ./rt-thread/src/timer.o
- *fill*         0x08010ba9        0x3 00000000
- .rodata.name   0x08010bac      0x1b9 ./rt-thread/components/finsh/cmd.o
-                0x08010bac                __fsym_clear_name
-                0x08010bb4                __fsym_clear_desc
-                0x08010bd0                __fsym_version_name
-                0x08010bd8                __fsym_version_desc
-                0x08010bfc                __fsym_list_thread_name
-                0x08010c08                __fsym_list_thread_desc
-                0x08010c14                __fsym_list_sem_name
-                0x08010c20                __fsym_list_sem_desc
-                0x08010c3c                __fsym_list_event_name
-                0x08010c48                __fsym_list_event_desc
-                0x08010c60                __fsym_list_mutex_name
-                0x08010c6c                __fsym_list_mutex_desc
-                0x08010c84                __fsym_list_mailbox_name
-                0x08010c94                __fsym_list_mailbox_desc
-                0x08010cac                __fsym_list_msgqueue_name
-                0x08010cbc                __fsym_list_msgqueue_desc
-                0x08010cdc                __fsym_list_mempool_name
-                0x08010cec                __fsym_list_mempool_desc
-                0x08010d08                __fsym_list_timer_name
-                0x08010d14                __fsym_list_timer_desc
-                0x08010d2c                __fsym_list_device_name
-                0x08010d38                __fsym_list_device_desc
-                0x08010d50                __fsym_list_name
-                0x08010d58                __fsym_list_desc
- *fill*         0x08010d65        0x3 00000000
+                0x08010d48       0x11 ./rt-thread/src/timer.o
+ *fill*         0x08010d59        0x3 00000000
+ .rodata.name   0x08010d5c      0x1b9 ./rt-thread/components/finsh/cmd.o
+                0x08010d5c                __fsym_clear_name
+                0x08010d64                __fsym_clear_desc
+                0x08010d80                __fsym_version_name
+                0x08010d88                __fsym_version_desc
+                0x08010dac                __fsym_list_thread_name
+                0x08010db8                __fsym_list_thread_desc
+                0x08010dc4                __fsym_list_sem_name
+                0x08010dd0                __fsym_list_sem_desc
+                0x08010dec                __fsym_list_event_name
+                0x08010df8                __fsym_list_event_desc
+                0x08010e10                __fsym_list_mutex_name
+                0x08010e1c                __fsym_list_mutex_desc
+                0x08010e34                __fsym_list_mailbox_name
+                0x08010e44                __fsym_list_mailbox_desc
+                0x08010e5c                __fsym_list_msgqueue_name
+                0x08010e6c                __fsym_list_msgqueue_desc
+                0x08010e8c                __fsym_list_mempool_name
+                0x08010e9c                __fsym_list_mempool_desc
+                0x08010eb8                __fsym_list_timer_name
+                0x08010ec4                __fsym_list_timer_desc
+                0x08010edc                __fsym_list_device_name
+                0x08010ee8                __fsym_list_device_desc
+                0x08010f00                __fsym_list_name
+                0x08010f08                __fsym_list_desc
+ *fill*         0x08010f15        0x3 00000000
  .rodata.device_type_str
-                0x08010d68       0x78 ./rt-thread/components/finsh/cmd.o
- .rodata.name   0x08010de0       0x6d ./rt-thread/components/finsh/msh.o
-                0x08010de0                __fsym_help_name
-                0x08010de8                __fsym_help_desc
-                0x08010e00                __fsym_ps_name
-                0x08010e04                __fsym_ps_desc
-                0x08010e20                __fsym_free_name
-                0x08010e28                __fsym_free_desc
- *fill*         0x08010e4d        0x3 00000000
- .rodata.__FUNCTION__.5506
-                0x08010e50        0xe ./rt-thread/components/finsh/msh.o
- *fill*         0x08010e5e        0x2 00000000
- .rodata.__FUNCTION__.6079
-                0x08010e60       0x16 ./rt-thread/components/finsh/shell.o
- *fill*         0x08010e76        0x2 00000000
- .rodata.__FUNCTION__.6085
-                0x08010e78        0xe ./rt-thread/components/finsh/shell.o
- *fill*         0x08010e86        0x2 00000000
- .rodata.__FUNCTION__.6093
-                0x08010e88        0xd ./rt-thread/components/finsh/shell.o
- *fill*         0x08010e95        0x3 00000000
- .rodata.__FUNCTION__.6098
-                0x08010e98       0x11 ./rt-thread/components/finsh/shell.o
- *fill*         0x08010ea9        0x3 00000000
- .rodata.__FUNCTION__.5909
-                0x08010eac       0x1d ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010ec9        0x3 00000000
- .rodata.__FUNCTION__.5918
-                0x08010ecc       0x1d ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010ee9        0x3 00000000
- .rodata.__FUNCTION__.5924
-                0x08010eec       0x1d ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010f09        0x3 00000000
- .rodata.__FUNCTION__.5950
-                0x08010f0c        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010f1b        0x1 00000000
- .rodata.__FUNCTION__.5957
-                0x08010f1c        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010f2b        0x1 00000000
- .rodata.__FUNCTION__.5967
-                0x08010f2c       0x10 ./rt-thread/components/drivers/serial/serial.o
- .rodata.__FUNCTION__.5980
-                0x08010f3c        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010f4b        0x1 00000000
- .rodata.__FUNCTION__.5884
-                0x08010f4c        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010f5b        0x1 00000000
- .rodata.__FUNCTION__.5931
-                0x08010f5c        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010f6b        0x1 00000000
- .rodata.__FUNCTION__.5863
-                0x08010f6c       0x10 ./rt-thread/components/drivers/serial/serial.o
- .rodata.__FUNCTION__.5988
-                0x08010f7c       0x10 ./rt-thread/components/drivers/serial/serial.o
- .rodata.__FUNCTION__.5897
-                0x08010f8c        0xf ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010f9b        0x1 00000000
- .rodata.__FUNCTION__.5873
-                0x08010f9c       0x10 ./rt-thread/components/drivers/serial/serial.o
- .rodata.__FUNCTION__.5996
-                0x08010fac       0x12 ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010fbe        0x2 00000000
- .rodata.__FUNCTION__.6011
-                0x08010fc0       0x16 ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010fd6        0x2 00000000
- .rodata.__FUNCTION__.6020
-                0x08010fd8       0x11 ./rt-thread/components/drivers/serial/serial.o
- *fill*         0x08010fe9        0x3 00000000
- .rodata.name   0x08010fec       0x11 ./rt-thread/components/drivers/misc/pin.o
-                0x08010fec                __fsym_pin_name
-                0x08010ff0                __fsym_pin_desc
+                0x08010f18       0x78 ./rt-thread/components/finsh/cmd.o
+ .rodata.name   0x08010f90       0x6d ./rt-thread/components/finsh/msh.o
+                0x08010f90                __fsym_help_name
+                0x08010f98                __fsym_help_desc
+                0x08010fb0                __fsym_ps_name
+                0x08010fb4                __fsym_ps_desc
+                0x08010fd0                __fsym_free_name
+                0x08010fd8                __fsym_free_desc
  *fill*         0x08010ffd        0x3 00000000
- .rodata.__FUNCTION__.5458
-                0x08011000        0xa ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x0801100a        0x2 00000000
- .rodata.__FUNCTION__.5467
-                0x0801100c        0xb ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x08011017        0x1 00000000
- .rodata.__FUNCTION__.5475
-                0x08011018        0xd ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x08011025        0x3 00000000
- .rodata.__FUNCTION__.5502
-                0x08011028        0xc ./rt-thread/components/drivers/misc/pin.o
- .rodata.__FUNCTION__.5507
-                0x08011034        0xd ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x08011041        0x3 00000000
- .rodata.__FUNCTION__.5511
-                0x08011044        0xc ./rt-thread/components/drivers/misc/pin.o
- .rodata.__FUNCTION__.5515
-                0x08011050        0xb ./rt-thread/components/drivers/misc/pin.o
- *fill*         0x0801105b        0x1 00000000
- .rodata.__FUNCTION__.5860
-                0x0801105c       0x13 ./rt-thread/components/drivers/ipc/completion.o
- *fill*         0x0801106f        0x1 00000000
- .rodata.__FUNCTION__.5868
-                0x08011070       0x13 ./rt-thread/components/drivers/ipc/completion.o
- *fill*         0x08011083        0x1 00000000
- .rodata.__FUNCTION__.5877
-                0x08011084       0x13 ./rt-thread/components/drivers/ipc/completion.o
- *fill*         0x08011097        0x1 00000000
- .rodata.__FUNCTION__.5866
-                0x08011098       0x13 ./rt-thread/components/drivers/ipc/dataqueue.o
- *fill*         0x080110ab        0x1 00000000
- .rodata.__FUNCTION__.5876
-                0x080110ac       0x13 ./rt-thread/components/drivers/ipc/dataqueue.o
- *fill*         0x080110bf        0x1 00000000
- .rodata.__FUNCTION__.5893
-                0x080110c0       0x12 ./rt-thread/components/drivers/ipc/dataqueue.o
- *fill*         0x080110d2        0x2 00000000
- .rodata.__FUNCTION__.5907
-                0x080110d4       0x13 ./rt-thread/components/drivers/ipc/dataqueue.o
- *fill*         0x080110e7        0x1 00000000
- .rodata.__FUNCTION__.5913
-                0x080110e8       0x14 ./rt-thread/components/drivers/ipc/dataqueue.o
+ .rodata.__FUNCTION__.5506
+                0x08011000        0xe ./rt-thread/components/finsh/msh.o
+ *fill*         0x0801100e        0x2 00000000
+ .rodata.__FUNCTION__.6079
+                0x08011010       0x16 ./rt-thread/components/finsh/shell.o
+ *fill*         0x08011026        0x2 00000000
+ .rodata.__FUNCTION__.6085
+                0x08011028        0xe ./rt-thread/components/finsh/shell.o
+ *fill*         0x08011036        0x2 00000000
+ .rodata.__FUNCTION__.6093
+                0x08011038        0xd ./rt-thread/components/finsh/shell.o
+ *fill*         0x08011045        0x3 00000000
+ .rodata.__FUNCTION__.6098
+                0x08011048       0x11 ./rt-thread/components/finsh/shell.o
+ *fill*         0x08011059        0x3 00000000
+ .rodata.__FUNCTION__.5909
+                0x0801105c       0x1d ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x08011079        0x3 00000000
+ .rodata.__FUNCTION__.5918
+                0x0801107c       0x1d ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x08011099        0x3 00000000
  .rodata.__FUNCTION__.5924
-                0x080110fc       0x15 ./rt-thread/components/drivers/ipc/dataqueue.o
- *fill*         0x08011111        0x3 00000000
+                0x0801109c       0x1d ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x080110b9        0x3 00000000
+ .rodata.__FUNCTION__.5950
+                0x080110bc        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x080110cb        0x1 00000000
+ .rodata.__FUNCTION__.5957
+                0x080110cc        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x080110db        0x1 00000000
+ .rodata.__FUNCTION__.5967
+                0x080110dc       0x10 ./rt-thread/components/drivers/serial/serial.o
+ .rodata.__FUNCTION__.5980
+                0x080110ec        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x080110fb        0x1 00000000
+ .rodata.__FUNCTION__.5884
+                0x080110fc        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0801110b        0x1 00000000
+ .rodata.__FUNCTION__.5931
+                0x0801110c        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0801111b        0x1 00000000
+ .rodata.__FUNCTION__.5863
+                0x0801111c       0x10 ./rt-thread/components/drivers/serial/serial.o
+ .rodata.__FUNCTION__.5988
+                0x0801112c       0x10 ./rt-thread/components/drivers/serial/serial.o
+ .rodata.__FUNCTION__.5897
+                0x0801113c        0xf ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0801114b        0x1 00000000
+ .rodata.__FUNCTION__.5873
+                0x0801114c       0x10 ./rt-thread/components/drivers/serial/serial.o
+ .rodata.__FUNCTION__.5996
+                0x0801115c       0x12 ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x0801116e        0x2 00000000
+ .rodata.__FUNCTION__.6011
+                0x08011170       0x16 ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x08011186        0x2 00000000
+ .rodata.__FUNCTION__.6020
+                0x08011188       0x11 ./rt-thread/components/drivers/serial/serial.o
+ *fill*         0x08011199        0x3 00000000
+ .rodata.name   0x0801119c       0x11 ./rt-thread/components/drivers/misc/pin.o
+                0x0801119c                __fsym_pin_name
+                0x080111a0                __fsym_pin_desc
+ *fill*         0x080111ad        0x3 00000000
+ .rodata.__FUNCTION__.5458
+                0x080111b0        0xa ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x080111ba        0x2 00000000
+ .rodata.__FUNCTION__.5467
+                0x080111bc        0xb ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x080111c7        0x1 00000000
+ .rodata.__FUNCTION__.5475
+                0x080111c8        0xd ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x080111d5        0x3 00000000
+ .rodata.__FUNCTION__.5502
+                0x080111d8        0xc ./rt-thread/components/drivers/misc/pin.o
+ .rodata.__FUNCTION__.5507
+                0x080111e4        0xd ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x080111f1        0x3 00000000
+ .rodata.__FUNCTION__.5511
+                0x080111f4        0xc ./rt-thread/components/drivers/misc/pin.o
+ .rodata.__FUNCTION__.5515
+                0x08011200        0xb ./rt-thread/components/drivers/misc/pin.o
+ *fill*         0x0801120b        0x1 00000000
+ .rodata.__FUNCTION__.5860
+                0x0801120c       0x13 ./rt-thread/components/drivers/ipc/completion.o
+ *fill*         0x0801121f        0x1 00000000
+ .rodata.__FUNCTION__.5868
+                0x08011220       0x13 ./rt-thread/components/drivers/ipc/completion.o
+ *fill*         0x08011233        0x1 00000000
+ .rodata.__FUNCTION__.5877
+                0x08011234       0x13 ./rt-thread/components/drivers/ipc/completion.o
+ *fill*         0x08011247        0x1 00000000
+ .rodata.__FUNCTION__.5866
+                0x08011248       0x13 ./rt-thread/components/drivers/ipc/dataqueue.o
+ *fill*         0x0801125b        0x1 00000000
+ .rodata.__FUNCTION__.5876
+                0x0801125c       0x13 ./rt-thread/components/drivers/ipc/dataqueue.o
+ *fill*         0x0801126f        0x1 00000000
+ .rodata.__FUNCTION__.5893
+                0x08011270       0x12 ./rt-thread/components/drivers/ipc/dataqueue.o
+ *fill*         0x08011282        0x2 00000000
+ .rodata.__FUNCTION__.5907
+                0x08011284       0x13 ./rt-thread/components/drivers/ipc/dataqueue.o
+ *fill*         0x08011297        0x1 00000000
+ .rodata.__FUNCTION__.5913
+                0x08011298       0x14 ./rt-thread/components/drivers/ipc/dataqueue.o
+ .rodata.__FUNCTION__.5924
+                0x080112ac       0x15 ./rt-thread/components/drivers/ipc/dataqueue.o
+ *fill*         0x080112c1        0x3 00000000
  .rodata.__FUNCTION__.5930
-                0x08011114       0x12 ./rt-thread/components/drivers/ipc/dataqueue.o
- *fill*         0x08011126        0x2 00000000
+                0x080112c4       0x12 ./rt-thread/components/drivers/ipc/dataqueue.o
+ *fill*         0x080112d6        0x2 00000000
  .rodata.AHBPrescTable
-                0x08011128       0x10 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
-                0x08011128                AHBPrescTable
+                0x080112d8       0x10 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
+                0x080112d8                AHBPrescTable
  .rodata.APBPrescTable
-                0x08011138        0x8 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
-                0x08011138                APBPrescTable
- .rodata.pins   0x08011140      0x540 ./drivers/drv_gpio.o
+                0x080112e8        0x8 ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o
+                0x080112e8                APBPrescTable
+ .rodata.pins   0x080112f0      0x540 ./drivers/drv_gpio.o
  .rodata.pin_irq_map
-                0x08011680       0x40 ./drivers/drv_gpio.o
+                0x08011830       0x40 ./drivers/drv_gpio.o
  .rodata._stm32_pin_ops
-                0x080116c0       0x1c ./drivers/drv_gpio.o
+                0x08011870       0x1c ./drivers/drv_gpio.o
  .rodata.stm32_uart_ops
-                0x080116dc       0x14 ./drivers/drv_usart.o
+                0x0801188c       0x14 ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8155
-                0x080116f0       0x16 ./drivers/drv_usart.o
- *fill*         0x08011706        0x2 00000000
+                0x080118a0       0x16 ./drivers/drv_usart.o
+ *fill*         0x080118b6        0x2 00000000
  .rodata.uart_remaps.8204
-                0x08011708       0x38 ./drivers/drv_usart.o
+                0x080118b8       0x38 ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8208
-                0x08011740       0x15 ./drivers/drv_usart.o
- *fill*         0x08011755        0x3 00000000
+                0x080118f0       0x15 ./drivers/drv_usart.o
+ *fill*         0x08011905        0x3 00000000
  .rodata.__FUNCTION__.8226
-                0x08011758       0x10 ./drivers/drv_usart.o
+                0x08011908       0x10 ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8247
-                0x08011768        0xe ./drivers/drv_usart.o
- *fill*         0x08011776        0x2 00000000
+                0x08011918        0xe ./drivers/drv_usart.o
+ *fill*         0x08011926        0x2 00000000
  .rodata.__FUNCTION__.8257
-                0x08011778        0xb ./drivers/drv_usart.o
- *fill*         0x08011783        0x1 00000000
+                0x08011928        0xb ./drivers/drv_usart.o
+ *fill*         0x08011933        0x1 00000000
  .rodata.__FUNCTION__.8266
-                0x08011784        0xb ./drivers/drv_usart.o
- *fill*         0x0801178f        0x1 00000000
+                0x08011934        0xb ./drivers/drv_usart.o
+ *fill*         0x0801193f        0x1 00000000
  .rodata.__FUNCTION__.8274
-                0x08011790       0x13 ./drivers/drv_usart.o
- *fill*         0x080117a3        0x1 00000000
+                0x08011940       0x13 ./drivers/drv_usart.o
+ *fill*         0x08011953        0x1 00000000
  .rodata.__FUNCTION__.8283
-                0x080117a4        0x9 ./drivers/drv_usart.o
- *fill*         0x080117ad        0x3 00000000
+                0x08011954        0x9 ./drivers/drv_usart.o
+ *fill*         0x0801195d        0x3 00000000
  .rodata.__FUNCTION__.8296
-                0x080117b0        0x8 ./drivers/drv_usart.o
+                0x08011960        0x8 ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8314
-                0x080117b8       0x11 ./drivers/drv_usart.o
- *fill*         0x080117c9        0x3 00000000
+                0x08011968       0x11 ./drivers/drv_usart.o
+ *fill*         0x08011979        0x3 00000000
  .rodata.__FUNCTION__.8319
-                0x080117cc       0x17 ./drivers/drv_usart.o
- *fill*         0x080117e3        0x1 00000000
+                0x0801197c       0x17 ./drivers/drv_usart.o
+ *fill*         0x08011993        0x1 00000000
  .rodata.__FUNCTION__.8325
-                0x080117e4       0x18 ./drivers/drv_usart.o
+                0x08011994       0x18 ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8330
-                0x080117fc       0x1c ./drivers/drv_usart.o
+                0x080119ac       0x1c ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8335
-                0x08011818       0x18 ./drivers/drv_usart.o
+                0x080119c8       0x18 ./drivers/drv_usart.o
  .rodata.__FUNCTION__.8347
-                0x08011830       0x11 ./drivers/drv_usart.o
- *fill*         0x08011841        0x3 00000000
+                0x080119e0       0x11 ./drivers/drv_usart.o
+ *fill*         0x080119f1        0x3 00000000
  .rodata._global_impure_ptr
-                0x08011844        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
-                0x08011844                _global_impure_ptr
+                0x080119f4        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
+                0x080119f4                _global_impure_ptr
  .rodata.str1.4
-                0x08011848       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+                0x080119f8       0x14 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
                                  0x12 (size before relaxing)
  .rodata._ctype_
-                0x0801185c      0x101 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-ctype_.o)
-                0x0801185c                _ctype_
+                0x08011a0c      0x101 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-ctype_.o)
+                0x08011a0c                _ctype_
  *(.glue_7)
- .glue_7        0x0801195d        0x0 linker stubs
+ .glue_7        0x08011b0d        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0801195d        0x0 linker stubs
+ .glue_7t       0x08011b0d        0x0 linker stubs
  *(.gnu.linkonce.t*)
-                0x08011960                . = ALIGN (0x4)
- *fill*         0x0801195d        0x3 00000000
-                0x08011960                __fsymtab_start = .
+                0x08011b10                . = ALIGN (0x4)
+ *fill*         0x08011b0d        0x3 00000000
+                0x08011b10                __fsymtab_start = .
  *(FSymTab)
- FSymTab        0x08011960       0x90 ./rt-thread/components/finsh/cmd.o
-                0x08011960                __fsym_clear
-                0x0801196c                __fsym_version
-                0x08011978                __fsym_list_thread
-                0x08011984                __fsym_list_sem
-                0x08011990                __fsym_list_event
-                0x0801199c                __fsym_list_mutex
-                0x080119a8                __fsym_list_mailbox
-                0x080119b4                __fsym_list_msgqueue
-                0x080119c0                __fsym_list_mempool
-                0x080119cc                __fsym_list_timer
-                0x080119d8                __fsym_list_device
-                0x080119e4                __fsym_list
- FSymTab        0x080119f0       0x24 ./rt-thread/components/finsh/msh.o
-                0x080119f0                __fsym_help
-                0x080119fc                __fsym_ps
-                0x08011a08                __fsym_free
- FSymTab        0x08011a14        0xc ./rt-thread/components/drivers/misc/pin.o
-                0x08011a14                __fsym_pin
-                0x08011a20                __fsymtab_end = .
-                0x08011a20                . = ALIGN (0x4)
-                0x08011a20                __vsymtab_start = .
+ FSymTab        0x08011b10       0x90 ./rt-thread/components/finsh/cmd.o
+                0x08011b10                __fsym_clear
+                0x08011b1c                __fsym_version
+                0x08011b28                __fsym_list_thread
+                0x08011b34                __fsym_list_sem
+                0x08011b40                __fsym_list_event
+                0x08011b4c                __fsym_list_mutex
+                0x08011b58                __fsym_list_mailbox
+                0x08011b64                __fsym_list_msgqueue
+                0x08011b70                __fsym_list_mempool
+                0x08011b7c                __fsym_list_timer
+                0x08011b88                __fsym_list_device
+                0x08011b94                __fsym_list
+ FSymTab        0x08011ba0       0x24 ./rt-thread/components/finsh/msh.o
+                0x08011ba0                __fsym_help
+                0x08011bac                __fsym_ps
+                0x08011bb8                __fsym_free
+ FSymTab        0x08011bc4        0xc ./rt-thread/components/drivers/misc/pin.o
+                0x08011bc4                __fsym_pin
+                0x08011bd0                __fsymtab_end = .
+                0x08011bd0                . = ALIGN (0x4)
+                0x08011bd0                __vsymtab_start = .
  *(VSymTab)
-                0x08011a20                __vsymtab_end = .
-                0x08011a20                . = ALIGN (0x4)
-                0x08011a20                __rt_utest_tc_tab_start = .
+                0x08011bd0                __vsymtab_end = .
+                0x08011bd0                . = ALIGN (0x4)
+                0x08011bd0                __rt_utest_tc_tab_start = .
  *(UtestTcTab)
-                0x08011a20                __rt_utest_tc_tab_end = .
-                0x08011a20                . = ALIGN (0x4)
-                0x08011a20                __rtatcmdtab_start = .
+                0x08011bd0                __rt_utest_tc_tab_end = .
+                0x08011bd0                . = ALIGN (0x4)
+                0x08011bd0                __rtatcmdtab_start = .
  *(RtAtCmdTab)
-                0x08011a20                __rtatcmdtab_end = .
-                0x08011a20                . = ALIGN (0x4)
-                0x08011a20                . = ALIGN (0x4)
-                0x08011a20                __rt_init_start = .
+                0x08011bd0                __rtatcmdtab_end = .
+                0x08011bd0                . = ALIGN (0x4)
+                0x08011bd0                . = ALIGN (0x4)
+                0x08011bd0                __rt_init_start = .
  *(SORT(.rti_fn*))
- .rti_fn.0      0x08011a20        0x4 ./rt-thread/src/components.o
-                0x08011a20                __rt_init_rti_start
- .rti_fn.0.end  0x08011a24        0x4 ./rt-thread/src/components.o
-                0x08011a24                __rt_init_rti_board_start
- .rti_fn.1      0x08011a28        0x4 ./drivers/drv_clk.o
-                0x08011a28                __rt_init_clock_information
- .rti_fn.1.end  0x08011a2c        0x4 ./rt-thread/src/components.o
-                0x08011a2c                __rt_init_rti_board_end
- .rti_fn.6      0x08011a30        0x4 ./rt-thread/components/finsh/shell.o
-                0x08011a30                __rt_init_finsh_system_init
- .rti_fn.6      0x08011a34        0x8 ./applications/switch/switch_evt.o
-                0x08011a34                __rt_init_logic_mgr_init
-                0x08011a38                __rt_init_switch_evt_init
- .rti_fn.6.end  0x08011a3c        0x4 ./rt-thread/src/components.o
-                0x08011a3c                __rt_init_rti_end
-                0x08011a40                __rt_init_end = .
-                0x08011a40                . = ALIGN (0x4)
+ .rti_fn.0      0x08011bd0        0x4 ./rt-thread/src/components.o
+                0x08011bd0                __rt_init_rti_start
+ .rti_fn.0.end  0x08011bd4        0x4 ./rt-thread/src/components.o
+                0x08011bd4                __rt_init_rti_board_start
+ .rti_fn.1      0x08011bd8        0x4 ./drivers/drv_clk.o
+                0x08011bd8                __rt_init_clock_information
+ .rti_fn.1.end  0x08011bdc        0x4 ./rt-thread/src/components.o
+                0x08011bdc                __rt_init_rti_board_end
+ .rti_fn.6      0x08011be0        0x4 ./rt-thread/components/finsh/shell.o
+                0x08011be0                __rt_init_finsh_system_init
+ .rti_fn.6      0x08011be4        0x4 ./applications/task/task_excution.o
+                0x08011be4                __rt_init_task_exec_init
+ .rti_fn.6      0x08011be8        0x8 ./applications/switch/switch_evt.o
+                0x08011be8                __rt_init_logic_mgr_init
+                0x08011bec                __rt_init_switch_evt_init
+ .rti_fn.6.end  0x08011bf0        0x4 ./rt-thread/src/components.o
+                0x08011bf0                __rt_init_rti_end
+                0x08011bf4                __rt_init_end = .
+                0x08011bf4                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__ctors_start__, .)
  *(SORT(.init_array.*))
  .init_array.00000
-                0x08011a40        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+                0x08011bf4        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
  *(.init_array)
- .init_array    0x08011a44        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .init_array    0x08011bf8        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
                 [!provide]                PROVIDE (__ctors_end__, .)
-                0x08011a48                . = ALIGN (0x4)
-                0x08011a48                _etext = .
-                0x08011a48                __exidx_start = .
+                0x08011bfc                . = ALIGN (0x4)
+                0x08011bfc                _etext = .
+                0x08011bfc                __exidx_start = .
 
-.vfp11_veneer   0x08011a48        0x0
- .vfp11_veneer  0x08011a48        0x0 linker stubs
+.vfp11_veneer   0x08011bfc        0x0
+ .vfp11_veneer  0x08011bfc        0x0 linker stubs
 
-.v4_bx          0x08011a48        0x0
- .v4_bx         0x08011a48        0x0 linker stubs
+.v4_bx          0x08011bfc        0x0
+ .v4_bx         0x08011bfc        0x0 linker stubs
 
-.init           0x08011a48        0x4
- .init          0x08011a48        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x08011a48                _init
+.init           0x08011bfc        0x4
+ .init          0x08011bfc        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x08011bfc                _init
 
-.fini           0x08011a4c        0x4
- .fini          0x08011a4c        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x08011a4c                _fini
+.fini           0x08011c00        0x4
+ .fini          0x08011c00        0x4 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x08011c00                _fini
 
-.iplt           0x08011a50        0x0
- .iplt          0x08011a50        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.iplt           0x08011c04        0x0
+ .iplt          0x08011c04        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.eh_frame       0x08011a50        0x0
- .eh_frame      0x08011a50        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.eh_frame       0x08011c04        0x0
+ .eh_frame      0x08011c04        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.rel.dyn        0x08011a50        0x0
- .rel.iplt      0x08011a50        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.rel.dyn        0x08011c04        0x0
+ .rel.iplt      0x08011c04        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.ARM.exidx      0x08011a50        0x0
+.ARM.exidx      0x08011c04        0x0
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08011a50                _sidata = .
-                0x08011a50                __exidx_end = .
+                0x08011c04                _sidata = .
+                0x08011c04                __exidx_end = .
 
-.data           0x20000000      0x788 load address 0x08011a50
+.data           0x20000000      0x788 load address 0x08011c04
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -4318,13 +4336,13 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
                 0x20000788                . = ALIGN (0x4)
                 0x20000788                _edata = .
 
-.jcr            0x20000788        0x0 load address 0x080121d8
+.jcr            0x20000788        0x0 load address 0x0801238c
  .jcr           0x20000788        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.igot.plt       0x20000788        0x0 load address 0x080121d8
+.igot.plt       0x20000788        0x0 load address 0x0801238c
  .igot.plt      0x20000788        0x0 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.stack          0x20000788      0x400 load address 0x080121d8
+.stack          0x20000788      0x400 load address 0x0801238c
                 0x20000788                . = ALIGN (0x4)
                 0x20000788                _sstack = .
                 0x20000b88                . = (. + _system_stack_size)
@@ -4333,7 +4351,7 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
                 0x20000b88                _estack = .
                 0x20000b88                __bss_start = .
 
-.bss            0x20000b88      0xc0c load address 0x080125d8
+.bss            0x20000b88      0xc10 load address 0x0801278c
                 0x20000b88                . = ALIGN (0x4)
                 0x20000b88                _sbss = .
  *(.bss)
@@ -4421,51 +4439,55 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .bss.pin_irq_enable_mask
                 0x2000129c        0x4 ./drivers/drv_gpio.o
  .bss.uart_obj  0x200012a0      0x250 ./drivers/drv_usart.o
+ .bss.g_task_state
+                0x200014f0        0x1 ./applications/task/task_state.o
+                0x200014f0                g_task_state
  .bss.sw1_stable
-                0x200014f0        0x1 ./applications/switch/switch_evt.o
- .bss.sw2_stable
                 0x200014f1        0x1 ./applications/switch/switch_evt.o
- .bss.sw1_cnt   0x200014f2        0x1 ./applications/switch/switch_evt.o
- .bss.sw2_cnt   0x200014f3        0x1 ./applications/switch/switch_evt.o
+ .bss.sw2_stable
+                0x200014f2        0x1 ./applications/switch/switch_evt.o
+ .bss.sw1_cnt   0x200014f3        0x1 ./applications/switch/switch_evt.o
+ .bss.sw2_cnt   0x200014f4        0x1 ./applications/switch/switch_evt.o
+ *fill*         0x200014f5        0x3 
  .bss.both_pressed_flag
-                0x200014f4        0x4 ./applications/switch/switch_evt.o
- .bss.both_cnt  0x200014f8        0x4 ./applications/switch/switch_evt.o
+                0x200014f8        0x4 ./applications/switch/switch_evt.o
+ .bss.both_cnt  0x200014fc        0x4 ./applications/switch/switch_evt.o
  .bss.both_button_press
-                0x200014fc        0x4 ./applications/switch/switch_evt.o
-                0x200014fc                both_button_press
+                0x20001500        0x4 ./applications/switch/switch_evt.o
+                0x20001500                both_button_press
  *(COMMON)
- COMMON         0x20001500        0x4 ./rt-thread/src/kservice.o
-                0x20001500                rt_assert_hook
- COMMON         0x20001504        0xc ./rt-thread/src/object.o
-                0x20001504                rt_object_put_hook
-                0x20001508                rt_object_take_hook
-                0x2000150c                rt_object_trytake_hook
- COMMON         0x20001510      0x108 ./rt-thread/src/scheduler.o
-                0x20001510                rt_thread_priority_table
-                0x20001610                rt_current_priority
-                0x20001614                rt_thread_ready_priority_group
- COMMON         0x20001618        0xc ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
-                0x20001618                rt_interrupt_to_thread
-                0x2000161c                rt_interrupt_from_thread
-                0x20001620                rt_thread_switch_interrupt_flag
- COMMON         0x20001624        0x4 ./rt-thread/components/finsh/shell.o
-                0x20001624                shell
- COMMON         0x20001628        0x4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x20001628                uwTick
- COMMON         0x2000162c       0x40 ./cubemx/Src/tim.o
-                0x2000162c                htim8
- COMMON         0x2000166c      0x108 ./cubemx/Src/usart.o
-                0x2000166c                hdma_uart4_rx
-                0x200016b0                huart1
-                0x200016f0                huart4
-                0x20001730                hdma_uart4_tx
- COMMON         0x20001774       0x20 ./applications/switch/switch_evt.o
-                0x20001774                g_sw_event
-                0x20001794                . = ALIGN (0x4)
-                0x20001794                _ebss = .
+ COMMON         0x20001504        0x4 ./rt-thread/src/kservice.o
+                0x20001504                rt_assert_hook
+ COMMON         0x20001508        0xc ./rt-thread/src/object.o
+                0x20001508                rt_object_put_hook
+                0x2000150c                rt_object_take_hook
+                0x20001510                rt_object_trytake_hook
+ COMMON         0x20001514      0x108 ./rt-thread/src/scheduler.o
+                0x20001514                rt_thread_priority_table
+                0x20001614                rt_current_priority
+                0x20001618                rt_thread_ready_priority_group
+ COMMON         0x2000161c        0xc ./rt-thread/libcpu/arm/cortex-m3/cpuport.o
+                0x2000161c                rt_interrupt_to_thread
+                0x20001620                rt_interrupt_from_thread
+                0x20001624                rt_thread_switch_interrupt_flag
+ COMMON         0x20001628        0x4 ./rt-thread/components/finsh/shell.o
+                0x20001628                shell
+ COMMON         0x2000162c        0x4 ./libraries/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x2000162c                uwTick
+ COMMON         0x20001630       0x40 ./cubemx/Src/tim.o
+                0x20001630                htim8
+ COMMON         0x20001670      0x108 ./cubemx/Src/usart.o
+                0x20001670                hdma_uart4_rx
+                0x200016b4                huart1
+                0x200016f4                huart4
+                0x20001734                hdma_uart4_tx
+ COMMON         0x20001778       0x20 ./applications/switch/switch_evt.o
+                0x20001778                g_sw_event
+                0x20001798                . = ALIGN (0x4)
+                0x20001798                _ebss = .
  *(.bss.init)
-                0x20001794                __bss_end = .
-                0x20001794                _end = .
+                0x20001798                __bss_end = .
+                0x20001798                _end = .
 
 .stab
  *(.stab)
@@ -4530,6 +4552,8 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .comment       0x0000006e       0x6f ./cubemx/Src/stm32f1xx_hal_msp.o
  .comment       0x0000006e       0x6f ./cubemx/Src/tim.o
  .comment       0x0000006e       0x6f ./cubemx/Src/usart.o
+ .comment       0x0000006e       0x6f ./applications/task/task_excution.o
+ .comment       0x0000006e       0x6f ./applications/task/task_state.o
  .comment       0x0000006e       0x6f ./applications/switch/switch_evt.o
  .comment       0x0000006e       0x6f ./applications/main.o
 
@@ -4628,47 +4652,51 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .ARM.attributes
                 0x000008b7       0x33 ./cubemx/Src/usart.o
  .ARM.attributes
-                0x000008ea       0x33 ./applications/switch/switch_evt.o
+                0x000008ea       0x33 ./applications/task/task_excution.o
  .ARM.attributes
-                0x0000091d       0x33 ./applications/main.o
+                0x0000091d       0x33 ./applications/task/task_state.o
  .ARM.attributes
-                0x00000950       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
+                0x00000950       0x33 ./applications/switch/switch_evt.o
  .ARM.attributes
-                0x0000097d       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
+                0x00000983       0x33 ./applications/main.o
  .ARM.attributes
-                0x000009aa       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+                0x000009b6       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
  .ARM.attributes
-                0x000009d7       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
+                0x000009e3       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000a04       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
+                0x00000a10       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
  .ARM.attributes
-                0x00000a31       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
+                0x00000a3d       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
  .ARM.attributes
-                0x00000a5e       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                0x00000a6a       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
  .ARM.attributes
-                0x00000a8b       0x1b e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strcmp.o)
+                0x00000a97       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
  .ARM.attributes
-                0x00000aa6       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
+                0x00000ac4       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000ad3       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
+                0x00000af1       0x1b e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strcmp.o)
  .ARM.attributes
-                0x00000b00       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
+                0x00000b0c       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
  .ARM.attributes
-                0x00000b2d       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
+                0x00000b39       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
  .ARM.attributes
-                0x00000b5a       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
+                0x00000b66       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
  .ARM.attributes
-                0x00000b87       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
+                0x00000b93       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
  .ARM.attributes
-                0x00000bb4       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+                0x00000bc0       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
  .ARM.attributes
-                0x00000be1       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
+                0x00000bed       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
  .ARM.attributes
-                0x00000c0e       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-ctype_.o)
+                0x00000c1a       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
  .ARM.attributes
-                0x00000c3b       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
+                0x00000c47       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
  .ARM.attributes
-                0x00000c68       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
+                0x00000c74       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-ctype_.o)
+ .ARM.attributes
+                0x00000ca1       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000cce       0x2d e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
 
 .debug
  *(.debug)
@@ -4682,7 +4710,7 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000     0x1b50
+.debug_aranges  0x00000000     0x1b90
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x48 ./rt-thread/src/clock.o
@@ -4773,14 +4801,18 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_aranges
                 0x00001ab0       0x38 ./cubemx/Src/usart.o
  .debug_aranges
-                0x00001ae8       0x48 ./applications/switch/switch_evt.o
+                0x00001ae8       0x28 ./applications/task/task_excution.o
  .debug_aranges
-                0x00001b30       0x20 ./applications/main.o
+                0x00001b10       0x20 ./applications/task/task_state.o
+ .debug_aranges
+                0x00001b30       0x40 ./applications/switch/switch_evt.o
+ .debug_aranges
+                0x00001b70       0x20 ./applications/main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x1d52b
+.debug_info     0x00000000    0x1dae1
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4cc ./rt-thread/src/clock.o
  .debug_info    0x000004cc      0x566 ./rt-thread/src/components.o
@@ -4826,10 +4858,12 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_info    0x0001b84c      0x24e ./cubemx/Src/stm32f1xx_hal_msp.o
  .debug_info    0x0001ba9a      0x9ac ./cubemx/Src/tim.o
  .debug_info    0x0001c446      0x9e3 ./cubemx/Src/usart.o
- .debug_info    0x0001ce29      0x628 ./applications/switch/switch_evt.o
- .debug_info    0x0001d451       0xda ./applications/main.o
+ .debug_info    0x0001ce29      0x470 ./applications/task/task_excution.o
+ .debug_info    0x0001d299      0x133 ./applications/task/task_state.o
+ .debug_info    0x0001d3cc      0x63b ./applications/switch/switch_evt.o
+ .debug_info    0x0001da07       0xda ./applications/main.o
 
-.debug_abbrev   0x00000000     0x4dcf
+.debug_abbrev   0x00000000     0x5001
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x164 ./rt-thread/src/clock.o
  .debug_abbrev  0x00000164      0x166 ./rt-thread/src/components.o
@@ -4875,10 +4909,12 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_abbrev  0x00004818       0xd8 ./cubemx/Src/stm32f1xx_hal_msp.o
  .debug_abbrev  0x000048f0      0x188 ./cubemx/Src/tim.o
  .debug_abbrev  0x00004a78      0x179 ./cubemx/Src/usart.o
- .debug_abbrev  0x00004bf1      0x162 ./applications/switch/switch_evt.o
- .debug_abbrev  0x00004d53       0x7c ./applications/main.o
+ .debug_abbrev  0x00004bf1      0x166 ./applications/task/task_excution.o
+ .debug_abbrev  0x00004d57       0xa3 ./applications/task/task_state.o
+ .debug_abbrev  0x00004dfa      0x18b ./applications/switch/switch_evt.o
+ .debug_abbrev  0x00004f85       0x7c ./applications/main.o
 
-.debug_line     0x00000000     0xe451
+.debug_line     0x00000000     0xe8f8
  *(.debug_line)
  .debug_line    0x00000000      0x22d ./rt-thread/src/clock.o
  .debug_line    0x0000022d      0x29e ./rt-thread/src/components.o
@@ -4919,15 +4955,17 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_line    0x0000c1dd      0x5e7 ./drivers/drv_gpio.o
  .debug_line    0x0000c7c4      0x81a ./drivers/drv_usart.o
  .debug_line    0x0000cfde      0x223 ./cubemx/Src/dma.o
- .debug_line    0x0000d201      0x287 ./cubemx/Src/gpio.o
- .debug_line    0x0000d488      0x2ad ./cubemx/Src/main.o
- .debug_line    0x0000d735      0x22f ./cubemx/Src/stm32f1xx_hal_msp.o
- .debug_line    0x0000d964      0x325 ./cubemx/Src/tim.o
- .debug_line    0x0000dc89      0x354 ./cubemx/Src/usart.o
- .debug_line    0x0000dfdd      0x2b0 ./applications/switch/switch_evt.o
- .debug_line    0x0000e28d      0x1c4 ./applications/main.o
+ .debug_line    0x0000d201      0x28b ./cubemx/Src/gpio.o
+ .debug_line    0x0000d48c      0x2ad ./cubemx/Src/main.o
+ .debug_line    0x0000d739      0x22f ./cubemx/Src/stm32f1xx_hal_msp.o
+ .debug_line    0x0000d968      0x325 ./cubemx/Src/tim.o
+ .debug_line    0x0000dc8d      0x354 ./cubemx/Src/usart.o
+ .debug_line    0x0000dfe1      0x251 ./applications/task/task_excution.o
+ .debug_line    0x0000e232      0x21e ./applications/task/task_state.o
+ .debug_line    0x0000e450      0x2e4 ./applications/switch/switch_evt.o
+ .debug_line    0x0000e734      0x1c4 ./applications/main.o
 
-.debug_frame    0x00000000     0x7024
+.debug_frame    0x00000000     0x708c
  *(.debug_frame)
  .debug_frame   0x00000000       0xe4 ./rt-thread/src/clock.o
  .debug_frame   0x000000e4      0x158 ./rt-thread/src/components.o
@@ -4971,27 +5009,29 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_frame   0x0000694c       0x38 ./cubemx/Src/stm32f1xx_hal_msp.o
  .debug_frame   0x00006984       0xa8 ./cubemx/Src/tim.o
  .debug_frame   0x00006a2c       0x90 ./cubemx/Src/usart.o
- .debug_frame   0x00006abc       0xe0 ./applications/switch/switch_evt.o
- .debug_frame   0x00006b9c       0x30 ./applications/main.o
- .debug_frame   0x00006bcc       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
- .debug_frame   0x00006bfc       0x84 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
- .debug_frame   0x00006c80       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
- .debug_frame   0x00006cb0       0x4c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
- .debug_frame   0x00006cfc       0x38 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
- .debug_frame   0x00006d34       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
- .debug_frame   0x00006d68       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strcmp.o)
- .debug_frame   0x00006d9c       0x20 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
- .debug_frame   0x00006dbc       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
- .debug_frame   0x00006dec       0x54 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
- .debug_frame   0x00006e40       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
- .debug_frame   0x00006e74       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
- .debug_frame   0x00006f10       0x3c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
- .debug_frame   0x00006f4c       0x50 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x00006f9c       0x20 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
- .debug_frame   0x00006fbc       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
- .debug_frame   0x00006ff0       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x00006abc       0x54 ./applications/task/task_excution.o
+ .debug_frame   0x00006b10       0x38 ./applications/task/task_state.o
+ .debug_frame   0x00006b48       0xbc ./applications/switch/switch_evt.o
+ .debug_frame   0x00006c04       0x30 ./applications/main.o
+ .debug_frame   0x00006c34       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atoi.o)
+ .debug_frame   0x00006c64       0x84 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+ .debug_frame   0x00006ce8       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-malloc.o)
+ .debug_frame   0x00006d18       0x4c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x00006d64       0x38 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcmp.o)
+ .debug_frame   0x00006d9c       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .debug_frame   0x00006dd0       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strcmp.o)
+ .debug_frame   0x00006e04       0x20 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen-stub.o)
+ .debug_frame   0x00006e24       0x30 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncat.o)
+ .debug_frame   0x00006e54       0x54 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncmp.o)
+ .debug_frame   0x00006ea8       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strncpy.o)
+ .debug_frame   0x00006edc       0x9c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strtol.o)
+ .debug_frame   0x00006f78       0x3c e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wctomb_r.o)
+ .debug_frame   0x00006fb4       0x50 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00007004       0x20 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00007024       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
+ .debug_frame   0x00007058       0x34 e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
 
-.debug_str      0x00000000     0x6d6e
+.debug_str      0x00000000     0x6e20
  *(.debug_str)
  .debug_str     0x00000000      0x2eb ./rt-thread/src/clock.o
                                 0x3b4 (size before relaxing)
@@ -5077,12 +5117,16 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
                                 0x7d5 (size before relaxing)
  .debug_str     0x00006bc9       0x6d ./cubemx/Src/usart.o
                                 0xa3d (size before relaxing)
- .debug_str     0x00006c36      0x110 ./applications/switch/switch_evt.o
-                                0x48d (size before relaxing)
- .debug_str     0x00006d46       0x28 ./applications/main.o
+ .debug_str     0x00006c36       0x91 ./applications/task/task_excution.o
+                                0x3bd (size before relaxing)
+ .debug_str     0x00006cc7       0x3d ./applications/task/task_state.o
+                                0x21d (size before relaxing)
+ .debug_str     0x00006d04       0xf4 ./applications/switch/switch_evt.o
+                                0x4b2 (size before relaxing)
+ .debug_str     0x00006df8       0x28 ./applications/main.o
                                 0x1b5 (size before relaxing)
 
-.debug_loc      0x00000000     0xe5fe
+.debug_loc      0x00000000     0xe692
  *(.debug_loc)
  .debug_loc     0x00000000      0x1c8 ./rt-thread/src/clock.o
  .debug_loc     0x000001c8      0x2a8 ./rt-thread/src/components.o
@@ -5126,8 +5170,10 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  .debug_loc     0x0000e15c       0x5c ./cubemx/Src/stm32f1xx_hal_msp.o
  .debug_loc     0x0000e1b8      0x15a ./cubemx/Src/tim.o
  .debug_loc     0x0000e312       0xf8 ./cubemx/Src/usart.o
- .debug_loc     0x0000e40a      0x1b0 ./applications/switch/switch_evt.o
- .debug_loc     0x0000e5ba       0x44 ./applications/main.o
+ .debug_loc     0x0000e40a       0x88 ./applications/task/task_excution.o
+ .debug_loc     0x0000e492       0x5c ./applications/task/task_state.o
+ .debug_loc     0x0000e4ee      0x160 ./applications/switch/switch_evt.o
+ .debug_loc     0x0000e64e       0x44 ./applications/main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -5145,7 +5191,7 @@ LOAD e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_fo
  *(.debug_varnames)
 OUTPUT(rtthread.elf elf32-littlearm)
 
-.debug_ranges   0x00000000     0x1928
+.debug_ranges   0x00000000     0x1948
  .debug_ranges  0x00000000       0x38 ./rt-thread/src/clock.o
  .debug_ranges  0x00000038       0x58 ./rt-thread/src/components.o
  .debug_ranges  0x00000090       0x70 ./rt-thread/src/device.o
@@ -5189,8 +5235,10 @@ OUTPUT(rtthread.elf elf32-littlearm)
  .debug_ranges  0x00001880       0x10 ./cubemx/Src/stm32f1xx_hal_msp.o
  .debug_ranges  0x00001890       0x28 ./cubemx/Src/tim.o
  .debug_ranges  0x000018b8       0x28 ./cubemx/Src/usart.o
- .debug_ranges  0x000018e0       0x38 ./applications/switch/switch_evt.o
- .debug_ranges  0x00001918       0x10 ./applications/main.o
+ .debug_ranges  0x000018e0       0x18 ./applications/task/task_excution.o
+ .debug_ranges  0x000018f8       0x10 ./applications/task/task_state.o
+ .debug_ranges  0x00001908       0x30 ./applications/switch/switch_evt.o
+ .debug_ranges  0x00001938       0x10 ./applications/main.o
 
 Cross Reference Table
 
@@ -5825,6 +5873,7 @@ __rt_init_rti_board_start                         ./rt-thread/src/components.o
 __rt_init_rti_end                                 ./rt-thread/src/components.o
 __rt_init_rti_start                               ./rt-thread/src/components.o
 __rt_init_switch_evt_init                         ./applications/switch/switch_evt.o
+__rt_init_task_exec_init                          ./applications/task/task_excution.o
 __rt_libc_exit                                    ./rt-thread/components/libc/compilers/common/cstdlib.o
                                                   ./rt-thread/components/libc/compilers/newlib/syscalls.o
 __stack                                           e:/rt-threadstudio/repo/extract/toolchain_support_packages/arm/gnu_tools_for_arm_embedded_processors/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
@@ -5939,6 +5988,9 @@ free                                              e:/rt-threadstudio/repo/extrac
 front_left_count                                  ./applications/main.o
 g_pfnVectors                                      ./libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.o
 g_sw_event                                        ./applications/switch/switch_evt.o
+g_task_state                                      ./applications/task/task_state.o
+                                                  ./applications/switch/switch_evt.o
+                                                  ./applications/task/task_excution.o
 gettimeofday                                      ./rt-thread/components/libc/compilers/common/ctime.o
 gmtime                                            ./rt-thread/components/libc/compilers/common/ctime.o
 gmtime_r                                          ./rt-thread/components/libc/compilers/common/ctime.o
@@ -6254,6 +6306,7 @@ rt_interrupt_to_thread                            ./rt-thread/libcpu/arm/cortex-
 rt_kprintf                                        ./rt-thread/src/kservice.o
                                                   ./applications/motor/motor_cmd.o
                                                   ./applications/switch/switch_evt.o
+                                                  ./applications/task/task_excution.o
                                                   ./rt-thread/components/drivers/ipc/waitqueue.o
                                                   ./rt-thread/components/drivers/ipc/dataqueue.o
                                                   ./rt-thread/components/drivers/ipc/completion.o
@@ -6423,8 +6476,10 @@ rt_pin_get                                        ./rt-thread/components/drivers
 rt_pin_irq_enable                                 ./rt-thread/components/drivers/misc/pin.o
 rt_pin_mode                                       ./rt-thread/components/drivers/misc/pin.o
                                                   ./applications/switch/switch_evt.o
+                                                  ./applications/task/task_excution.o
 rt_pin_read                                       ./rt-thread/components/drivers/misc/pin.o
                                                   ./applications/switch/switch_evt.o
+                                                  ./applications/task/task_excution.o
 rt_pin_write                                      ./rt-thread/components/drivers/misc/pin.o
 rt_pipe_create                                    ./rt-thread/components/drivers/ipc/pipe.o
 rt_pipe_delete                                    ./rt-thread/components/drivers/ipc/pipe.o
@@ -6534,6 +6589,7 @@ rt_thread_control                                 ./rt-thread/src/thread.o
                                                   ./rt-thread/src/ipc.o
 rt_thread_create                                  ./rt-thread/src/thread.o
                                                   ./applications/switch/switch_evt.o
+                                                  ./applications/task/task_excution.o
                                                   ./rt-thread/components/drivers/ipc/workqueue.o
                                                   ./rt-thread/components/finsh/shell.o
                                                   ./rt-thread/src/components.o
@@ -6559,6 +6615,7 @@ rt_thread_inited_sethook                          ./rt-thread/src/thread.o
 rt_thread_mdelay                                  ./rt-thread/src/thread.o
                                                   ./applications/motor/motor_cmd.o
                                                   ./applications/switch/switch_evt.o
+                                                  ./applications/task/task_excution.o
 rt_thread_priority_table                          ./rt-thread/src/scheduler.o
 rt_thread_ready_priority_group                    ./rt-thread/src/scheduler.o
 rt_thread_resume                                  ./rt-thread/src/thread.o
@@ -6585,6 +6642,7 @@ rt_thread_self                                    ./rt-thread/src/thread.o
 rt_thread_sleep                                   ./rt-thread/src/thread.o
 rt_thread_startup                                 ./rt-thread/src/thread.o
                                                   ./applications/switch/switch_evt.o
+                                                  ./applications/task/task_excution.o
                                                   ./rt-thread/components/drivers/ipc/workqueue.o
                                                   ./rt-thread/components/finsh/shell.o
                                                   ./rt-thread/src/timer.o
@@ -6713,6 +6771,9 @@ strtol_l                                          e:/rt-threadstudio/repo/extrac
 switch_evt_init                                   ./applications/switch/switch_evt.o
 system                                            ./rt-thread/components/libc/compilers/common/cstdlib.o
 system_clock_config                               ./drivers/drv_clk.o
+task_exec_entry                                   ./applications/task/task_excution.o
+task_state_update                                 ./applications/task/task_state.o
+                                                  ./applications/switch/switch_evt.o
 time                                              ./rt-thread/components/libc/compilers/common/ctime.o
 timegm                                            ./rt-thread/components/libc/compilers/common/ctime.o
 toascii                                           ./rt-thread/components/libc/compilers/common/cctype.o

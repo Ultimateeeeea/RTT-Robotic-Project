@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define TASK_START_Pin GPIO_PIN_13
+#define TASK_START_GPIO_Port GPIOC
 #define Motor_BackLeft_Pin GPIO_PIN_8
 #define Motor_BackLeft_GPIO_Port GPIOC
 #define Motor_BackRight_Pin GPIO_PIN_9

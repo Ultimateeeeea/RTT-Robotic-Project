@@ -2,8 +2,8 @@
 #ifndef __MOTOR_STATE_H__
 #define __MOTOR_STATE_H__
 
-#include <rtthread.h>
-#include <rtdevice.h>
+#include "motor_motion.h"
+#include "switch/switch_evt.h"      /* g_sw_event & EVT_SW_BOTH_PRESS */
 
 typedef enum
 {

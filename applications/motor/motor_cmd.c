@@ -1,7 +1,3 @@
-#include <rtthread.h>
-#include <rtdevice.h>
-#include <board.h>
-#include "drv_common.h"
 #include "motor_cmd.h"
 
 static rt_device_t motor_uart = RT_NULL;

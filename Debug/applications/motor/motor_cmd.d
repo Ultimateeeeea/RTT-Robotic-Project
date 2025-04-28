@@ -1,5 +1,6 @@
 applications/motor/motor_cmd.o: ../applications/motor/motor_cmd.c \
  E:\RT-ThreadStudio\workspace\Robtic\rtconfig_preinc.h \
+ ../applications/motor/motor_cmd.h \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rtthread.h \
  E:\RT-ThreadStudio\workspace\Robtic/rtconfig.h \
  E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rtdebug.h \
@@ -44,10 +45,11 @@ applications/motor/motor_cmd.o: ../applications/motor/motor_cmd.c \
  E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_tim_ex.h \
  E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_uart.h \
  E:\RT-ThreadStudio\workspace\Robtic\drivers\include/drv_common.h \
- E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rthw.h \
- ../applications/motor/motor_cmd.h
+ E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rthw.h
 
 E:\RT-ThreadStudio\workspace\Robtic\rtconfig_preinc.h:
+
+../applications/motor/motor_cmd.h:
 
 E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rtthread.h:
 
@@ -138,5 +140,3 @@ E:\RT-ThreadStudio\workspace\Robtic\libraries\STM32F1xx_HAL_Driver\Inc/stm32f1xx
 E:\RT-ThreadStudio\workspace\Robtic\drivers\include/drv_common.h:
 
 E:\RT-ThreadStudio\workspace\Robtic\rt-thread\include/rthw.h:
-
-../applications/motor/motor_cmd.h:

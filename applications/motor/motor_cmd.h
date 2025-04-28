@@ -4,6 +4,8 @@
 
 #include <rtthread.h>
 #include <rtdevice.h>
+#include <board.h>
+#include "drv_common.h"
 
 rt_err_t motor_cmd_init(const char *uart_name);
 

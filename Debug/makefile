@@ -23,6 +23,7 @@ RM := rm -rf
 -include libraries/CMSIS/Device/ST/STM32F1xx/Source/Templates/subdir.mk
 -include drivers/subdir.mk
 -include cubemx/Src/subdir.mk
+-include applications/task/subdir.mk
 -include applications/switch/subdir.mk
 -include applications/motor/subdir.mk
 -include applications/logic/subdir.mk
