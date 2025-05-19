@@ -18,7 +18,7 @@ config PKGS_DIR
 config PLATFORM_DIR
     string
     option env="PLATFORM_DIR"
-    default "E:/RT-ThreadStudio/workspace/Robtic/platform"
+    default "D:/RT-ThreadStudio/workspace/Robtic/platform"
 
 source "$RTT_DIR/Kconfig"
 source "$PKGS_DIR/Kconfig"

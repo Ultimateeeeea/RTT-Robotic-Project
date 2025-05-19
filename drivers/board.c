@@ -26,14 +26,22 @@ RT_WEAK void rt_hw_board_init()
     /* 基本初始化 */
     HAL_Init();
     MX_GPIO_Init();
-    MX_USART1_UART_Init();
-    MX_DMA_Init();
-    MX_UART4_Init();
 
+    /* 串口初始化 */
+    MX_USART1_UART_Init();
+    MX_USART2_UART_Init();
+    MX_USART3_UART_Init();
+    MX_UART4_Init();
+    MX_UART5_Init();
+
+    MX_DMA_Init();
     /* TIM8初始化，开启CH3 CH4 PWM模式*/
-    MX_TIM8_Init();
-    HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3);
-    HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
+//    MX_TIM8_Init();
+//    HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3);
+//    HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
+
+//    MX_TIM1_Init();
+    MX_TIM2_Init();
 
     extern void hw_board_init(char *clock_src, int32_t clock_src_freq, int32_t clock_target_freq);
 
@@ -53,9 +61,6 @@ RT_WEAK void rt_hw_board_init()
 #ifdef RT_USING_COMPONENTS_INIT
     rt_components_board_init();
 #endif
-
-
-
 
 
 }

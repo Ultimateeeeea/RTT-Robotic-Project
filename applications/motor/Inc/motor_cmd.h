@@ -1,13 +1,12 @@
-/* motor_cmd.h */
-#ifndef __MOTOR_CMD_H__
-#define __MOTOR_CMD_H__
+//————— motor_cmd 配置 —————//
+#ifndef MOTOR_CMD_CONFIG_H
+#define MOTOR_CMD_CONFIG_H
 
 #include <rtthread.h>
 #include <rtdevice.h>
 #include <board.h>
 #include "drv_common.h"
 #include <string.h>
-
 
 rt_err_t motor_cmd_init(const char *uart_name); //串口4初始化
 

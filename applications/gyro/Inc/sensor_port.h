@@ -28,6 +28,8 @@
 /* Wit_SDK初始化 */
 int sensor_port_init(void);
 
+
+
 /* 手动归零 */
 rt_err_t gyro_cmd_zero(void);
 
@@ -40,5 +42,7 @@ extern volatile float g_yaw_angle;
 
 /* 得到的全局设备 gyro_uart */
 extern volatile rt_device_t gyro_uart;
+
+
 
 #endif

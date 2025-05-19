@@ -17,7 +17,6 @@ static void CmdProcess(void)//UART1接收到的数据会代入到这里进行检
 {
     switch(s_cCmd)//判断输入的是什么进而来判断进行什么操作
     {
-
          case 'K':  if (WitStartIYAWCali() != WIT_HAL_OK)      //只对101z轴置零起作用
             rt_kprintf("\r\nSet IYAWCali Error\r\n");
               break;
@@ -33,13 +32,13 @@ static void CmdProcess(void)//UART1接收到的数据会代入到这里进行检
             ShowHelp();//帮助
             break;
     }
-
     s_cCmd = 0xff;
 }
 
 void gyro_entry_thread(void *parameter)
 {
     sensor_port_init();
+    gyro_cmd_zero();    //上电初始化
     while (1)//循环语句
      {
          CmdProcess();//如果发送数据修改失败会发送错误提示会一直检测，成功的话不会有提示，如果需要成功有提示也是可以进行修改的
@@ -68,7 +67,7 @@ void gyro_entry_thread(void *parameter)
          }
 
 //         gyro_cmd_zero();
-         rt_thread_mdelay(10);
+         rt_thread_mdelay(50);
      }
 }
 
@@ -83,14 +82,14 @@ void gyro_entry_thread(void *parameter)
 
 int gyro_thread_init(void)
 {
-    rt_thread_t tid = rt_thread_create("gyro_entry_thread",
-                                        gyro_entry_thread,
+    rt_thread_t tid = rt_thread_create("get_yaw",
+                                       gyro_entry_thread,
                                        RT_NULL,
                                        2048,   /* 2 KB 栈，足够浮点输出 */
-                                       12,     /* 优先级，可根据系统调整 */
+                                       13,     /* 优先级，可根据系统调整 */
                                        20);    /* 时间片 */
     if (tid)
-        rt_thread_startup(tid);
+    rt_thread_startup(tid);
     return tid ? RT_EOK : -RT_ERROR;
 }
 

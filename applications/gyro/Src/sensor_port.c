@@ -1,6 +1,6 @@
 #include "gyro/Inc/sensor_port.h"
 
-#define UART_DEV_NAME  "uart2"
+#define GYRO_UART_NAME  "uart2"
 volatile rt_device_t gyro_uart = RT_NULL;
 
 const uint32_t c_uiBaud[10] = {0, 4800, 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600};
@@ -28,27 +28,25 @@ static void ShowHelp(void)//上电提示并且打印下面内容
     rt_kprintf("******************************************************************************\r\n");
 }
 
-/* 打开步进电机串口uart4 */
+/* 打开陀螺仪串口uart2 */
 rt_err_t gyro_uart_init(const char *uart_name)
 {
     gyro_uart = rt_device_find(uart_name);
-
-    if (gyro_uart)
+    if (!gyro_uart)
     {
-        rt_kprintf("%s is opened successfully\n", uart_name);
+        rt_kprintf("Error: cannot find %s\n", uart_name);
+        return -RT_ERROR;
     }
-
-    if (!gyro_uart) return -RT_ERROR;    //找不到返回-1
-    return rt_device_open(gyro_uart, RT_DEVICE_FLAG_RDWR | RT_DEVICE_FLAG_DMA_RX);   //开启读写与DMA的收
+    rt_err_t err = rt_device_open(gyro_uart,
+                        RT_DEVICE_FLAG_RDWR | RT_DEVICE_FLAG_DMA_RX);
+    if (err != RT_EOK)
+    {
+        rt_kprintf("Error: open %s failed: %d\n", uart_name, err);
+        return err;
+    }
+    rt_kprintf("%s opened\n", uart_name);
+    return RT_EOK;
 }
-
-/* 归零发送数据 */
-//static void send_frame(const uint8_t *buf, size_t len)
-//{
-//    rt_device_write(gyro_uart, 0, buf, len);
-//    rt_kprintf("Sending gyro zero command: 0xFF 0xAA 0x76 0x00 0x00\n");
-//    rt_thread_mdelay(1000);    /* 等 1s发送数据 */
-//}
 
 /* 手动归零指令 */
 rt_err_t gyro_cmd_zero(void)
@@ -62,6 +60,7 @@ rt_err_t gyro_cmd_zero(void)
     return RT_EOK;
 }
 
+/* 读取陀螺仪的Yaw值这里的接收方式是非阻塞 */
 void uart2_recv_thread(void *parameter)
 {
     char buf[64];
@@ -71,7 +70,7 @@ void uart2_recv_thread(void *parameter)
 
     while (1)
     {
-        recv_len = rt_device_read(gyro_uart, 0, buf, sizeof(buf));
+        recv_len = rt_device_read(gyro_uart, 0, buf, sizeof(buf));  //这里的rt_device_read是怎么读取到的？DMA？
 
         if (recv_len > 0)
         {
@@ -88,7 +87,7 @@ void uart2_recv_thread(void *parameter)
 static void Uart2Send(const uint8_t *buf, size_t len)
 {
 
-    // 检查 motor_uart 是否有效
+    // 检查 gyro_uart 是否有效
     if (gyro_uart == RT_NULL)
     {
         rt_kprintf("gyro_uart device is NULL! can't send!\n");
@@ -167,6 +166,10 @@ static void SensorDataUpdata(uint32_t uiReg, uint32_t uiRegNum)//传感器数据
 
 int sensor_port_init(void)
 {
+    if (gyro_uart_init(GYRO_UART_NAME) != RT_EOK) {
+           rt_kprintf("Fatal: gyro UART init failed, halting sensor thread\n");
+           return -RT_ERROR;
+       }
 
     WitInit(WIT_PROTOCOL_NORMAL, 0x50);//初始化标准协议，设置设备地址
     WitSerialWriteRegister(SensorUartSend);//注册写回调函数    串口1接收数据调用 SensorUartSend函数
@@ -179,15 +182,16 @@ int sensor_port_init(void)
 
 int uart2_recv_init(void)
 {
-    gyro_uart_init(UART_DEV_NAME);
+    gyro_uart_init(GYRO_UART_NAME);
     rt_thread_t tid = rt_thread_create("uart2_rd",
                                        uart2_recv_thread,
                                        RT_NULL,
                                        1024,
-                                       11,
+                                       15,
                                        10);
     if (tid) rt_thread_startup(tid);
     return tid ? RT_EOK : -RT_ERROR;
 }
+
 INIT_APP_EXPORT(uart2_recv_init);
 

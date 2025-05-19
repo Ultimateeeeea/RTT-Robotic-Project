@@ -202,7 +202,8 @@ rt_err_t motor_cmd_read_rpm_nb(uint8_t addr, int16_t *rpm)
                     // 按方向打负号
                     if (buf[base+2] & 0x01) v = -v;
                     *rpm = v;
-                    rt_kprintf("Current RPM: %d\n", v);
+                    rt_thread_mdelay(50);
+//                    rt_kprintf("%d\n",v);
                     return RT_EOK;
                 }
             }
@@ -210,10 +211,9 @@ rt_err_t motor_cmd_read_rpm_nb(uint8_t addr, int16_t *rpm)
         else
         {
             // 没读到数据，就稍微休息一下，yield CPU
-            rt_thread_mdelay(1);
+            rt_thread_mdelay(50);
         }
     }
-
     rt_kprintf("Read RPM timeout\n");
     return -RT_ETIMEOUT;
 }

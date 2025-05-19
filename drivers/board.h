@@ -65,23 +65,29 @@ extern "C"
  *                 such as     #define BSP_UART1_RX_USING_DMA
  *
  */
-/* RTT */
+/* USART1-RTT */
 #define BSP_USING_UART1
 #define BSP_UART1_TX_PIN       "PA9"
 #define BSP_UART1_RX_PIN       "PA10"
 
-/* gyro */
+/* USART2-Gyro */
 #define BSP_USING_UART2
 #define BSP_UART2_TX_PIN       "PA2"
 #define BSP_UART2_RX_PIN       "PA3"
 
-/* step_motor */
+/* USART3-Arm */
+#define BSP_USING_UART3
+#define BSP_UART3_TX_PIN       "PB10"
+#define BSP_UART3_RX_PIN       "PB11"
+
+/* UART4-Step_motor */
 #define BSP_USING_UART4
 #define BSP_UART4_TX_PIN       "PC10"
 #define BSP_UART4_RX_PIN       "PC11"
 
-#define BSP_UART4_RX_USING_DMA      /* 使能 DMA 驱动模式 */
+
 #define BSP_UART2_RX_USING_DMA      /* 使能 DMA 驱动模式 */
+#define BSP_UART4_RX_USING_DMA      /* 使能 DMA 驱动模式 */
 
 /*-------------------------- UART CONFIG END --------------------------*/
 
