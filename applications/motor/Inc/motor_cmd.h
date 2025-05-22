@@ -12,19 +12,19 @@ rt_err_t motor_cmd_init(const char *uart_name); //串口4初始化
 
 /* 速度模式 */
 rt_err_t motor_cmd_speed(uint8_t addr,
-                         uint8_t dir,
-                         uint16_t rpm,
-                         uint8_t accel,
-                         uint8_t sync_flag);
+                        uint8_t dir,
+                        uint16_t rpm,
+                        uint8_t accel,
+                        uint8_t sync_flag);
 
 /* 相对位置模式 */
 rt_err_t motor_cmd_position(uint8_t addr,
-                                  uint8_t dir,
-                                  uint16_t rpm,
-                                  uint8_t accel,
-                                  uint32_t pulses,
-                                  uint8_t rel_abs,
-                                  uint8_t sync_flag);
+                                 uint8_t dir,
+                                 uint16_t rpm,
+                                 uint8_t accel,
+                                 uint32_t pulses,
+                                 uint8_t rel_abs,
+                                 uint8_t sync_flag);
 
 /* 立即停止 */
 rt_err_t motor_cmd_stop(uint8_t addr, uint8_t sync_flag);
@@ -33,7 +33,6 @@ rt_err_t motor_cmd_stop(uint8_t addr, uint8_t sync_flag);
 rt_err_t motor_cmd_sync(uint8_t addr);   /* 广播 0x00 一般 */
 
 /* 读取速度 */
-//rt_err_t motor_cmd_read_rpm(uint8_t addr, int16_t *rpm);
 rt_err_t motor_cmd_read_rpm_nb(uint8_t addr, int16_t *rpm);
 
 #endif

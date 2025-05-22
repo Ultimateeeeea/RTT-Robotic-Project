@@ -1,9 +1,9 @@
 //#include <rtthread.h>
 //#include <rthw.h>
 //
-//#include "logic_mgr.h"
+//#include "logic/Inc/logic_mgr.h"
 //#include "switch/switch_evt.h"      /* g_sw_event & EVT_SW_BOTH_PRESS */
-//#include "motor/motor_state.h"     /* motor_state_set() */
+//#include "motor/Inc/motor_state.h"     /* motor_state_set() */
 //
 //
 ///* -------------------------------------------------------------
