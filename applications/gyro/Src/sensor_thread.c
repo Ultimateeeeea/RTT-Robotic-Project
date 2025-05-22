@@ -38,47 +38,49 @@ static void CmdProcess(void)//UART1接收到的数据会代入到这里进行检
 void gyro_entry_thread(void *parameter)
 {
     sensor_port_init();
-    gyro_cmd_zero();    //上电初始化
-    while (1)//循环语句
-     {
-         CmdProcess();//如果发送数据修改失败会发送错误提示会一直检测，成功的话不会有提示，如果需要成功有提示也是可以进行修改的
+    gyro_cmd_zero();    // 上电初始化
 
-         if (s_cDataUpdate & ANGLE_UPDATE)
-         {
-             // 1) 计算出 Yaw，单位度
-             float yaw = sReg[Yaw] / 32768.0f * 180.0f;
-             g_yaw_angle = yaw; //得到全局Z轴角度
-             // 2) 放大 100 倍取整
-             int32_t v = (int32_t)(g_yaw_angle * 100);
-             if (v < 0)  // 处理负数
-             {
-                 rt_kprintf("Yaw: -%d.%02d°\r\n",
-                     -v / 100,
-                     -v % 100);
-             }
-             else
-             {
-                 rt_kprintf("Yaw: %d.%02d°\r\n",
-                     v / 100,
-                     v % 100);
-             }
-             // 3) 清标志
-             s_cDataUpdate &= ~ANGLE_UPDATE;
-         }
+    static int print_cnt = 0;
 
-//         gyro_cmd_zero();
-         rt_thread_mdelay(50);
-     }
+    while (1)
+    {
+        CmdProcess();   // 处理外部命令
+
+        if (s_cDataUpdate & ANGLE_UPDATE)
+        {
+            // 先清标志
+            s_cDataUpdate &= ~ANGLE_UPDATE;
+
+            // 每两次才打印一次
+            if (++print_cnt >= 2)
+            {
+                print_cnt = 0;
+
+                // 1) 计算出 Yaw，单位度
+                float yaw = sReg[Yaw] / 32768.0f * 180.0f;
+                g_yaw_angle = yaw; // 更新全局角度
+
+                // 2) 放大 100 倍取整并打印
+                int32_t v = (int32_t)(g_yaw_angle * 100);
+                if (v < 0)
+                {
+                    rt_kprintf("Yaw: -%d.%02d°\r\n",
+                               -v / 100,
+                               -v % 100);
+                }
+                else
+                {
+                    rt_kprintf("Yaw: %d.%02d°\r\n",
+                               v / 100,
+                               v % 100);
+                }
+            }
+        }
+
+        // 50 ms 周期，只不过打印频率被我们“降”到 100 ms
+        rt_thread_mdelay(50);
+    }
 }
-
-//void gyrozero_entry_thread(void *parameter)
-//{
-//    while (1)//循环语句
-//     {
-//         gyro_cmd_zero();
-//         rt_thread_mdelay(100);
-//     }
-//}
 
 int gyro_thread_init(void)
 {
@@ -86,25 +88,10 @@ int gyro_thread_init(void)
                                        gyro_entry_thread,
                                        RT_NULL,
                                        2048,   /* 2 KB 栈，足够浮点输出 */
-                                       13,     /* 优先级，可根据系统调整 */
+                                       14,     /* 优先级，可根据系统调整 */
                                        20);    /* 时间片 */
     if (tid)
     rt_thread_startup(tid);
     return tid ? RT_EOK : -RT_ERROR;
 }
-
-//int gyrozero_thread_init(void)
-//{
-//    rt_thread_t tid = rt_thread_create("gyrozero_entry_thread",
-//                                        gyrozero_entry_thread,
-//                                       RT_NULL,
-//                                       2048,   /* 2 KB 栈，足够浮点输出 */
-//                                       13,     /* 优先级，可根据系统调整 */
-//                                       20);    /* 时间片 */
-//    if (tid)
-//        rt_thread_startup(tid);
-//    return tid ? RT_EOK : -RT_ERROR;
-//}
-
 INIT_APP_EXPORT(gyro_thread_init);
-//INIT_APP_EXPORT(gyrozero_thread_init);

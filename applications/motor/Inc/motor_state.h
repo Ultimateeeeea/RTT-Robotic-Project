@@ -27,16 +27,16 @@ extern volatile int16_t Curent_Speed[4];
 /* 状态 */
 typedef enum
 {
-    ST_IDLE = 0,     // 空闲状态
-    ST_FORWARD,      // 向前直行
-    ST_BACKWARD,     // 向后直退
-    ST_LEFT,        // 向左平移（左平行滑动，供扫描物品时的移动）
-    ST_RIGHT,        // 向右平移（右平行滑动）
-    ST_PIVOT_RIGHT180,   // 新增：原地右转180°
-    ST_PIVOT_RIGHT90,   // 新增：以右侧为轴原地右转 90°
-    ST_UP,           // 57升一层
-    ST_DOWN,         // 57降低一层
-    ST_Elevator_Stop // 57停止
+   ST_IDLE = 0,     // 空闲状态
+   ST_FORWARD,      // 向前直行
+   ST_BACKWARD,     // 向后直退
+   ST_LEFT,        // 向左平移（左平行滑动，供扫描物品时的移动）
+   ST_RIGHT,        // 向右平移（右平行滑动）
+   ST_PIVOT_RIGHT180,   // 新增：原地右转180°
+   ST_PIVOT_RIGHT90,   // 新增：以右侧为轴原地右转 90°
+   ST_UP,           // 57升一层
+   ST_DOWN,         // 57降低一层
+   ST_Elevator_Stop // 57停止
 } motor_state_t;     // 枚举体变量名称：motor_state_t
 
 /* 动作 */
@@ -56,5 +56,5 @@ void motion_pivot_right_90(void);    /* 小车右转90度 */
 void motion_pivot_right_180(void);
 void motor_state_set(motor_state_t st); /* 当前状态设置 */
 void motor_state_poll(void);            /* 当前状态对应的 **运动** 状态 */
-
+motor_state_t motor_get_current_state(void); // motor_state_t 是您电机状态的枚举类型
 #endif

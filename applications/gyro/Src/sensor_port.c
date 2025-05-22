@@ -166,10 +166,6 @@ static void SensorDataUpdata(uint32_t uiReg, uint32_t uiRegNum)//传感器数据
 
 int sensor_port_init(void)
 {
-    if (gyro_uart_init(GYRO_UART_NAME) != RT_EOK) {
-           rt_kprintf("Fatal: gyro UART init failed, halting sensor thread\n");
-           return -RT_ERROR;
-       }
 
     WitInit(WIT_PROTOCOL_NORMAL, 0x50);//初始化标准协议，设置设备地址
     WitSerialWriteRegister(SensorUartSend);//注册写回调函数    串口1接收数据调用 SensorUartSend函数
@@ -182,7 +178,11 @@ int sensor_port_init(void)
 
 int uart2_recv_init(void)
 {
-    gyro_uart_init(GYRO_UART_NAME);
+    if (gyro_uart_init(GYRO_UART_NAME) != RT_EOK) {
+           rt_kprintf("Fatal: gyro UART init failed, halting sensor thread\n");
+           return -RT_ERROR;
+       }
+
     rt_thread_t tid = rt_thread_create("uart2_rd",
                                        uart2_recv_thread,
                                        RT_NULL,

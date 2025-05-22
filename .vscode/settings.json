@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "drv_common.h": "c",
+        "rtthread.h": "c",
+        "board.h": "c",
+        "motor_cmd.h": "c"
+    }
+}

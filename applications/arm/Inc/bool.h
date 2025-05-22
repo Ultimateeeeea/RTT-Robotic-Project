@@ -1,8 +1,7 @@
-#ifndef BOOL_H_
-#define BOOL_H_
+#ifndef ARM_INC_BOOL_H_
+#define ARM_INC_BOOL_H_
 
-typedef enum {
-	false = 0, true = !false
-}bool;
+// Simple bool definition for GCC when <stdbool.h> not used
+typedef enum { false = 0, true = 1 } bool;
 
-#endif
+#endif // ARM_INC_BOOL_H_
