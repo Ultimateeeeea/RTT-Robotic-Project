@@ -131,8 +131,8 @@ void motor_state_poll(void)
   case ST_IDLE:                motion_stop();            break;
   case ST_FORWARD:             motion_forward(50);       break;
   case ST_BACKWARD:            motion_backward(50);     break;
-  case ST_LEFT:                motion_strafe_left(50);   break;
-  case ST_RIGHT:               motion_strafe_right(50); break;
+  case ST_LEFT:                motion_strafe_left(20);   break;
+  case ST_RIGHT:               motion_strafe_right(20); break;
   case ST_PIVOT_RIGHT90:       motion_pivot_right_90();  break;
   case ST_PIVOT_RIGHT180:      motion_pivot_right_180(); break;
   case ST_UP:                  elevator_up(100);         break;
@@ -271,38 +271,31 @@ rt_err_t motion_strafe_left(uint16_t rpm_base)
   V_sp = fmaxf(fminf(V_sp,  50.0f), -50.0f);
 
   /* 2) 读取实际对角速度（LF+RB vs RF+LB） */
-  float left_diag  = ((float)Curent_Speed[0] + Curent_Speed[3]) * 0.5f; // LF + RB
-  float right_diag = ((float)Curent_Speed[1] + Curent_Speed[2]) * 0.5f; // RF + LB
+  float left_diag  = ((float)Curent_Speed[0] + Curent_Speed[3]) * 0.5f;
+  float right_diag = ((float)Curent_Speed[1] + Curent_Speed[2]) * 0.5f;
 
   /* 3) 计算速度差误差 */
   float speed_error = (left_diag - right_diag) - V_sp;
 
   /* 4) 内环：速度差 PID 求修正 corr */
   float du = PID_Inc_Compute(&speed_pid, speed_error, CTRL_PERIOD_S);
-  du = fmaxf(fminf(du, 30.0f), -30.0f);
-  int16_t corr = (int16_t)du;
-  uint16_t delta = corr >= 0 ? (uint16_t)corr : (uint16_t)(-corr);
+  du = fmaxf(fminf(du, 20.0f), -20.0f);
+  int16_t corr    = (int16_t)du;
+  uint16_t delta  = corr >= 0 ? (uint16_t)corr : (uint16_t)(-corr);
 
   /* 5) 计算两条对角线的最终转速 */
-  // corr > 0: left_diag 减速, right_diag 加速
-  // corr < 0: left_diag 加速, right_diag 减速
-  uint16_t rpm_ld = (corr >= 0) // Target for LF, RB
+  uint16_t rpm_ld = (corr >= 0)
                     ? ((rpm_base > delta) ? rpm_base - delta : 0)
                     : (rpm_base + delta);
-  uint16_t rpm_rd = (corr >= 0) // Target for RF, LB
+  uint16_t rpm_rd = (corr >= 0)
                     ? (rpm_base + delta)
                     : ((rpm_base > delta) ? rpm_base - delta : 0);
 
   /* 6) 下发四轮平移命令并同步 */
-  // 左平移期望: LF(向后), RF(向前), LB(向前), RB(向后)
-  // 根据用户定义: 左侧CW向前,右侧CW向后
-  // LF (左侧) 向后 -> CCW
-  // RF (右侧) 向前 -> CCW
-  // LB (左侧) 向前 -> CW
-  // RB (右侧) 向后 -> CW
+  /* 左平移：前左+后右（LF,RB）向后; 前右+后左（RF,LB）向前 */
   motor_cmd_speed(LF, CCW, rpm_ld, 0, RT_TRUE);
-  motor_cmd_speed(RB, CW,  rpm_ld, 0, RT_TRUE);
-  motor_cmd_speed(RF, CCW, rpm_rd, 0, RT_TRUE);
+  motor_cmd_speed(RB, CCW, rpm_ld, 0, RT_TRUE);
+  motor_cmd_speed(RF, CW,  rpm_rd, 0, RT_TRUE);
   motor_cmd_speed(LB, CW,  rpm_rd, 0, RT_TRUE);
 
   motor_cmd_sync(0x00);
@@ -333,45 +326,39 @@ rt_err_t motion_strafe_left(uint16_t rpm_base)
 rt_err_t motion_strafe_right(uint16_t rpm_base)
 {
   /* 1) 外环：航向 PID 输出期望对角差速 V_sp */
+  /* 让小车沿着 target_yaw 平移时不偏航 */
   float V_sp = PID_Inc_Compute(&straight_pid, g_yaw_angle, CTRL_PERIOD_S);
   V_sp = fmaxf(fminf(V_sp,  50.0f), -50.0f);
 
   /* 2) 读取实际对角速度（单位同 rpm） */
-  float left_diag  = ((float)Curent_Speed[0] + Curent_Speed[3]) * 0.5f; // LF + RB
-  float right_diag = ((float)Curent_Speed[1] + Curent_Speed[2]) * 0.5f; // RF + LB
+  /* 前左(LF) & 后右(RB) 组成一对，前右(RF) & 后左(LB) 组成一对 */
+  float left_diag  = ((float)Curent_Speed[0] + Curent_Speed[3]) * 0.5f;
+  float right_diag = ((float)Curent_Speed[1] + Curent_Speed[2]) * 0.5f;
 
-  /* 3) 内环：速度差误差 */
-  // 对于右平移，V_sp > 0 意味着希望车头向右偏 (顺时针)
-  // (right_diag - left_diag) 是实际的右偏趋势速度
+  /* 3) 内环：速度差误差 = (实际对角差速) - V_sp */
   float speed_error = (right_diag - left_diag) - V_sp;
 
   /* 4) 速度差 PID 输出修正 corr */
   float du = PID_Inc_Compute(&speed_pid, speed_error, CTRL_PERIOD_S);
-  du = fmaxf(fminf(du,  30.0f), -30.0f);
+  du = fmaxf(fminf(du,  20.0f), -20.0f);
   int16_t corr = (int16_t)du;
   uint16_t delta = (corr >= 0) ? (uint16_t)corr : (uint16_t)(-corr);
 
   /* 5) 计算两对对角线最终转速 */
-  // corr > 0: right_diag (RF+LB) 加速, left_diag (LF+RB) 减速
-  // corr < 0: right_diag (RF+LB) 减速, left_diag (LF+RB) 加速
-  uint16_t rpm_ld = (corr >= 0) // Target for LF, RB (left_diag)
+  /* corr > 0：(RF+LB)加速, (LF+RB)减速 */
+  /* corr < 0：(RF+LB)减速, (LF+RB)加速 */
+  uint16_t rpm_ld = (corr >= 0)
                     ? ((rpm_base > delta) ? rpm_base - delta : 0)
                     : (rpm_base + delta);
-  uint16_t rpm_rd = (corr >= 0) // Target for RF, LB (right_diag)
+  uint16_t rpm_rd = (corr >= 0)
                     ? (rpm_base + delta)
                     : ((rpm_base > delta) ? rpm_base - delta : 0);
 
   /* 6) 下发四轮平移命令并同步启动 */
-  // 右平移期望: LF(向前), RF(向后), LB(向后), RB(向前)
-  // 根据用户定义: 左侧CW向前,右侧CW向后
-  // LF (左侧) 向前 -> CW
-  // RF (右侧) 向后 -> CW
-  // LB (左侧) 向后 -> CCW
-  // RB (右侧) 向前 -> CCW
-  motor_cmd_speed(LF, CW,  rpm_ld, 0, RT_TRUE); // LF,RB 使用 rpm_ld
-  motor_cmd_speed(RB, CCW, rpm_ld, 0, RT_TRUE); 
-  motor_cmd_speed(RF, CW,  rpm_rd, 0, RT_TRUE); // RF,LB 使用 rpm_rd
-  motor_cmd_speed(LB, CCW, rpm_rd, 0, RT_TRUE);
+  motor_cmd_speed(LF, CW,  rpm_rd, 0, RT_TRUE);
+  motor_cmd_speed(RB, CW,  rpm_rd, 0, RT_TRUE);
+  motor_cmd_speed(RF, CCW, rpm_ld, 0, RT_TRUE);
+  motor_cmd_speed(LB, CCW, rpm_ld, 0, RT_TRUE);
 
   motor_cmd_sync(0x00);
 
